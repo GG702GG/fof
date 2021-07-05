@@ -4327,12 +4327,12 @@ local n = faederdx1:get(FAEDER..'bot:idacount'..msg.sender_user_id_)
 local nn = faederdx1:get(FAEDER..'bot:acctear'..msg.sender_user_id_)
 local nnn = faederdx1:get(FAEDER..'bot:name_acount'..msg.sender_user_id_)
 local Texting = {
-'ككفو ورمبي ☹️💞',
-"تقييمك مصعده كمبره ؟ 😉💞",
-"تقيمك هذا وحدك جبته لْـۆ هكر وياك 🥱!",
+'والنعم يوحش',
+"تقييم بلحرام",
+"مفعل هاك يبن الذينا",
 "طفي الهاك اخي طفي 🤥",
-"ليش متمسح ببجي مو احسلك 🤧",
-"شكبرك شكدك وهذا تقيمك مقتنع بي انته!!!",
+"ليه ماتسمح ببجي احسن لك",
+"شكلك كمبرجي",
 }
 local faeder_send = Texting[math.random(#Texting)]
 faederdx(msg.chat_id_, msg.id_, 1,"\n❍ حسابك على الببجي ،\n❍ اسم حسابك ، {`"..nnn.."`}\n❍ ايدي حسابك ، {`"..n.."`}\n❍ تقييمك ، {`"..nn.."`}\n\n❍ {"..faeder_send.."}", 1, 'md')
@@ -4351,7 +4351,7 @@ faeder = 'ضعيف'
 elseif msgs < 500 then 
 faeder = 'غير متفاعل' 
 elseif msgs < 750 then 
-faeder = 'متوسط كثر حجي' 
+faeder = 'متوسط كثر ' 
 elseif msgs < 1000 then 
 faeder = 'متفاعل عمري' 
 elseif msgs < 2000 then
@@ -4361,15 +4361,15 @@ faeder = 'ملك التفاعل'
 elseif msgs < 4000 then 
 faeder = 'اسطوره التفاعل' 
 elseif msgs < 5000 then 
-faeder = 'تفاعلك نار يبا' 
+faeder = 'تفاعلك نار يسطا' 
 elseif msgs < 5500 then 
 faeder = 'نار وشرار' 
 elseif msgs < 6000 then 
 faeder = 'خيالي' 
 elseif msgs < 7000 then 
-faeder = 'كافر بالتفاعل' 
+faeder = 'اغتصب التفاعل' 
 elseif msgs < 8000 then 
-faeder = 'رب التفاعل ' 
+faeder = 'ملك التفاعل ' 
 end 
 return faeder
 end
