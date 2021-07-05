@@ -1359,9 +1359,9 @@ local Sudo_Welcome = '*❍ اهلا بك عزيزي Devil 🎖 \n❍ اليك ا
 local key = {
 {'وضع اسم البوت','ضع كليشه المطور','تحديث'},
 {'الاحصائيات','المطورين','قائمه العام'},
-{'ضع دعم','الكروبات','تعيين قناة الاشتراك'},
+{'ضع دعم','القروبات','تعيين قناة الاشتراك'},
 {'معلومات السيرفر','تحديث السورس','تفعيل الاشتراك الاجباري'},
-{'تفعيل البوت الخدمي','تعطيل البوت الخدمي','جلب نسخه الكروبات'},
+{'تفعيل البوت الخدمي','تعطيل البوت الخدمي','جلب نسخه القروبات'},
 {"جلب كليشه ستارت",'مسح كليشه ستارت',"ضع كليشه ستارت"},
 {'اوامر الاذاعات','اوامر الخدمه','اوامر بوت التواصل'},
 } 
@@ -1485,7 +1485,7 @@ end end
 --     By Developer Faeder     -- 
 if text == 'احسب عمرك' then faederdx(msg.chat_id_, msg.id_, 1, '❍ من خلال البوت يمكنك حساب عمرك ،\n❍ فقط قم بارسال امر احسب + مواليدك الى البوت ،\n❍ بالتنسيق التالي مثال : احسب 1996/1/17', 1, 'md') end
 if text == 'الابراج' then faederdx(msg.chat_id_, msg.id_, 1, '❍ من خلال البوت يمكنك معرفه توقعات برجك ،\n❍ فقط قم بارسال امر برج + اسم البرج ،\n❍ مثال : برج الدلو ،\n❍ لمعرفه برجك قم بالرجوع الى قسم حساب العمر ،', 1, 'md') end
-if text == 'قسم الحمايه' then faederdx(msg.chat_id_, msg.id_, 1, '❍ اضف البوت في المجموعه وارسل تفعيل ،\n❍ وتمتع بخدمات غير مطروقه ،', 1, 'md') end
+if text == 'قسم الحمايه' then faederdx(msg.chat_id_, msg.id_, 1, '❍ اضف البوت في المجموعه وارسل تفعيل ،\n❍ وتمتع بخدمات غير منتشره ،', 1, 'md') end
 if text == '•┉ • ┉ • ┉ • ┉ • ┉•' then faederdx(msg.chat_id_, msg.id_, 1, '❍ اختر لعبه من الكيبورد بالاسفل ،', 1, 'md') end
 if Chat_Type == 'pv' then   
 if not is_leader(msg) and not faederdx1:sismember(FAEDER..'BaN:In:User',msg.sender_user_id_) and not faederdx1:get(FAEDER..'Texting:In:Bv') then
@@ -3142,7 +3142,7 @@ getUser(msg.sender_user_id_,get_warning)
 end end
 ---------------------------- End Functions Faeder ----------------------------
 ----------------******* Started Code Source Faeder *******---------
-if text == 'جلب نسخه الكروبات' and tonumber(msg.sender_user_id_) == tonumber(bot_owner) then
+if text == 'جلب نسخه القروبات' and tonumber(msg.sender_user_id_) == tonumber(bot_owner) then
 local list = faederdx1:smembers(FAEDER..'bot:groups')  
 local t = '{"BOT_ID": '..FAEDER..',"GP_BOT":{'  
 for k,v in pairs(list) do   
@@ -4588,11 +4588,11 @@ if text:match("^all (.*)$") and is_momod(msg.sender_user_id_, msg.chat_id_) and 
 --     By Developer Faeder     -- 
 if text:match("^@all (.*)$") and is_momod(msg.sender_user_id_, msg.chat_id_) and faeder11(msg) then local txt = {string.match(text, "^(@all) (.*)$")} if faederdx1:get(FAEDER..'bot:lock_geam'..msg.chat_id_) then faederdx(msg.chat_id_, msg.id_, 1, '❍ هذا الامر معطل ', 1, 'md') else if faederdx1:get(FAEDER.."taagall"..msg.chat_id_..':'..msg.sender_user_id_) then return faederdx(msg.chat_id_, msg.id_, 1, "❍ انتظر لا يمكن عمل تاك قبل انتهاء 5 دقائق للتاك السابق", 1, 'md') end faederdx1:setex(FAEDER..'taagall'..msg.chat_id_..':'..msg.sender_user_id_,300,true) tdcli_function({ID="GetChannelFull",channel_id_ = msg.chat_id_:gsub('-100','')},function(dx,faeder) tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = faeder.member_count_},function(dxx,faederr) x = 0 tags = 0 local list = faederr.members_ for k, v in pairs(list) do tdcli_function({ID="GetUser",user_id_ = v.user_id_},function(arg,data) if x == 5 or x == tags or k == 0 then tags = x + 5 t = "#all "..txt[2].."\n\n" end x = x + 1 taagall = data.first_name_ taagall = taagall:gsub("]","") taagall = taagall:gsub("[[]","") t = t..", ["..taagall.."](tg://user?id="..v.user_id_..")" if x == 5 or x == tags or k == 0 then local Text = t:gsub('#all,','#all\n') sendText(msg.chat_id_,Text,0,'md') end end,nil) end end,nil) end,nil) end end
 --     By Developer Faeder     --
-if text == 'الكروبات' and is_admin(msg.sender_user_id_, msg.chat_id_) and faeder11(msg) then 
+if text == 'القروبات' and is_admin(msg.sender_user_id_, msg.chat_id_) and faeder11(msg) then 
 local faeder = faederdx1:scard(FAEDER.."bot:groups")
 local dx = faederdx1:scard("faeder:addg"..bot_id) or 0 
 local users = faederdx1:scard(FAEDER.."bot:userss")
-faederdx(msg.chat_id_, msg.id_, 1, '❍ *اعضاء الخاص ، { '..users..' }\n❍ عدد كروبات ، { '..faeder..' }\n❍ الكروبات المفعله ، { '..dx..' }\n❍ الغير مفعله ، {'..(faeder - dx)..'} *', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ *اعضاء الخاص ، { '..users..' }\n❍ عدد كروبات ، { '..faeder..' }\n❍ القروبات المفعله ، { '..dx..' }\n❍ الغير مفعله ، {'..(faeder - dx)..'} *', 1, 'md')
 end
 --     By Developer Faeder     -- 
 if text:match("^رسائلي$") and msg.reply_to_message_id_ == 0  and faeder11(msg) then
@@ -7301,10 +7301,10 @@ clerkar = "مفعل 🛢"
 elseif not faederdx1:get(FAEDER..'clerk') then
 clerkar = "مفعل 🌟"
 end
-faederdx(msg.chat_id_, msg.id_, 1, '❍ احصائيات البوت ، \n         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •~~\n❍ عدد الكروبات ، '..gps..'\n❍ عدد الاعضاء ، '..users..' \n❍ عدد كل رسائل المجموعات ، '..allmgs..'\n❍ المغادره التلقائيه ، '..autoleavear..'\n❍ رساله ستارت ، '..clerkar, 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ احصائيات البوت ، \n         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •~~\n❍ عدد القروبات ، '..gps..'\n❍ عدد الاعضاء ، '..users..' \n❍ عدد كل رسائل المجموعات ، '..allmgs..'\n❍ المغادره التلقائيه ، '..autoleavear..'\n❍ رساله ستارت ، '..clerkar, 1, 'md')
 end 
 --     By Developer Faeder     -- 
-if text == "تنظيف الكروبات" and is_sudo(msg) then 
+if text == "تنظيف القروبات" and is_sudo(msg) then 
 local group = faederdx1:smembers(FAEDER.."bot:groups")
 local w = 0
 local q = 0
@@ -7347,7 +7347,7 @@ faederddx1 = ''
 else
 faederddx1 = '\n*❍ تم مسح ⌯» { '..w..' } كروب بسبب تنزيل البوت عضو*'
 end
-faederdx(msg.chat_id_, msg.id_, 1,'*❍ عدد الكروبات الان ⌯» { '..#group..' }*'..faederddx1..''..faederddx2..'\n*❍ العدد الحقيقي الان ⌯» ( '..faederdx3..' ) كروب*\n', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1,'*❍ عدد القروبات الان ⌯» { '..#group..' }*'..faederddx1..''..faederddx2..'\n*❍ العدد الحقيقي الان ⌯» ( '..faederdx3..' ) كروب*\n', 1, 'md')
 end end end,nil) end
 return false
 end
@@ -7379,7 +7379,7 @@ end
 --     By Developer Faeder     -- 
 if text and text:match("^تنظيف الرسائل$") and is_sudo(msg) then
 faederdx1:del(FAEDER.."bot:allmsgs")
-faederdx(msg.chat_id_, msg.id_, 1, '❍ تم تنظيف عدد رسائل الكروبات ', 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ تم تنظيف عدد رسائل القروبات ', 'md')
 end
 --     By Developer Faeder     -- 
 if is_momod(msg.sender_user_id_, msg.chat_id_) then
@@ -8575,7 +8575,7 @@ faederdx1:set(FAEDER..'lock:bot:ttt'..bot_id,true)
 end end
 if text and text == "تفعيل تنبيه التغيرات" and faeder11(msg) then
 if faederdx1:get(FAEDER..'lock:bot:ttt'..bot_id) then 
-faederdx(msg.chat_id_, msg.id_, 1, '❍ التنبيه على تغيير\n❍ { صوره - اسم - معرف } الاعضاء\n❍ معطل في كل الكروبات من قبل المطور  ', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ التنبيه على تغيير\n❍ { صوره - اسم - معرف } الاعضاء\n❍ معطل في كل القروبات من قبل المطور  ', 1, 'md')
 return false 
 end
 if not is_owner(msg.sender_user_id_, msg.chat_id_) then
@@ -8684,7 +8684,7 @@ faederdx1:del(FAEDER.."bot:charge:"..gp[2])
 local v = tonumber(bot_owner)       
 end
 --     By Developer Faeder     -- 
-if text and text:match("^تفعيل كل الكروبات$") and faeder11(msg) then
+if text and text:match("^تفعيل كل القروبات$") and faeder11(msg) then
 local gps = faederdx1:smembers(FAEDER.."bot:groups") or 0
 local gps2 = faederdx1:smembers("faeder:addg"..bot_id) or 0
 for i=1,#gps do
@@ -8694,7 +8694,7 @@ faederdx1:set( FAEDER.."bot:charge:"..gps[i],true)
 end
 faederdx(msg.chat_id_, msg.id_, 1, '❍ تم تفعيل المجموعات *{'..(#gps - #gps2)..'}*', 1, 'md')
 end
-if text and text:match("^تعطيل كل الكروبات$") and faeder11(msg) then
+if text and text:match("^تعطيل كل القروبات$") and faeder11(msg) then
 local gps = faederdx1:smembers(FAEDER.."bot:groups") or 0
 local gps2 = faederdx1:smembers("faeder:addg"..bot_id) or 0
 for i=1,#gps do
@@ -8738,7 +8738,7 @@ sendDocument(bot_owner, 0, 0, 1, nil, './FAEDER.lua', dl_cb, nil)
 faederdx(msg.chat_id_, msg.id_, 1, '❍ تم ارسال نسخه الملف الى خاصك مع البوت ', 1, 'md')
 end end end
 --     By Developer Faeder     -- 
-if text == 'روابط الكروبات' or text == 'روابط المجموعات' then
+if text == 'روابط القروبات' or text == 'روابط المجموعات' then
 if not is_leader(msg) then
 faederdx(msg.chat_id_, msg.id_, 1, '❍ للمطور الاساسي فقط ', 1, 'md')
 else
@@ -9552,7 +9552,7 @@ local text =  [[
 ❍ تفعيل « » تعطيل
 ❍ تفعيل « » تعطيل التواصل
 ❍ تفعيل « » تعطيل التنبيه
-❍ تفعيل « » تعطيل كل الكروبات 
+❍ تفعيل « » تعطيل كل القروبات 
 ❍ تفعيل « » تعطيل البوت الخدمي 
 ❍ تفعيل « » تعطيل الاشتراك الاجباري  
          • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •
@@ -9638,7 +9638,7 @@ local text =  [[
 ❍ اوامر المطورين
          • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •
 ❍ السيرفر 
-❍ الكروبات 
+❍ القروبات 
 ❍ المجموعات 
 ❍ الاحصائيات 
 ❍ تحديث 
@@ -9649,7 +9649,7 @@ local text =  [[
 ❍ اذاعه بالتوجيه
 ❍ نشر بالخاص 
 ❍ اذاعه خاص بالتوجيه
-❍ روابط الكروبات
+❍ روابط القروبات
 ❍ جلب نسخه الملف
 ❍ حظر ( بالرد داخل التواصل )
 ❍ الغاء حظر 
@@ -9674,7 +9674,7 @@ local text =  [[
          • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •
 ❍ جلب الملاحظه 
 ❍ تنظيف الرسائل 
-❍ تنظيف الكروبات 
+❍ تنظيف القروبات 
 ❍ تعيين كليشه ستارت
 ❍ جلب كليشه ستارت 
 ❍ تعيين ايدي عام
@@ -9688,7 +9688,7 @@ local text =  [[
 ❍ مطورين الرتبه الثالثه 
 ❍ ضع كليشه المطور
 ❍ رفع النسخه ( بالرد للملف ) 
-❍ جلب نسخه الكروبات 
+❍ جلب نسخه القروبات 
 ❍ (وضع او تغيير) اسم البوت    
 ❍ نقل احصائيات تشاكي
 ❍ نقل احصائيات الزعيم
@@ -9831,7 +9831,7 @@ end end end end
 getMessage(msg.chat_id_, msg.message_id_,get_msg_contact)
 --     By Developer Faeder     -- 
 elseif (data.ID == "UpdateOption" and data.name_ == "my_id") then  
-print('\27[30;32m»» جاري فحص الكروبات الوهميه ««\n\27[1;37m')
+print('\27[30;32m»» جاري فحص القروبات الوهميه ««\n\27[1;37m')
 local list = faederdx1:smembers(FAEDER..'bot:userss')  
 for k,v in pairs(list) do
 getchat(v,function(arg,data)
