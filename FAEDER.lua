@@ -4781,27 +4781,27 @@ else
 faederdx(msg.chat_id_, msg.id_, 1, "- 𝐓𝐨 𝐂𝐨𝐧𝐭𝐢𝐧𝐮𝐞 𝐖𝐢𝐭𝐡 𝐓𝐡𝐞 𝐁𝐨𝐭 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫  𖠂\n\n- 𝗦𝘂𝗱𝗼 𖠙 @"..SudoFaeder..",", 1, "md")
 end end end 
 --     By Developer Faeder     -- 
-if text and text:match('^هينه @(.*)') and faeder11(msg) then 
-local username = text:match('^هينه @(.*)') 
+if text and text:match('^امحطه @(.*)') and faeder11(msg) then 
+local username = text:match('^امحطه @(.*)') 
 function faeder(extra,result,success)
 if result.id_ then  
 if tonumber(result.id_) == tonumber(bot_id) then  
-faederdx(msg.chat_id_, msg.id_, 1, 'شكد غبي لعد تريدني اهين نفسي ؟؟ 🙆😹', 1, 'md') 
+faederdx(msg.chat_id_, msg.id_, 1, 'لاتصير غبي يرحم اهلك كيف امحط نفسي ؟', 1, 'md') 
 return false 
 end  
 if tonumber(result.id_) == tonumber(bot_owner) then 
-faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك مطوري ؟ 🌚🙆', 1, 'md') 
+faederdx(msg.chat_id_, msg.id_, 1, 'غبي انت عمك ذا !', 1, 'md') 
 return false  
 end  
 if tonumber(result.id_) == tonumber(218385683) then 
-faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك مبرمج السورس ؟ 🌚🙆', 1, 'md') 
+faederdx(msg.chat_id_, msg.id_, 1, 'ذا مطور السورس لو اتفل عليه وقفني يرجال', 1, 'md') 
 return false  
 end  
 if faederdx1:sismember(FAEDER.."bot:monsh:"..msg.chat_id_,result.id_) then
-faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك المنشئ ؟ ??🙆', 1, 'md') 
+faederdx(msg.chat_id_, msg.id_, 1, 'دزمها بس ذا عمك المنشى', 1, 'md') 
 return false
 end 
-local faeder = "صار ستاذي 💞🏃" 
+local faeder = "تم ي بعدي" 
 faederdx(msg.chat_id_, msg.id_, 1,faeder, 1, 'md') 
 local faeder = {  "لكك جرجف @"..username.." احترم تاجراسك لا اكتلك واخري على كبرك،💩","هيو جرجف @"..username.." لتضل تمسلت حيوان دوختنه،😐👊","حبيبي @"..username.." راح احاول احترمك هالمره بلكي تبطل حيونه، 🤔🔪","هيو الحضينه @"..username.."شبيك تكمز حيوان 🤕👊","باع هذا المنغولي @"..username.."شبيك حبي مغير علاجك ؟ صير عاقل لا اخذك للسده 🤒🤙",}
 faederdx(msg.chat_id_, result.id_, 1,''..faeder[math.random(#faeder)]..'', 1, 'html') 
@@ -4811,22 +4811,22 @@ end end
 resolve_username(username,faeder)
 end
 --     By Developer Faeder     -- 
-if text:match("^هينه$") or text:match("^بعد هينه$") or text:match("^هينه بعد$") or text:match("^لك هينه$") or text:match("^هينها$") or text:match("^هينهه$") then
+if text:match("^امحطه$") or text:match("^اقين امحطه$") or text:match("^امحطه بعد$") or text:match("^اقولك امحطه$") or text:match("^امحطها$") or text:match("^امحطهه$") then
 function hena(extra, result, success)
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then 
-faederdx(msg.chat_id_, msg.id_, 1, 'شكد غبي لعد تريدني اهين نفسي ؟؟ 🙆😹', 1, 'md') 
+faederdx(msg.chat_id_, msg.id_, 1, 'لاتصير غبي يرحم اهلك كيف امحط نفسي ؟', 1, 'md') 
 return false  
 end  
 if tonumber(result.sender_user_id_) == tonumber(bot_owner) then  
-faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك مطوري ؟ 🌚🙆', 1, 'md') 
+faederdx(msg.chat_id_, msg.id_, 1, 'غبي انت عمك ذا !', 1, 'md') 
 return false
 end 
 if tonumber(result.sender_user_id_) == tonumber(218385683) then  
-faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك مبرمج السورس ؟ 🌚🙆', 1, 'md') 
+faederdx(msg.chat_id_, msg.id_, 1, 'ذا مطور السورس لو اتفل عليه وقفني يرجال', 1, 'md') 
 return false
 end 
 if faederdx1:sismember(FAEDER.."bot:monsh:"..msg.chat_id_,result.sender_user_id_) then
-faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك المنشئ ؟ 🌚🙆', 1, 'md') 
+faederdx(msg.chat_id_, msg.id_, 1, 'دزمها بس ذا عمك المنشى', 1, 'md') 
 return false
 end 
 local faeder = "صار ستاذي 💞🏃" 
@@ -4859,17 +4859,17 @@ else
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),bosha)   
 end end
 --     By Developer Faeder     -- 
-if text:match("^بوسه$") or text:match("^بعد بوسه$") or text:match("^ضل بوس$") or text:match("^بوسه بعد$") then
+if text:match("^عطه بوسه$") or text:match("^عطه بعد$") or text:match("^ضل بوس$") or text:match("^بوسه بعد$") then
 function bosh(extra, result, success)
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then 
-faederdx(msg.chat_id_, msg.id_, 1, ' بس فهمني شون ابوس نفسي وتدلل 🤭😹', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, ' انت فهمني كيف ابوس نفسي وازهل', 1, 'md')
 return false  
 end  
 if tonumber(result.sender_user_id_) == tonumber(bot_owner) then  
-faederdx(msg.chat_id_, msg.id_, 1, 'مواححح احلى بوسةه المطوري😻🔥💗 @'..SudoFaeder, 1, 'html')
+faederdx(msg.chat_id_, msg.id_, 1, 'اطلق بوسه لاطلق مطور @'..SudoFaeder, 1, 'html')
 return false
 end 
-local faeder = "صار ستاذي 💞🏃" 
+local faeder = "صار ستاذي " 
 faederdx(msg.chat_id_, msg.id_, 1,faeder, 1, 'md') 
 local faeder = {"مواححح افيش عافيههه😍🔥💗","امممووااهحح شهلعسل🥺🍯💘","مواححح،ءوفف اذوب🤤💗"} 
 faederdx(msg.chat_id_, result.id_, 1,''..faeder[math.random(#faeder)]..'', 1, 'md') 
