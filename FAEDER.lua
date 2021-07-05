@@ -1339,7 +1339,7 @@ if Chat_Type == 'pv' then
 if text == '/start' then   
 function adding(extra,result,success)
 local users = faederdx1:scard(FAEDER.."bot:userss")
-faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❍  هذا دز ستارت للبوت \n❍ معرفه ⌯» @"..(result.username_ or "لا يوجد").."\n❍ ايديه ⌯» {"..msg.sender_user_id_.."}\n❍ اصبح عدد المشتركين { "..users.." }" , 1, 'html')
+faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❍  هذا ارسل ستارت للبوت \n❍ معرفه ⌯» @"..(result.username_ or "لا يوجد").."\n❍ ايديه ⌯» {"..msg.sender_user_id_.."}\n❍ اصبح عدد المشتركين { "..users.." }" , 1, 'html')
 end 
 getUser(msg.sender_user_id_,adding) 
 end end
@@ -1347,7 +1347,7 @@ end end
 if Chat_Type == 'pv' then 
 if text and text:match("/start hms(.*)_(%d+)") then 
 function adding(extra,result,success)
-faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❍ هذا دزوله همسه وديشوفها \n❍ معرفه ⌯» @"..(result.username_ or "لا يوجد").."\n❍ ايديه ⌯» {"..msg.sender_user_id_.."}" , 1, 'html') 
+faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❍ هذا ارسلو له همسه وجالس يشوفها \n❍ معرفه ⌯» @"..(result.username_ or "لا يوجد").."\n❍ ايديه ⌯» {"..msg.sender_user_id_.."}" , 1, 'html') 
 end 
 getUser(msg.sender_user_id_,adding) 
 end end 
@@ -1422,7 +1422,7 @@ if Chat_Type == 'pv' then
 if text == '/start' and faeder11(msg) then    
 if not faederdx1:get(FAEDER..'Start:Time'..msg.sender_user_id_) then
 local inline = {{{text="المطور",url="t.me/"..(SudoFaeder or "Faeder_ch")}}}
-local Sudo_Welcome = '❍ يمكنك ايضا استخدام الاوامر الخدميه \n❍ اليك ازرار الاوامر الخدميه اسفل الرساله\n                  • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •\n                              [𝐅𝐀𝐄𝐃𝐄𝐑 - 𝐂𝐇](https://t.me/badboy_here)'
+local Sudo_Welcome = '❍ يمكنك ايضا استخدام الاوامر الخدميه \n❍ اليك ازرار الاوامر الخدميه اسفل الرساله\n                  • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •\n                              [LAKS - DV](https://t.me/badboy_here)'
 local key = {
 {'زخرفه','احسب عمرك'},
 {'الابراج','نسبه الحب'},
@@ -4070,9 +4070,9 @@ Faeder = faederdx1:get(FAEDER.."HM:"..faed_dx[1]..faed_dx[2])
 if Faeder then 
 faederdx(msg.chat_id_, msg.id_, 1, '❍ الهمسه هي\n❍ { ['..Faeder..'] }', 1, 'md')
 else 
-faederdx(msg.chat_id_, msg.id_, 1, '❍ اثكل الهمسه مو الك ،', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ اثقل الهمسه مو الك ،', 1, 'md')
 end else 
-faederdx(msg.chat_id_, msg.id_, 1, '❍ اثكل الهمسه مو الك ،', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ اثقل الهمسه مو الك ،', 1, 'md')
 end end
 --     By Developer Faeder     -- 
 if text == 'رفع المشرفين' or text == 'رفع الادمنيه' and faeder11(msg) then  
