@@ -1,7 +1,7 @@
 -- Welcom To File The Best Source In The Telegram
 -- All The File By Developer Faeder : @KKKKF
 -- Join In Chennel Source : @badboy_here 
--- Join In Explanation Channel : @Learn_Faeder
+-- Join In Explanation Channel : @badboy_here
 ----------------------------------------------------------------------------
 serpent = require("serpent") 
 lgi = require('lgi')
@@ -3466,7 +3466,7 @@ faederdx(msg.chat_id_, msg.id_, 1, t, 1, 'md')
 end
 --     By Developer Faeder     -- 
 if text == 'دز' or text == 'دزمها' or text == 'دي ' then if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then local faeder = { "احترام شوي","الاخلاق مثل الارزاق غني وفقير "}  faederdx12 = math.random(#faeder) faederdx(msg.chat_id_, msg.id_, 1, faeder[faederdx12] , 1, 'md') end end
-if text == 'احبك' or text == 'اموت فيك' or text == 'اححبك ' then if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then local faeder = { "ويازينك اذا حبيت","حتنا احبك والحياة بدونك لاتعني لي شيء ! "}  faederdx12 = math.random(#faeder) faederdx(msg.chat_id_, msg.id_, 1, faeder[faederdx12] , 1, 'md') end end
+if text == 'احبك' then  if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then local faeder = { "كذاب","اموت فيك صدقني" } faederdx12 = math.random(#faeder) faederdx(msg.chat_id_, msg.id_, 1, faeder[faederdx12] , 1, 'md') end end
 if text == 'السلام عليكم' or text == 'سلام عليكم' or text == 'سلام'  then if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then faeder =  "وعليكم السلام والرحمه ارحب" else faeder = '' end faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md') end
 if text == 'بوت' and faeder11(msg) then  name_bot = (faederdx1:get('faeder:'..bot_id..'name_bot') or 'لاكس')  local faeder = {"الله يطيح حظك يخوي افهم ماني بوت","بدعي عليك ترا","قد لمعت عيناه وشاف اسمي ومابيفكني","على زق يرجال دزمها","هاتولي الكلب ده","حعلني اصير انسان واجي ارفسك","ماتشوف اسمي؟!","يخوي  .."}  faeder2 = math.random(#faeder) faederdx(msg.chat_id_, msg.id_, 1, faeder[faeder2] , 1, 'md')  end
 if (text and text == (faederdx1:get('faeder:'..bot_id..'name_bot') or 'لاكس')) then name_bot = (faederdx1:get('faeder:'..bot_id..'name_bot') or 'لاكس') local namebot = {'عيون '..name_bot..'الحلوه','سم ي غالي ؟','ي لبييييه حتى مناداتك عسل','ي شيخ جعلني فداك','مدحتك زياده خلاص دزمها'} name = math.random(#namebot) faederdx(msg.chat_id_, msg.id_, 1, namebot[name] , 1, 'md') return false end
@@ -4640,16 +4640,7 @@ send_inline(msg.chat_id_,'❍ فكر زين قبل لا تحذف عمري ،\n�
 return false 
 end 
 --     By Developer Faeder     -- 
-if text:match("^source$") or text:match("^اصدار$") or text:match("^الاصدار$") or  text:match("^السورس$") or text:match("^سورس$") and faeder11(msg) then 
-local inline = {
-{{text="- قناة السورس ،",url="t.me/badboy_here"},
-{text="- مبرمج السورس،",url="t.me/bzzzw"}},
-{{text="- اضغط هنا لتنصيب السورس ،",url="t.me/badboy_here"}},
-{text="- شروحات السورس ،",url="t.me/badboy_here"}}
-}
-send_inline(msg.chat_id_,'❍ مرحبا بك في سورس لاكس┋LAKS ،\n❍ اضغط على الازرار بالاسفل  ،',nil,inline) 
-return false 
-end
+
 --     By Developer Faeder     -- 
 if text:match("^جهاتي$") and faeder11(msg) then
 add = (tonumber(faederdx1:get(FAEDER..'bot:user:add'..msg.chat_id_..':'..msg.sender_user_id_)) or 0)
@@ -4793,7 +4784,7 @@ if tonumber(result.id_) == tonumber(bot_owner) then
 faederdx(msg.chat_id_, msg.id_, 1, 'غبي انت عمك ذا !', 1, 'md') 
 return false  
 end  
-if tonumber(result.id_) == tonumber(218385683) then 
+if tonumber(result.id_) == tonumber(1769776049) then 
 faederdx(msg.chat_id_, msg.id_, 1, 'ذا مطور السورس لو اتفل عليه وقفني يرجال', 1, 'md') 
 return false  
 end  
@@ -4821,7 +4812,7 @@ if tonumber(result.sender_user_id_) == tonumber(bot_owner) then
 faederdx(msg.chat_id_, msg.id_, 1, 'غبي انت عمك ذا !', 1, 'md') 
 return false
 end 
-if tonumber(result.sender_user_id_) == tonumber(218385683) then  
+if tonumber(result.sender_user_id_) == tonumber(1769776049) then  
 faederdx(msg.chat_id_, msg.id_, 1, 'ذا مطور السورس لو اتفل عليه وقفني يرجال', 1, 'md') 
 return false
 end 
@@ -9867,4 +9858,4 @@ end end) end end end
 -- END VERSION (24) FAEDER DX 
 -- All The File By Developer Faeder : @KKKKF
 -- Join In Chennel Source : @badboy_here 
--- Join In Explanation Channel : @Learn_Faeder
+-- Join In Explanation Channel : @badboy_here
