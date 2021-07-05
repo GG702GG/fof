@@ -4340,18 +4340,6 @@ end end end
 --     By Developer Faeder     -- 
 if text and (text:match("^موقعي$") and faeder11(msg) or text:match("^رتبتي$")) and faeder11(msg) then
 function get_me(extra,result,success)
-local faedery = (faederdx1:get('faeder:'..bot_id..'nummsg'..msg.chat_id_..msg.sender_user_id_) or 0)
-local faeder = faederdx1:get(FAEDER..'user:msgs'..bot_id..os.date('%d')..':'..msg.chat_id_..':'..msg.sender_user_id_) or 0
-local msguser = tonumber(faederdx1:get(FAEDER..'user:msgs'..msg.chat_id_..':'..msg.sender_user_id_))
-local user_msgs = faederdx1:get(FAEDER..'user:msgs'..msg.chat_id_..':'..msg.sender_user_id_)
-local cont = (tonumber(faederdx1:get(FAEDER..'bot:user:add'..msg.chat_id_..':'..msg.sender_user_id_)) or 0)
-local user_nkt = tonumber(faederdx1:get(FAEDER..'bot:add:num'..msg.chat_id_..msg.sender_user_id_) or 0)
-local text = (tonumber(faederdx1:get(FAEDER.."text:"..msg.sender_user_id_..":"..msg.chat_id_.."")) or "0" )
-local sticker = (tonumber(faederdx1:get(FAEDER.."sticker:"..msg.sender_user_id_..":"..msg.chat_id_.."")) or "0" )
-local Photo = (tonumber(faederdx1:get(FAEDER.."Photo:"..msg.sender_user_id_..":"..msg.chat_id_.."")) or "0" )
-local Voice = (tonumber(faederdx1:get(FAEDER.."Voice:"..msg.sender_user_id_..":"..msg.chat_id_.."")) or "0" )
-local Gif = (tonumber(faederdx1:get(FAEDER.."Gif:"..msg.sender_user_id_..":"..msg.chat_id_.."")) or "0" )
-local Video = (tonumber(faederdx1:get(FAEDER.."Video:"..msg.sender_user_id_..":"..msg.chat_id_.."")) or "0" )
 function formsgg(msgs) 
 local faeder = ''  
 if msgs < 100 then 
