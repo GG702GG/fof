@@ -1616,10 +1616,10 @@ end end
 if result.first_name_ then 
 if dx and dx ~= result.first_name_ then 
 local faeder_text = {
-  "اسمك الجديد { "..result.first_name_.." }\n ليش غيرته 🌚😹",
-  "اسمك الجديد { "..result.first_name_.." }\n مو حلو رجعه القديم ☹️👌",
-  "ليش غيرت اسمك { "..result.first_name_.." }\n قطيت احد حبي ؟ 🌚😹",
-  "اسمك الجديد يخبل ضلعي 🤭😹{ "..result.first_name_.." }", 
+  "اسمك الجديد { "..result.first_name_.." }\n ليش غيرته ",
+  "اسمك الجديد { "..result.first_name_.." }\n مو حلو رجعه القديم ",
+  "ليش غيرت اسمك { "..result.first_name_.." }\n زرفت احد حبيبي ؟ ",
+  "اسمك الجديد زق حبيبي 🤭😹{ "..result.first_name_.." }", 
 }
 dxx = math.random(#faeder_text)
 faederdx(msg.chat_id_, msg.id_, 1, faeder_text[dxx], 1, 'html')
