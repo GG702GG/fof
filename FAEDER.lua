@@ -4640,7 +4640,14 @@ send_inline(msg.chat_id_,'❍ فكر زين قبل لا تحذف عمري ،\n�
 return false 
 end 
 --     By Developer Faeder     -- 
-
+if text:match("^السورس$") or text:match("^سورس$") and faeder11(msg) then 
+local inline = {
+{{text="- قناة السورس ،",url="t.me/badboy_here"},
+{text="- مبرمج السورس،",url="t.me/bzzzw"}},
+}
+send_inline(msg.chat_id_,'❍ مرحبا بك في سورس لاكس┋LAKS ،\n❍ اضغط على الازرار بالاسفل  ،',nil,inline) 
+return false 
+end
 --     By Developer Faeder     -- 
 if text:match("^جهاتي$") and faeder11(msg) then
 add = (tonumber(faederdx1:get(FAEDER..'bot:user:add'..msg.chat_id_..':'..msg.sender_user_id_)) or 0)
