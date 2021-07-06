@@ -6961,7 +6961,7 @@ end
 local lockptf = {string.match(text, "^(قفل) (.*)$")} 
 if lockptf[2] == "التعديل" then
 if not faederdx1:get(FAEDER..'editmsg'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » التعديل  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » التعديل  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'editmsg'..msg.chat_id_,true)
 else
@@ -6969,7 +6969,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل التعديل سابقا ،
 end end
 if lockptf[2] == "الفارسيه" then
 if not faederdx1:get(FAEDER..'farsi'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الفارسيه  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الفارسيه  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 56, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'farsi'..msg.chat_id_,true)
 else
@@ -6977,7 +6977,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل الفارسيه سابقا 
 end end
 if lockptf[2] == "الفارسيه بالطرد" then
 if not faederdx1:get(FAEDER..'farsiban'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الفارسيه بالطرد  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الفارسيه بالطرد  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 63, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'farsiban'..msg.chat_id_,true)
 else
@@ -6985,7 +6985,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل الفارسيه بالطر�
 end end
 if lockptf[2] == "الشارحه" then
 if not faederdx1:get(FAEDER..'bot:cmds'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الشارحه  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الشارحه  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:cmds'..msg.chat_id_,true)
 else
@@ -6993,7 +6993,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل الشارحه سابقا ،
 end end
 if lockptf[2] == "البوتات" then
 if not faederdx1:get(FAEDER..'bot:bots:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » البوتات  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » البوتات  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:bots:mute'..msg.chat_id_,true)
 else
@@ -7001,7 +7001,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل البوتات سابقا ،
 end end
 if lockptf[2] == "البوتات بالطرد" then
 if not faederdx1:get(FAEDER..'bot:bots:ban'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » البوتات بالطرد  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » البوتات بالطرد  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 62, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:bots:ban'..msg.chat_id_,true)
 else
@@ -7009,7 +7009,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل البوتات بالطرد 
 end end
 if lockptf[2] == "البوتات بالتقييد" then
 if not faederdx1:get(FAEDER..'keed_bots'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » البوتات بالتقييد  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » البوتات بالتقييد  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 64, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'keed_bots'..msg.chat_id_,true)
 else
@@ -7017,7 +7017,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل البوتات بالتقي�
 end end
 if lockptf[2] == "التكرار" then
 if not faederdx1:get(FAEDER..'anti-flood:'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » التكرار  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » التكرار  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'anti-flood:'..msg.chat_id_,true)
 else
@@ -7025,7 +7025,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل التكرار سابقا ،
 end end
 if lockptf[2] == "التثبيت" then
 if not faederdx1:get(FAEDER..'bot:pin:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » التثبيت  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » التثبيت  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:pin:mute'..msg.chat_id_,true)
 else
@@ -7406,7 +7406,7 @@ end
 local unlockpts = {string.match(text, "^(فتح) (.*)$")}
 if unlockpts[2] == "التعديل" then
 if faederdx1:get(FAEDER..'editmsg'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » التعديل  \n❍ بواسطة ('..msg.sender_user_id_..') ' 
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » التعديل  \n) ' 
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'editmsg'..msg.chat_id_)
 else
@@ -7414,7 +7414,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » التعديل سابقا
 end end
 if unlockpts[2] == "الفارسيه" then
 if faederdx1:get(FAEDER..'farsi'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الفارسيه  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الفارسيه  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 56, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'farsi'..msg.chat_id_)
 else
@@ -7422,7 +7422,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » الفارسيه سابق
 end end
 if unlockpts[2] == "الفارسيه بالطرد" then
 if faederdx1:get(FAEDER..'farsiban'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الفارسيه بالطرد  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الفارسيه بالطرد  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 63, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'farsiban'..msg.chat_id_)
 else
@@ -7430,7 +7430,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » الفارسيه بالط
 end end
 if unlockpts[2] == "الشارحه" then
 if faederdx1:get(FAEDER..'bot:cmds'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الشارحه  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الشارحه  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:cmds'..msg.chat_id_)
 else
@@ -7438,7 +7438,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » الشارحه سابقا
 end end
 if unlockpts[2] == "البوتات" then
 if faederdx1:get(FAEDER..'bot:bots:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » البوتات  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » البوتات  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:bots:mute'..msg.chat_id_)
 else
@@ -7446,7 +7446,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » البوتات سابقا
 end end
 if unlockpts[2] == "البوتات بالطرد" then
 if faederdx1:get(FAEDER..'bot:bots:ban'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » البوتات بالطرد  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » البوتات بالطرد  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 62, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:bots:ban'..msg.chat_id_)
 else
@@ -7454,7 +7454,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » البوتات بالطر
 end end
 if unlockpts[2] == "البوتات بالتقييد" then
 if faederdx1:get(FAEDER..'keed_bots'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » البوتات بالتقييد  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » البوتات بالتقييد  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 64, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'keed_bots'..msg.chat_id_)
 else
@@ -7462,7 +7462,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » البوتات بالتق
 end end
 if unlockpts[2] == "التكرار" then
 if faederdx1:get(FAEDER..'anti-flood:'..msg.chat_id_) then 
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » التكرار  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » التكرار  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'anti-flood:'..msg.chat_id_)
 else
@@ -7470,7 +7470,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » التكرار سابقا
 end end
 if unlockpts[2] == "التثبيت" then
 if faederdx1:get(FAEDER..'bot:pin:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » التثبيت  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » التثبيت  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:pin:mute'..msg.chat_id_)
 else
@@ -7511,7 +7511,7 @@ end
 local mutepts = {string.match(text, "^(قفل) (.*)$")}
 if mutepts[2] == "الدردشه" then
 if not faederdx1:get(FAEDER..'bot:text:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الدردشه  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الدردشه  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:text:mute'..msg.chat_id_,true)
 else
@@ -7519,7 +7519,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » الدردشه سابقا
 end end
 if mutepts[2] == "الاونلاين" then
 if not faederdx1:get(FAEDER..'bot:inline:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الاونلاين  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الاونلاين  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 57, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:inline:mute'..msg.chat_id_,true)
 else
@@ -7527,7 +7527,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » الاونلاين ساب
 end end
 if mutepts[2] == "الصور" then
 if not faederdx1:get(FAEDER..'bot:photo:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الصور  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الصور  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 53, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:photo:mute'..msg.chat_id_,true)
 else
@@ -7535,7 +7535,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » الصور سابقا ،'
 end end
 if mutepts[2] == "الكلايش" then
 if not faederdx1:get(FAEDER..'bot:spam:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الكلايش  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الكلايش  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:spam:mute'..msg.chat_id_,true)
 else
@@ -7543,7 +7543,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » الكلايش سابقا
 end end
 if mutepts[2] == "الفيديو" then
 if not faederdx1:get(FAEDER..'bot:video:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الفيديو  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الفيديو  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:video:mute'..msg.chat_id_,true)
 else
@@ -7551,7 +7551,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » الفيديو سابقا
 end end
 if mutepts[2] == "المتحركه" then
 if not faederdx1:get(FAEDER..'bot:gifs:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » المتحركه  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » المتحركه  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 56, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:gifs:mute'..msg.chat_id_,true)
 else
@@ -7559,7 +7559,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » المتحركه سابق
 end end
 if mutepts[2] == "الاغاني" then
 if not faederdx1:get(FAEDER..'bot:music:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الاغاني  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الاغاني  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:music:mute'..msg.chat_id_,true)
 else
@@ -7567,7 +7567,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » الاغاني سابقا
 end end
 if mutepts[2] == "الصوت" then
 if not faederdx1:get(FAEDER..'bot:voice:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الصوت  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الصوت  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 53, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:voice:mute'..msg.chat_id_,true)
 else
@@ -7575,7 +7575,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » الصوت سابقا ،'
 end end
 if mutepts[2] == "الروابط" then
 if not faederdx1:get(FAEDER..'bot:links:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الروابط  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الروابط  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:links:mute'..msg.chat_id_,true)
 else
@@ -7583,7 +7583,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » الروابط سابقا
 end end
 if mutepts[2] == "المواقع" then
 if not faederdx1:get(FAEDER..'bot:location:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » المواقع  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » المواقع  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:location:mute'..msg.chat_id_,true)
 else
@@ -7591,7 +7591,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » المواقع سابقا
 end end
 if mutepts[2] == "المعرف" then
 if not faederdx1:get(FAEDER..'tags:lock'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » المعرف  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » المعرف  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 51, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'tags:lock'..msg.chat_id_,true)
 else
@@ -7599,7 +7599,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » المعرف سابقا �
 end end
 if mutepts[2] == "الدخول" then
 if not faederdx1:get(FAEDER..'Lock:Join'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الدخول  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الدخول  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 54, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'Lock:Join'..msg.chat_id_,true)
 else
@@ -7607,7 +7607,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » الدخول سابقا �
 end end
 if  mutepts[2] == "الحمايه" then
 if not faederdx1:get(FAEDER..'bot:strict'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الحمايه  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الحمايه  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:strict'..msg.chat_id_,true)
 else
@@ -7615,7 +7615,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » الحمايه سابقا
 end end
 if mutepts[2] == "الملفات" then
 if not faederdx1:get(FAEDER..'bot:document:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الملفات  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الملفات  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:document:mute'..msg.chat_id_,true)
 else
@@ -7623,7 +7623,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » الملفات سابقا
 end end
 if mutepts[2] == "الهاشتاك" then
 if not faederdx1:get(FAEDER..'bot:hashtag:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الهاشتاك  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الهاشتاك  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 56, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:hashtag:mute'..msg.chat_id_,true)
 else
@@ -7631,7 +7631,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » الهاشتاك سابق
 end end
 if mutepts[2] == "الجهات" then
 if not faederdx1:get(FAEDER..'bot:contact:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الجهات  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الجهات  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 54, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:contact:mute'..msg.chat_id_,true)
 else
@@ -7639,7 +7639,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » الجهات سابقا �
 end end
 if mutepts[2] == "الشبكات" then
 if not faederdx1:get(FAEDER..'bot:webpage:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الشبكات  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الشبكات  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:webpage:mute'..msg.chat_id_,true)
 else
@@ -7647,7 +7647,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » الشبكات سابقا
 end end
 if mutepts[2] == "العربيه" then
 if not faederdx1:get(FAEDER..'bot:arabic:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » العربيه  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » العربيه  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:arabic:mute'..msg.chat_id_,true)
 else
@@ -7655,7 +7655,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » العربيه سابقا
 end end
 if mutepts[2] == "الانقليزيه" then
 if not faederdx1:get(FAEDER..'bot:english:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الانقليزيه  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الانقليزيه  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 58, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:english:mute'..msg.chat_id_,true)
 else
@@ -7663,7 +7663,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » الانقليزيه سا
 end end
 if mutepts[2] == "الملصقات" then
 if not faederdx1:get(FAEDER..'bot:sticker:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الملصقات  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الملصقات  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 56, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:sticker:mute'..msg.chat_id_,true)
 else
@@ -7671,7 +7671,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » الملصقات سابق
 end end
 if mutepts[2] == "الماركداون" then
 if not faederdx1:get(FAEDER..'markdown:lock'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الماركداون  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الماركداون  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 58, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'markdown:lock'..msg.chat_id_,true)
 else
@@ -7679,7 +7679,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » الماركداون سا
 end end
 if mutepts[2] == "الاشعارات" then
 if not faederdx1:get(FAEDER..'bot:tgservice:jk'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الاشعارات  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الاشعارات  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 57, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:tgservice:jk'..msg.chat_id_,true)
 else
@@ -7687,7 +7687,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » الاشعارات ساب
 end end
 if mutepts[2] == "الفشار" then
 if not faederdx1:get(FAEDER.."fshar"..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الفشار  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الفشار  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 54, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER.."fshar"..msg.chat_id_,true)
 else
@@ -7695,7 +7695,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » الفشار سابقا �
 end end
 if mutepts[2] == "الطائفيه" then
 if not faederdx1:get(FAEDER.."taf"..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الطائفيه  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الطائفيه  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 56, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER.."taf"..msg.chat_id_,true)
 else
@@ -7703,7 +7703,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » الطائفيه سابق
 end end
 if mutepts[2] == "الكفران" then
 if not faederdx1:get(FAEDER.."kaf"..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الكفران  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » الكفران  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER.."kaf"..msg.chat_id_,true)
 else
@@ -7711,7 +7711,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم قفل » الكفران سابقا
 end end
 if mutepts[2] == "التوجيه" then
 if not faederdx1:get(FAEDER..'bot:forward:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » التوجيه  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » التوجيه  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:forward:mute'..msg.chat_id_,true)
 else
@@ -7742,7 +7742,7 @@ end
 local unmutepts = {string.match(text, "^(فتح) (.*)$")}
 if unmutepts[2] == "الدردشه" then
 if faederdx1:get(FAEDER..'bot:text:mute'..msg.chat_id_) then 
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الدردشه  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الدردشه  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:text:mute'..msg.chat_id_)
 else
@@ -7750,7 +7750,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » الدردشه سابقا
 end end
 if unmutepts[2] == "الفشار" then
 if faederdx1:get(FAEDER.."fshar"..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الفشار  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الفشار  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 54, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER.."fshar"..msg.chat_id_)
 else
@@ -7758,7 +7758,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » الفشار سابقا �
 end end
 if unmutepts[2] == "الطائفيه" then
 if faederdx1:get(FAEDER.."taf"..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الطائفيه  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الطائفيه  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 56, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER.."taf"..msg.chat_id_)
 else
@@ -7766,7 +7766,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » الطائفيه سابق
 end end
 if unmutepts[2] == "الكفران" then
 if faederdx1:get(FAEDER.."kaf"..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الكفران  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الكفران  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER.."kaf"..msg.chat_id_)
 else
@@ -7774,7 +7774,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » الكفران سابقا
 end end
 if unmutepts[2] == "الصور" then
 if faederdx1:get(FAEDER..'bot:photo:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الصور  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الصور  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 53, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:photo:mute'..msg.chat_id_)
 else 
@@ -7782,7 +7782,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » الصور سابقا ،'
 end end
 if unmutepts[2] == "الكلايش" then
 if faederdx1:get(FAEDER..'bot:spam:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الكلايش  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الكلايش  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:spam:mute'..msg.chat_id_)
 else
@@ -7790,7 +7790,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » الكلايش سابقا
 end end
 if unmutepts[2] == "الفيديو" then
 if faederdx1:get(FAEDER..'bot:video:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الفيديو  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الفيديو  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:video:mute'..msg.chat_id_)
 else
@@ -7798,7 +7798,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » الفيديو سابقا
 end end
 if unmutepts[2] == "الملفات" then
 if faederdx1:get(FAEDER..'bot:document:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الملفات  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الملفات  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:document:mute'..msg.chat_id_)
 else
@@ -7806,7 +7806,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » الملفات سابقا
 end end
 if unmutepts[2] == "الاونلاين" then
 if faederdx1:get(FAEDER..'bot:inline:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الاونلاين  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الاونلاين  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 57, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:inline:mute'..msg.chat_id_)
 else
@@ -7814,7 +7814,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » الاونلاين ساب
 end end
 if unmutepts[2] == "الماركداون" then
 if faederdx1:get(FAEDER..'markdown:lock'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الماركداون  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الماركداون  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 58, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'markdown:lock'..msg.chat_id_)
 else
@@ -7822,7 +7822,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » الماركداون سا
 end end
 if unmutepts[2] == "المتحركه" then
 if faederdx1:get(FAEDER..'bot:gifs:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » المتحركه  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » المتحركه  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 56, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:gifs:mute'..msg.chat_id_)
 else
@@ -7830,7 +7830,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » المتحركه سابق
 end end
 if unmutepts[2] == "الاغاني" then
 if faederdx1:get(FAEDER..'bot:music:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الاغاني  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الاغاني  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:music:mute'..msg.chat_id_)
 else
@@ -7838,7 +7838,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » الاغاني سابقا
 end end
 if unmutepts[2] == "الصوت" then
 if faederdx1:get(FAEDER..'bot:voice:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الصوت  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الصوت  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 53, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:voice:mute'..msg.chat_id_)
 else
@@ -7846,7 +7846,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » الصوت سابقا ،'
 end end
 if unmutepts[2] == "الروابط" then
 if faederdx1:get(FAEDER..'bot:links:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الروابط  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الروابط  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:links:mute'..msg.chat_id_)
 else
@@ -7854,7 +7854,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » الروابط سابقا
 end end
 if unmutepts[2] == "المواقع" then
 if faederdx1:get(FAEDER..'bot:location:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » المواقع  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » المواقع  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:location:mute'..msg.chat_id_)
 else
@@ -7862,7 +7862,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » المواقع سابقا
 end end
 if unmutepts[2] == "المعرف" then
 if faederdx1:get(FAEDER..'tags:lock'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » المعرف  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » المعرف  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 54, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'tags:lock'..msg.chat_id_)
 else
@@ -7870,7 +7870,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » المعرف سابقا �
 end end
 if unmutepts[2] == "الدخول" then
 if faederdx1:get(FAEDER..'Lock:Join'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الدخول  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الدخول  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 54, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'Lock:Join'..msg.chat_id_)
 else
@@ -7878,7 +7878,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » الدخول سابقا �
 end end
 if unmutepts[2] == "الحمايه" then
 if faederdx1:get(FAEDER..'bot:strict'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الحمايه  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الحمايه  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:strict'..msg.chat_id_)
 else
@@ -7886,7 +7886,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » الحمايه سابقا
 end end
 if unmutepts[2] == "الهاشتاك" then
 if faederdx1:get(FAEDER..'bot:hashtag:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الهاشتاك  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الهاشتاك  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 56, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:hashtag:mute'..msg.chat_id_)
 else
@@ -7894,7 +7894,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » الهاشتاك سابق
 end end
 if unmutepts[2] == "الجهات" then
 if faederdx1:get(FAEDER..'bot:contact:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الجهات  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الجهات  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 54, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:contact:mute'..msg.chat_id_)
 else
@@ -7902,7 +7902,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » الجهات سابقا �
 end end
 if unmutepts[2] == "الشبكات" then
 if faederdx1:get(FAEDER..'bot:webpage:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الشبكات  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الشبكات  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:webpage:mute'..msg.chat_id_)
 else
@@ -7910,7 +7910,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » الشبكات سابقا
 end end
 if unmutepts[2] == "العربيه" then
 if faederdx1:get(FAEDER..'bot:arabic:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » العربيه  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » العربيه  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:arabic:mute'..msg.chat_id_)
 else
@@ -7918,7 +7918,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » العربيه سابقا
 end end
 if unmutepts[2] == "الانقليزيه" then
 if faederdx1:get(FAEDER..'bot:english:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الانقليزيه  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الانقليزيه  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 58, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:english:mute'..msg.chat_id_)
 else
@@ -7926,7 +7926,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » الانقليزيه سا
 end end
 if unmutepts[2] == "الاشعارات" then
 if faederdx1:get(FAEDER..'bot:tgservice:jk'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الاشعارات  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الاشعارات  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 57, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:tgservice:jk'..msg.chat_id_)
 else
@@ -7934,7 +7934,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » الاشعارات ساب
 end end
 if unmutepts[2] == "الملصقات" then
 if faederdx1:get(FAEDER..'bot:sticker:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الملصقات  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » الملصقات  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 56, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:sticker:mute'..msg.chat_id_)
 else
@@ -7942,7 +7942,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ تم فتح » الملصقات سابق
 end end 
 if unmutepts[2] == "التوجيه" then
 if faederdx1:get(FAEDER..'bot:forward:mute'..msg.chat_id_) then
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » التوجيه  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » التوجيه  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 55, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:forward:mute'..msg.chat_id_)
 else 
@@ -7994,7 +7994,7 @@ faederdx1:set(FAEDER..'bot:webpage:mute'..msg.chat_id_,true)
 faederdx1:set(FAEDER..'bot:sticker:mute'..msg.chat_id_,true)
 faederdx1:set(FAEDER..'markdown:lock'..msg.chat_id_,true)
 faederdx1:set(FAEDER..'bot:forward:mute'..msg.chat_id_,true) 
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » كل الوسائط  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم قفل » كل الوسائط  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 58, string.len(msg.sender_user_id_))
 end 
 if text == ("فتح الكل") and is_momod(msg.sender_user_id_, msg.chat_id_) then
@@ -8048,7 +8048,7 @@ faederdx1:del(FAEDER..'bot:contact:mute'..msg.chat_id_)
 faederdx1:del(FAEDER..'bot:webpage:mute'..msg.chat_id_)
 faederdx1:del(FAEDER..'bot:sticker:mute'..msg.chat_id_)
 faederdx1:del(FAEDER..'bot:forward:mute'..msg.chat_id_)
-local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » كل الوسائط  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ رتبتك : '..tar..' \n❍ تم فتح » كل الوسائط  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 58, string.len(msg.sender_user_id_))
 end
 --     By Developer Faeder     -- 
@@ -8073,19 +8073,19 @@ if text and text:match("^مسح (.*)$") and faeder11(msg) then
 local txts = {string.match(text, "^(مسح) (.*)$")}
 if txts[2] == 'المحظورين' then
 faederdx1:del(FAEDER..'bot:banned:'..msg.chat_id_) 
-local faeder = '❍ تم مسح المحظورين ،  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ تم مسح المحظورين ،  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 35, string.len(msg.sender_user_id_))
 end
 if is_sudo(msg) then 
 if txts[2] == 'قائمه العام' then
 faederdx1:del(FAEDER..'bot:gban:')
-local faeder = '❍ تم مسح قائمه العام ،  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ تم مسح قائمه العام ،  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 37, string.len(msg.sender_user_id_))
 end end
 if is_leader(msg) then 
 if txts[2] == 'مطورين الرتبه الثالثه' then
 faederdx1:del(FAEDER..'bot:admins:')
-local faeder = '❍ تم مسح مطورين الرتبه الثالثه ، \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ تم مسح مطورين الرتبه الثالثه ، \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 46, string.len(msg.sender_user_id_))
 end end
 if txts[2] == 'البوتات' then
@@ -8094,13 +8094,13 @@ local list = result.members_
 for i = 0, #list do
 if tonumber(list[i].user_id_) ~= tonumber(bot_id) then chat_kick(msg.chat_id_,list[i].user_id_)
 end end end
-local faeder = '❍ تم مسح البوتات ،  \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ تم طرد البوتات ،  \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 33, string.len(msg.sender_user_id_))
 getChannelMembers(msg.chat_id_, 0, "Bots", 100, botslist)
 end
 if is_monsh(msg.sender_user_id_, msg.chat_id_) then
 if txts[2] == 'المنشئين' then
-local faeder = '❍ تم مسح المنشئين ، \n❍ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❍ تم مسح المنشئين ، \n) '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 33, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:monsh2:'..msg.chat_id_)
 end end
@@ -9586,7 +9586,7 @@ local text =  [[
          • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •
 ❍ مسح القوائم
 ❍ مسح الرابط
-❍ مسح البوتات
+❍ طرد البوتات
 ❍  مسح المدراء
 ❍ مسح الادمنيه
 ❍ مسح المقيدين
