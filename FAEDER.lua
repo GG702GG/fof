@@ -1353,7 +1353,7 @@ getUser(msg.sender_user_id_,adding)
 end end 
 --     By Developer Faeder     -- 
 if Chat_Type == 'pv' then 
-if text == '/start' or text == 'رجوع ،🔙‘' and faeder11(msg) then    
+if text == '/start' or text == 'رجوع ،‘' and faeder11(msg) then    
 if is_leader(msg) then
 local Sudo_Welcome = '*❍ اهلا بك عزيزي Devil  \n❍ اليك اوامر الكيبورد الخاص بسورس لاكس*'
 local key = {
@@ -1377,7 +1377,7 @@ local key = {
 {'اذاعه'},
 {'توجيه للكل','اذاعه بالتوجيه'},
 {'اذاعه خاص بالتوجيه','نشر بالخاص'},
-{'رجوع ،🔙‘'}, 
+{'رجوع ،‘'}, 
 }
 send_inline(msg.chat_id_,Sudo_Welcome,key)
 return false
@@ -1390,7 +1390,7 @@ local Sudo_Welcome = '❍ اهلا بك مره اخرى عزيزي المطور 
 local key = {
 {'تعطيل التواصل','تفعيل التواصل'},
 {'الغاء حظر','حظر'},
-{'رجوع ،🔙‘'}, 
+{'رجوع ،‘'}, 
 } 
 send_inline(msg.chat_id_,Sudo_Welcome,key)
 return false
@@ -1412,7 +1412,7 @@ local key = {
 {'العكس','المحيبس'},
 {'امثله','المختلف'},
 {'انقليزي','رياضيات'},
-{'رجوع ،🔙‘'},
+{'رجوع ،‘'},
 }
 send_inline(msg.chat_id_,Sudo_Welcome,key)
 return false
@@ -1436,7 +1436,7 @@ local key = {
 {'العكس','المحيبس'},
 {'امثله','المختلف'},
 {'انقليزي','رياضيات'},
-{'رجوع ،🔙‘'},
+{'رجوع ،‘'},
 }
 local start = faederdx1:get(FAEDER.."Start:Bot")
 if start then 
@@ -1619,7 +1619,7 @@ local faeder_text = {
   "اسمك الجديد { "..result.first_name_.." }\n ليش غيرته ",
   "اسمك الجديد { "..result.first_name_.." }\n مو حلو رجعه القديم ",
   "ليش غيرت اسمك { "..result.first_name_.." }\n زرفت احد حبيبي ؟ ",
-  "اسمك الجديد زق حبيبي 🤭😹{ "..result.first_name_.." }", 
+  "اسمك الجديد زق { "..result.first_name_.." }", 
 }
 dxx = math.random(#faeder_text)
 faederdx(msg.chat_id_, msg.id_, 1, faeder_text[dxx], 1, 'html')
@@ -1701,16 +1701,16 @@ if result.id_ then
 local dx = faederdx1:get("faeder:Userr"..result.id_)
 if not result.username_ then 
 if dx then 
-faederdx(msg.chat_id_, msg.id_, 1, "حذف معرفه خمطو بساع بساع  \n هاذه معرفه : @"..dx, 1, 'html')
+faederdx(msg.chat_id_, msg.id_, 1, "ترا ذا غير معرفه ازرفو المعرف حقه  \n هاذه معرفه : @"..dx, 1, 'html')
 faederdx1:del("faeder:Userr"..result.id_) 
 end end
 if result.username_ then 
 if dx and dx ~= result.username_ then 
 local faeder_text = {
-  'كمشتك ليش غيرت معرفك ولك 😹',
-  "ليش غيرت معرف طشوك بقنات انحراف ؟ ⛷😹",
-  "حلو معرفك الجديد منين خمطته 😹",
-  "لحكو غير معرفه خمطو \n هذا معرفه القديم 🌚😹 @"..result.username_.."",
+  'مسكتك ليه مغير يوزرك؟',
+  "ليه مغير يوزرك يمسكين شكلهم نشروك بقنوات انحراف",
+  "من وين جبت يوزرك الجديد",
+  "ازرفوه \n ذا يوزره القديم 🌚😹 @"..result.username_.."",
 }
 dxx = math.random(#faeder_text)
 faederdx(msg.chat_id_, msg.id_, 1, faeder_text[dxx], 1, 'html')
@@ -1728,16 +1728,16 @@ if result.id_ then
 local dx2 = faederdx1:get("dx:photo"..result.id_)
 if not result.profile_photo_ then 
 if dx2 then 
-faederdx(msg.chat_id_, msg.id_, 1, "حذف كل صوره الحلو 😂👌🏻", 1, 'html')
+faederdx(msg.chat_id_, msg.id_, 1, "حذف كل صوره الحلو ", 1, 'html')
 faederdx1:del("dx:photo"..result.id_) 
 end end
 if result.profile_photo_ then 
 if dx2 and dx2 ~= result.profile_photo_.big_.persistent_id_ then 
 local dx_text = {
-  "طالع صاك بالصوره الجديده ممكن نرتبط",
-  "صوره فيطي الجديده غيرها",
-  "صورتك الجديده فد شي 😑😹",
-  "حطيت صورتي شوفوني اني صاك بنات 🙄😹",
+  "والله صورتك الجديده رهيبه",
+  "صورتك الجديده ماش",
+  "اوف ي الافتار الرهيب الجديد ذا من وين جبته",
+  "شكلك شوقر دادي كل شوي تغير افتار",
 }
 dx3 = math.random(#dx_text)
 faederdx(msg.chat_id_, msg.id_, 1, dx_text[dx3], 1, 'html')
@@ -2019,7 +2019,7 @@ if content_text == 'save_repgp' then
 if text == 'الغاء' then
 local delrep_owner = faederdx1:get(FAEDER..'delrep_owner'..msg.chat_id_..'')
 faederdx1:srem(FAEDER..'rep_owner'..msg.chat_id_..'',delrep_owner)
-faederdx(msg.chat_id_, msg.id_, 1, '❍ تم الغاء حفظ الرد . \n', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ تم الغاء الامر . \n', 1, 'md')
 faederdx1:del(FAEDER..'addreplaygp:'..msg.sender_user_id_..''..msg.chat_id_..'')
 faederdx1:del(FAEDER..'add:repgp'..msg.sender_user_id_..''..msg.chat_id_)
 faederdx1:del(FAEDER..'delrep_owner'..msg.chat_id_..'')
@@ -2107,7 +2107,7 @@ if content_text == 'save_rep' then
 if text == 'الغاء' then
 local delrep_sudo = faederdx1:get(FAEDER..'delrep_sudo')
 faederdx1:del(FAEDER.."rep_sudo",delrep_sudo)
-faederdx(msg.chat_id_, msg.id_, 1, '❍ تم الغاء حفظ الرد . \n', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ تم الغاء الامر . \n', 1, 'md')
 faederdx1:del(FAEDER.."addreply2:"..msg.sender_user_id_)
 faederdx1:del(FAEDER.."add:repallt"..msg.sender_user_id_)
 faederdx1:del(FAEDER.."delrep_sudo")
@@ -2151,7 +2151,7 @@ end
 if msg.content_.text_ then
 faederdx1:set(FAEDER.."text_repall"..content_text, msg.content_.text_)
 end 
-faederdx(msg.chat_id_, msg.id_, 1, '❍ تم حفظ الرد . \n', 1, 'md') 
+faederdx(msg.chat_id_, msg.id_, 1, '❍ تم الغاء الامر . \n', 1, 'md') 
 faederdx1:del(FAEDER.."addreply2:"..msg.sender_user_id_)
 faederdx1:del(FAEDER..'delrep_sudo')
 return false end end
@@ -2500,7 +2500,7 @@ function get_welcome(extra,result,success)
 if faederdx1:get(FAEDER..'get:welcome'..msg.chat_id_) then
 text = faederdx1:get(FAEDER..'get:welcome'..msg.chat_id_)
 else
-text = '❍ هلا بالكمر 👋 ،\n❍ name ،\n❍ @user ،\n❍ في '..title_name(msg.chat_id_)..' ،\n'
+text = '❍ هلا بالقمر 👋 ،\n❍ name ،\n❍ @user ،\n❍ في '..title_name(msg.chat_id_)..' ،\n'
 end
 local text = text:gsub('name',(result.first_name_ or ''))
 local text = text:gsub('lname',(result.last_name_ or ''))
@@ -2535,7 +2535,7 @@ if faederdx1:get(FAEDER.."bot:welcome"..msg.chat_id_) then
 if faederdx1:get(FAEDER..'get:welcome'..msg.chat_id_) then
 text = faederdx1:get(FAEDER..'get:welcome'..msg.chat_id_)
 else
-text = '❍ هلا بالكمر 👋 ،\n❍ name ،\n❍ @user ،\n❍ في '..title_name(msg.chat_id_)..' ،\n'
+text = '❍ هلا بالقمر 👋 ،\n❍ name ،\n❍ @user ،\n❍ في '..title_name(msg.chat_id_)..' ،\n'
 end
 local text = text:gsub('name',(msg.content_.members_[0].first_name_ or ''))
 local text = text:gsub('lname',(msg.content_.members_[0].last_name_ or ''))
@@ -3082,7 +3082,7 @@ local id = msg.id_
 local msgs = { [0] = id} 
 local chat = msg.chat_id_
 delete_msg(chat, msgs)
-text = '❍ عذرا عزيزي  [firstname](https://telegram.me/username) \n❍ ممنوع الفشار هنا التزم فضلا .'
+text = '❍ عذرا عزيزي  [firstname](https://telegram.me/username) \n❍ ممنوع السب هنا التزم فضلا .'
 local text = text:gsub('firstname',(result.first_name_ or ''))
 local text = text:gsub('username',(result.username_ or 'Faeder_ch'))
 faederdx(msg.chat_id_, msg.id_, 1, text, 1, 'md')
@@ -3290,11 +3290,11 @@ end
 faederdx(msg.chat_id_, msg.id_, 1,'❍ الحاله : نقل الاحصائيات ،\n         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •\n❍ تم نقل : '..#Groups..' قروب ،\n❍ تم نقل : '..#Users..' مشترك ،\n❍ تم نقل المنشئين الاساسيين والثانويين ،\n❍ تم نقل المدراء والادمنيه لكل المجموعات ،\n         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •\n❍ التنصيب السابق للبوت { سورس الزعيم } ،', "md")
 end
 --     By Developer Faeder     -- 
-if text and text:match("منو ضافني") or text:match("منو ضافني هنا") then
+if text and text:match("مين ضافني") or text:match("منو ضافني هنا") then
 if not faederdx1:get(FAEDER..'Added:Me'..msg.chat_id_) then
 tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = msg.sender_user_id_},function(arg,da) 
 if da and da.status_.ID == "ChatMemberStatusCreator" then
-faederdx(msg.chat_id_, msg.id_, 1, '❍ انت منشئ المجموعه .', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ فله يعني ها انت منشئ المجموعه وتقول من ضافني .', 1, 'md')
 return false
 end
 local Added_Me = faederdx1:get(FAEDER.."Who:Added:Me"..msg.chat_id_..':'..msg.sender_user_id_)
@@ -3525,7 +3525,7 @@ name = string.gsub(name,'🔮','🔮') name = string.gsub(name,'🌡','🌡')  n
 name = string.gsub(name,'⏱','⏱') name = string.gsub(name,'','') name = string.gsub(name,'📓','📒') name = string.gsub(name,'📗','📗')
 name = string.gsub(name,'📂','🗂') name = string.gsub(name,'📅','📆') name = string.gsub(name,'📪','📪') name = string.gsub(name,'📫','📫')
 name = string.gsub(name,'📬','📬') name = string.gsub(name,'📭','📭') name = string.gsub(name,'⏰','⏰') name = string.gsub(name,'📺','📺') name = string.gsub(name,'🎚','🎚') name = string.gsub(name,'☎️','☎️')
-faeder = '❍ اول واحد يدز هذا السمايل  {'..name..'} يربح ،'
+faeder = '❍ اول واحد يرسل هذا السمايل  {'..name..'} يربح ،'
 faederdx(msg.chat_id_, msg.id_, 1,faeder, 1, 'md')
 end
 if text == ''..(faederdx1:get(FAEDER..'bot:klmos'..msg.chat_id_) or 'لفاتع')..'' and not faederdx1:get(FAEDER..'bot:l:ids'..msg.chat_id_) then
@@ -4070,9 +4070,9 @@ Faeder = faederdx1:get(FAEDER.."HM:"..faed_dx[1]..faed_dx[2])
 if Faeder then 
 faederdx(msg.chat_id_, msg.id_, 1, '❍ الهمسه هي\n❍ { ['..Faeder..'] }', 1, 'md')
 else 
-faederdx(msg.chat_id_, msg.id_, 1, '❍ اثقل الهمسه مو الك ،', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ اثقل الهمسه مو لك ،', 1, 'md')
 end else 
-faederdx(msg.chat_id_, msg.id_, 1, '❍ اثقل الهمسه مو الك ،', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ اثقل الهمسه مو لك ،', 1, 'md')
 end end
 --     By Developer Faeder     -- 
 if text == 'رفع المشرفين' or text == 'رفع الادمنيه' and faeder11(msg) then  
@@ -4584,11 +4584,11 @@ end
 tdcli_function({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID, offset_ = 0,limit_ = 200000},tall,nil)
 end
 --     By Developer Faeder     -- 
-if text == "all" or text == "@all" or text == "تاك للكل" or text == "تاك الكل" and is_momod(msg.sender_user_id_, msg.chat_id_) and faeder11(msg) then if faederdx1:get(FAEDER..'bot:lock_tag'..msg.chat_id_) then faederdx(msg.chat_id_, msg.id_, 1, '❍ هذا الامر معطل ', 1, 'md') else if faederdx1:get(FAEDER.."taagall"..msg.chat_id_..':'..msg.sender_user_id_) then return faederdx(msg.chat_id_, msg.id_, 1, "❍ انتظر لا يمكن عمل تاك قبل انتهاء 5 دقائق للتاك السابق", 1, 'md') end faederdx1:setex(bot_id..'taagall'..msg.chat_id_..':'..msg.sender_user_id_,300,true) tdcli_function({ID="GetChannelFull",channel_id_ = msg.chat_id_:gsub('-100','')},function(dx,faeder)  tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = faeder.member_count_},function(dxx,faederr) x = 0 tags = 0 local list = faederr.members_ for k, v in pairs(list) do tdcli_function({ID="GetUser",user_id_ = v.user_id_},function(arg,data) if x == 5 or x == tags or k == 0 then tags = x + 5 t = "#all" end x = x + 1 taagall = data.first_name_ taagall = taagall:gsub("]","") taagall = taagall:gsub("[[]","") t = t..", ["..taagall.."](tg://user?id="..v.user_id_..")" if x == 5 or x == tags or k == 0 then local Text = t:gsub('#all,','#all\n') sendText(msg.chat_id_,Text,0,'md') end end,nil) end end,nil) end,nil) end end
+if text == "all" or text == "@all" or text == "تاك للكل" or text == "تاك الكل" and Admin(msg) and is_momod(msg.sender_user_id_, msg.chat_id_) and faeder11(msg) then if faederdx1:get(FAEDER..'bot:lock_tag'..msg.chat_id_) then faederdx(msg.chat_id_, msg.id_, 1, '❍ هذا الامر معطل ', 1, 'md') else if faederdx1:get(FAEDER.."taagall"..msg.chat_id_..':'..msg.sender_user_id_) then return faederdx(msg.chat_id_, msg.id_, 1, "❍ انتظر لا يمكن عمل تاك قبل انتهاء 5 دقائق للتاك السابق", 1, 'md') end faederdx1:setex(bot_id..'taagall'..msg.chat_id_..':'..msg.sender_user_id_,300,true) tdcli_function({ID="GetChannelFull",channel_id_ = msg.chat_id_:gsub('-100','')},function(dx,faeder)  tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = faeder.member_count_},function(dxx,faederr) x = 0 tags = 0 local list = faederr.members_ for k, v in pairs(list) do tdcli_function({ID="GetUser",user_id_ = v.user_id_},function(arg,data) if x == 5 or x == tags or k == 0 then tags = x + 5 t = "#all" end x = x + 1 taagall = data.first_name_ taagall = taagall:gsub("]","") taagall = taagall:gsub("[[]","") t = t..", ["..taagall.."](tg://user?id="..v.user_id_..")" if x == 5 or x == tags or k == 0 then local Text = t:gsub('#all,','#all\n') sendText(msg.chat_id_,Text,0,'md') end end,nil) end end,nil) end,nil) end end
 --     By Developer Faeder     -- 
-if text:match("^all (.*)$") and is_momod(msg.sender_user_id_, msg.chat_id_) and faeder11(msg) then local txt = {string.match(text, "^(all) (.*)$")} if faederdx1:get(FAEDER..'bot:lock_geam'..msg.chat_id_) then faederdx(msg.chat_id_, msg.id_, 1, '❍ هذا الامر معطل ', 1, 'md') end if faederdx1:get(FAEDER.."taagall"..msg.chat_id_..':'..msg.sender_user_id_) then return faederdx(msg.chat_id_, msg.id_, 1, "❍ انتظر لا يمكن عمل تاك قبل انتهاء 5 دقائق للتاك السابق", 1, 'md') end faederdx1:setex(FAEDER..'taagall'..msg.chat_id_..':'..msg.sender_user_id_,300,true) tdcli_function({ID="GetChannelFull",channel_id_ = msg.chat_id_:gsub('-100','')},function(dx,faeder) tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = faeder.member_count_},function(dxx,faederr) x = 0 tags = 0 local list = faederr.members_ for k, v in pairs(list) do tdcli_function({ID="GetUser",user_id_ = v.user_id_},function(arg,data) if x == 5 or x == tags or k == 0 then tags = x + 5 t = "#all "..txt[2].."\n\n" end x = x + 1 taagall = data.first_name_ taagall = taagall:gsub("]","") taagall = taagall:gsub("[[]","") t = t..", ["..taagall.."](tg://user?id="..v.user_id_..")" if x == 5 or x == tags or k == 0 then local Text = t:gsub('#all,','#all\n') sendText(msg.chat_id_,Text,0,'md') end end,nil) end end,nil) end,nil) end
+if text:match("^all (.*)$") and is_momod(msg.sender_user_id_, msg.chat_id_) and Admin(msg) and faeder11(msg) then local txt = {string.match(text, "^(all) (.*)$")} if faederdx1:get(FAEDER..'bot:lock_geam'..msg.chat_id_) then faederdx(msg.chat_id_, msg.id_, 1, '❍ هذا الامر معطل ', 1, 'md') end if faederdx1:get(FAEDER.."taagall"..msg.chat_id_..':'..msg.sender_user_id_) then return faederdx(msg.chat_id_, msg.id_, 1, "❍ انتظر لا يمكن عمل تاك قبل انتهاء 5 دقائق للتاك السابق", 1, 'md') end faederdx1:setex(FAEDER..'taagall'..msg.chat_id_..':'..msg.sender_user_id_,300,true) tdcli_function({ID="GetChannelFull",channel_id_ = msg.chat_id_:gsub('-100','')},function(dx,faeder) tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = faeder.member_count_},function(dxx,faederr) x = 0 tags = 0 local list = faederr.members_ for k, v in pairs(list) do tdcli_function({ID="GetUser",user_id_ = v.user_id_},function(arg,data) if x == 5 or x == tags or k == 0 then tags = x + 5 t = "#all "..txt[2].."\n\n" end x = x + 1 taagall = data.first_name_ taagall = taagall:gsub("]","") taagall = taagall:gsub("[[]","") t = t..", ["..taagall.."](tg://user?id="..v.user_id_..")" if x == 5 or x == tags or k == 0 then local Text = t:gsub('#all,','#all\n') sendText(msg.chat_id_,Text,0,'md') end end,nil) end end,nil) end,nil) end
 --     By Developer Faeder     -- 
-if text:match("^@all (.*)$") and is_momod(msg.sender_user_id_, msg.chat_id_) and faeder11(msg) then local txt = {string.match(text, "^(@all) (.*)$")} if faederdx1:get(FAEDER..'bot:lock_geam'..msg.chat_id_) then faederdx(msg.chat_id_, msg.id_, 1, '❍ هذا الامر معطل ', 1, 'md') else if faederdx1:get(FAEDER.."taagall"..msg.chat_id_..':'..msg.sender_user_id_) then return faederdx(msg.chat_id_, msg.id_, 1, "❍ انتظر لا يمكن عمل تاك قبل انتهاء 5 دقائق للتاك السابق", 1, 'md') end faederdx1:setex(FAEDER..'taagall'..msg.chat_id_..':'..msg.sender_user_id_,300,true) tdcli_function({ID="GetChannelFull",channel_id_ = msg.chat_id_:gsub('-100','')},function(dx,faeder) tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = faeder.member_count_},function(dxx,faederr) x = 0 tags = 0 local list = faederr.members_ for k, v in pairs(list) do tdcli_function({ID="GetUser",user_id_ = v.user_id_},function(arg,data) if x == 5 or x == tags or k == 0 then tags = x + 5 t = "#all "..txt[2].."\n\n" end x = x + 1 taagall = data.first_name_ taagall = taagall:gsub("]","") taagall = taagall:gsub("[[]","") t = t..", ["..taagall.."](tg://user?id="..v.user_id_..")" if x == 5 or x == tags or k == 0 then local Text = t:gsub('#all,','#all\n') sendText(msg.chat_id_,Text,0,'md') end end,nil) end end,nil) end,nil) end end
+if text:match("^@all (.*)$") and is_momod(msg.sender_user_id_, msg.chat_id_) and Admin(msg) and faeder11(msg) then local txt = {string.match(text, "^(@all) (.*)$")} if faederdx1:get(FAEDER..'bot:lock_geam'..msg.chat_id_) then faederdx(msg.chat_id_, msg.id_, 1, '❍ هذا الامر معطل ', 1, 'md') else if faederdx1:get(FAEDER.."taagall"..msg.chat_id_..':'..msg.sender_user_id_) then return faederdx(msg.chat_id_, msg.id_, 1, "❍ انتظر لا يمكن عمل تاك قبل انتهاء 5 دقائق للتاك السابق", 1, 'md') end faederdx1:setex(FAEDER..'taagall'..msg.chat_id_..':'..msg.sender_user_id_,300,true) tdcli_function({ID="GetChannelFull",channel_id_ = msg.chat_id_:gsub('-100','')},function(dx,faeder) tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = faeder.member_count_},function(dxx,faederr) x = 0 tags = 0 local list = faederr.members_ for k, v in pairs(list) do tdcli_function({ID="GetUser",user_id_ = v.user_id_},function(arg,data) if x == 5 or x == tags or k == 0 then tags = x + 5 t = "#all "..txt[2].."\n\n" end x = x + 1 taagall = data.first_name_ taagall = taagall:gsub("]","") taagall = taagall:gsub("[[]","") t = t..", ["..taagall.."](tg://user?id="..v.user_id_..")" if x == 5 or x == tags or k == 0 then local Text = t:gsub('#all,','#all\n') sendText(msg.chat_id_,Text,0,'md') end end,nil) end end,nil) end,nil) end end
 --     By Developer Faeder     --
 if text == 'القروبات' and is_admin(msg.sender_user_id_, msg.chat_id_) and faeder11(msg) then 
 local faeder = faederdx1:scard(FAEDER.."bot:groups")
