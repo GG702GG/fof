@@ -8715,7 +8715,7 @@ else
 local groups = function(extra, result) 
 local num = (faederdx1:scard(FAEDER.."bot:groups"))
 local list = faederdx1:smembers(FAEDER.."bot:groups")
-local text = "~ Groups_Bots_In_the_Bot_Of_Source_laks ~ @badboy_here\n\n"
+local text = "~ Groups_Bots_In_the_Bot_Of_Source_LAKS ~ @badboy_here\n\n"
 for k,v in pairs(list) do
 local GroupsMonsh = faederdx1:scard(FAEDER.."bot:monsh:"..v) or 0
 local GroupsOwner = faederdx1:scard(FAEDER.."bot:owners:"..v) or 0
@@ -9123,26 +9123,26 @@ return false end
 end
 --     By Developer Faeder     -- 
 if text:match("^الاوامر$") and faeder11(msg) then
-local help = faederdx1:get(FAEDER..'bot:help')
-local text =  [[
-         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •
-❍ اليك اوامر البوت ↓↓
-         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •
-❍ ارسل (م1) لعرض اوامر الحماية
-❍ ارسل (م2) لعرض اوامر المشرفين
-❍ ارسل (م3) لعرض اوامر الخدمة
-❍ ارسل (م4) لعرض اوامر الوضع
-❍ ارسل (م5) لعرض اوامر الرفع والتنزيل
-❍ ارسل (م6) لعرض اوامر التفعيلات
-❍ ارسل (م7) لعرض اوامر مسح القوائم
-❍ ارسل (م8) لعرض اوامر المطورين
-         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •
-❍ مطور البوت : @]]..SudoFaeder..[[
-
-❍ قناة السورس : @badboy_here
-]] 
-faederdx(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html') 
-end 
+  local help = faederdx1:get(FAEDER..'bot:help')
+  local text =  [[
+           • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •
+  ❅∫ اليك اوامر البوت ↓↓
+           • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •
+  ❅∫ ارسل (م1) لعرض اوامر الحماية
+  ❅∫ ارسل (م2) لعرض اوامر المشرفين
+  ❅∫ ارسل (م3) لعرض اوامر الخدمة
+  ❅∫ ارسل (م4) لعرض اوامر الوضع
+  ❅∫ ارسل (م5) لعرض اوامر الرفع والتنزيل
+  ❅∫ ارسل (م6) لعرض اوامر التفعيلات
+  ❅∫ ارسل (م7) لعرض اوامر مسح القوائم
+  ❅∫ ارسل (م8) لعرض اوامر المطورين
+           • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •
+  ❅∫ مطور البوت : @]]..SudoFaeder..[[
+  
+  ❅∫ قناة السورس : @badboy_here
+  ]] 
+  faederdx(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html') 
+  end 
 --     By Developer Faeder     -- 
 if is_leader(msg) and text:match("^تعيين امر م1$") then
 faederdx(msg.chat_id_, msg.id_, 1, "❍ ارسل لي الكليشه الان " ,  1, "md")
