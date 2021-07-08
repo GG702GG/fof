@@ -9122,35 +9122,27 @@ faederdx(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 return false end
 end
 --     By Developer Faeder     -- 
-if text == 'الاوامر' or text == 'اوامر' or text == 'الأوامر' then
-  if faeder11(msg) then
-  local Text =[[
-  *• اوامر المجموعه*
-   ━━━━━━━━
-  • م1 => اوامر الادمنيه
-  • م2 => اوامر التفعيل - التعطيل - الرفع
-  • م3 => اوامر المسح
-  • م4 => اوامر Commander
-  • م C => اوامر Carbon 
-   ━━━━━━━━
-  Carbon - ]].. UserName_Dev..[[
-  ]]
-  keyboard = {} 
-  keyboard.inline_keyboard = {
-  {
-  {text = '⓵', callback_data=msg.sender_user_id_.."/help1"},{text = '⓶', callback_data=msg.sender_user_id_.."/help2"},{text = '⓷', callback_data=msg.sender_user_id_.."/help3"},
-  },
-  {
-  {text = '⓸', callback_data="/help4"},
-  },
-  {
-  {text = 'اوامر التعطيل', callback_data=msg.sender_user_id_.."/homeaddrem"},{text = 'اوامر القفل', callback_data=msg.sender_user_id_.."/homelocks"},
-  },
-  }
-  local msg_id = msg.id_/2097152/0.5
-  https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-  end
-  end
+if text:match("^الاوامر$") and faeder11(msg) then
+local help = faederdx1:get(FAEDER..'bot:help')
+local text =  [[
+         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •
+❍ اليك اوامر البوت ↓↓
+         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •
+❍ ارسل (م1) لعرض اوامر الحماية
+❍ ارسل (م2) لعرض اوامر المشرفين
+❍ ارسل (م3) لعرض اوامر الخدمة
+❍ ارسل (م4) لعرض اوامر الوضع
+❍ ارسل (م5) لعرض اوامر الرفع والتنزيل
+❍ ارسل (م6) لعرض اوامر التفعيلات
+❍ ارسل (م7) لعرض اوامر مسح القوائم
+❍ ارسل (م8) لعرض اوامر المطورين
+         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •
+❍ مطور البوت : @]]..SudoFaeder..[[
+
+❍ قناة السورس : @badboy_here
+]] 
+faederdx(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html') 
+end 
 --     By Developer Faeder     -- 
 if is_leader(msg) and text:match("^تعيين امر م1$") then
 faederdx(msg.chat_id_, msg.id_, 1, "❍ ارسل لي الكليشه الان " ,  1, "md")
