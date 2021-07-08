@@ -9122,7 +9122,8 @@ faederdx(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 return false end
 end
 --     By Developer Faeder     -- 
-if text:match("^الاوامر$") and faeder11(msg) then
+if text == 'الاوامر' and GetSourseMember(msg) then     
+  if not Addictive(msg) then
   send(msg.chat_id_, msg.id_,'• عذرا الاوامر هذا لا المنشئين ') 
   return false
   end
@@ -9135,7 +9136,7 @@ if text:match("^الاوامر$") and faeder11(msg) then
   •  ④ > لعرض اوامر المنشئين
   •  ⑤ > لعرض اوامر المطورين
   ●○━━━━━𝑩𝑺━━━━━●
-  𝘊𝘩 - [LAKS](t.me/BADBOY_HERE) •
+  𝘊𝘩 - [Besso](t.me/BESSO500K) •
   ]]
   keyboard = {} 
   keyboard.inline_keyboard = {
