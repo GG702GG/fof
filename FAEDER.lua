@@ -840,7 +840,7 @@ faeder  = "Devil "
 elseif is_sudoid(user_id) then
 faeder = faederdx1:get(FAEDER.."bot:sudo:add"..chat_id) or "المطور الثانوي"
 elseif is_admin(user_id) then
-faeder = faederdx1:get(FAEDER.."bot:sudo3:add"..chat_id) or "المطور الثالث"
+faeder = faederdx1:get(FAEDER.."bot:sudo3:add"..chat_id) or "Legand 🎖"
 elseif is_onall(user_id) then
 faeder = faederdx1:get(FAEDER.."bot:onall:add"..chat_id) or "المدير العام"
 elseif is_moall(user_id) then
@@ -4601,6 +4601,15 @@ end
 getUser(msg.sender_user_id_,get_username)
 end
 --     By Developer Faeder     -- 
+if text:match("^بايو$")  and faeder11(msg) then
+function get_username(extra,result,success)
+text = '❍ البايو حقك ، {User}'
+local text = text:gsub('{User}',('@'..result.username_ or ''))
+faederdx(msg.chat_id_, msg.id_, 1, text, 1, 'html')
+end
+getUser(msg.sender_user_id_,get_username)
+end
+--     By Developer Faeder     -- 
 if text:match("^اسمي$") and faeder11(msg) then
 function get_firstname(extra,result,success)
 text = '❍ اسمك ، {firstname}'
@@ -4861,10 +4870,10 @@ end end
 --     By Developer Faeder     -- 
 -------- Set Sudo3
 if is_sudo(msg) then
-if text ==('رفع مطور رتبه ثالثه') or text ==('رفع مطور') or text ==('اضف مطور') and faeder11(msg) then
+if text ==('رفع مطور رتبه ثالثه') or text ==('رفع مطور') or text ==('رفع Legand 🎖') and faeder11(msg) then
 function sudo_reply(extra, result, success)
 faederdx1:sadd(FAEDER..'bot:admins:',result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه مطور رتبه ثالثه𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه Legand 🎖  \n❍ بواسطه ، "..renk_faeder(msg).."\n")
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
@@ -4883,10 +4892,10 @@ resolve_username(username,promreply)
 end
 --     By Developer Faeder     -- 
 -------- Rem Sudo3
-if text ==('تنزيل مطور رتبه ثالثه') or text ==('تنزيل مطور') or text ==('حذف مطور') and faeder11(msg) then
+if text ==('تنزيل مطور رتبه ثالثه') or text ==('تنزيل Legand 🎖') or text ==('حذف مطور') and faeder11(msg) then
 function prom_reply(extra, result, success)
 faederdx1:srem(FAEDER..'bot:admins:',result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من المطورين,\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من Legand 🎖,\n❍ بواسطه ، "..renk_faeder(msg).."\n")
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
