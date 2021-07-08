@@ -4563,8 +4563,8 @@ faederdx1:del(FAEDER.."lock_delme"..msg.chat_id_)
 faederdx(msg.chat_id_, msg.id_, 1, '❍ اهلا عزيزي ، '..renk_faeder(msg)..' \n❍ تم تفعيل امر نزلني ،', 1, 'md')
 end end
 --     By Developer Faeder     -- 
-if text:match("^قوله (.*)$")  and faeder11(msg) then
-local txt = {string.match(text, "^(قوله) (.*)$")}
+if text:match("^ييييبيسبسيبسي (.*)$")  and faeder11(msg) then
+local txt = {string.match(text, "^(قولسيبسيبسيبسيسيبسيبسيبسيبسيبه) (.*)$")}
 function tall(f1, f2)
 local text = "❍  "..txt[2].." \n         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •\n"
 local id = msg.id_
