@@ -4563,26 +4563,6 @@ faederdx1:del(FAEDER.."lock_delme"..msg.chat_id_)
 faederdx(msg.chat_id_, msg.id_, 1, '❍ اهلا عزيزي ، '..renk_faeder(msg)..' \n❍ تم تفعيل امر نزلني ،', 1, 'md')
 end end
 --     By Developer Faeder     -- 
-if text:match("^ييييبيسبسيبسي (.*)$")  and faeder11(msg) then
-local txt = {string.match(text, "^(قولسيبسيبسيبسيسيبسيبسيبسيبسيبه) (.*)$")}
-function tall(f1, f2)
-local text = "❍  "..txt[2].." \n         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •\n"
-local id = msg.id_
-local msgs = {[0] = id}
-local chat = msg.chat_id_
-i = 0
-for k, v in pairs(f2.members_) do
-i = i + 1
-if faederdx1:get(bot_id..'FAEDER:UserName'..v.user_id_) then
-text = text..""..i.." - : [@"..faederdx1:get(bot_id..'FAEDER:UserName'..v.user_id_).."]\n"
-else
-text = text..""..i.." - : "..v.user_id_.."\n"
-end
-end
-faederdx(msg.chat_id_, msg.id_, 1, text, 1, 'html')
-end
-tdcli_function({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID, offset_ = 0,limit_ = 200000},tall,nil)
-end
 --     By Developer Faeder     -- 
 if text == "all" or text == "@all" or text == "تاك للكل" or text == "تاك الكل" and is_owner(msg.sender_user_id_, msg.chat_id_) and faeder11(msg) then if faederdx1:get(FAEDER..'bot:lock_tag'..msg.chat_id_) then faederdx(msg.chat_id_, msg.id_, 1, '❍ هذا الامر معطل ', 1, 'md') else if faederdx1:get(FAEDER.."taagall"..msg.chat_id_..':'..msg.sender_user_id_) then return faederdx(msg.chat_id_, msg.id_, 1, "❍ انتظر لا يمكن عمل تاك قبل انتهاء 5 دقائق للتاك السابق", 1, 'md') end faederdx1:setex(bot_id..'taagall'..msg.chat_id_..':'..msg.sender_user_id_,300,true) tdcli_function({ID="GetChannelFull",channel_id_ = msg.chat_id_:gsub('-100','')},function(dx,faeder)  tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = faeder.member_count_},function(dxx,faederr) x = 0 tags = 0 local list = faederr.members_ for k, v in pairs(list) do tdcli_function({ID="GetUser",user_id_ = v.user_id_},function(arg,data) if x == 5 or x == tags or k == 0 then tags = x + 5 t = "#all" end x = x + 1 taagall = data.first_name_ taagall = taagall:gsub("]","") taagall = taagall:gsub("[[]","") t = t..", ["..taagall.."](tg://user?id="..v.user_id_..")" if x == 5 or x == tags or k == 0 then local Text = t:gsub('#all,','#all\n') sendText(msg.chat_id_,Text,0,'md') end end,nil) end end,nil) end,nil) end end
 --     By Developer Faeder     -- 
@@ -8185,26 +8165,7 @@ faederdx1:del(FAEDER..'bot:muted:'..msg.chat_id_)
 faederdx(msg.chat_id_, msg.id_, 1, '❍ تم مسح المحظورين ، \n❍ تم مسح الادمنيه ،\n❍ تم مسح المميزين ،\n❍ تم مسح المطاية ،\n❍ تم مسح قائمه المنع ،\n❍ تم مسح المكتومين ،\n         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •~~\n❍ تم مسح هذه القوائم بواسطه ، '..renk_faeder(msg)..' ', 1, 'md')
 end end
 --     By Developer Faeder     -- 
-if text and text:match("^تفعيل الحمايه القصوى$") or text:match("^قفل التفليش$") and faeder11(msg) then
-if not is_monsh(msg.sender_user_id_, msg.chat_id_) then
-faederdx(msg.chat_id_, msg.id_, 1, '❍ هذه الخاصيه للمنشئ والرتب الاعلى منه ، ', 1, 'md')
-else
-faederdx1:set(FAEDER..'bot:links:mute'..msg.chat_id_,true)
-faederdx1:set(FAEDER..'bot:forward:mute'..msg.chat_id_,true)
-faederdx1:del(FAEDER..'lock:get:photo'..msg.chat_id_)
-faederdx1:set(FAEDER..'bot:bots:ban'..msg.chat_id_,true)
-faederdx1:set(FAEDER..'anti-flood:'..msg.chat_id_,true)
-faederdx1:set(FAEDER..'bot:video:mute'..msg.chat_id_,true)
-faederdx1:set(FAEDER..'bot:gifs:mute'..msg.chat_id_,true)
-faederdx1:set(FAEDER..'bot:sticker:mute'..msg.chat_id_,true)
-faederdx1:set(FAEDER..'farsiban'..msg.chat_id_,true)
-faederdx1:del(FAEDER.."fshar"..msg.chat_id_)
-faederdx1:del(FAEDER.."taf"..msg.chat_id_)
-faederdx1:del(FAEDER.."kaf"..msg.chat_id_)
-faederdx1:set(FAEDER..'floodstatus'..msg.chat_id_,'Kicked')
-faederdx1:set('FAEDER:id:photo'..msg.chat_id_,true)
-faederdx(msg.chat_id_, msg.id_, 1, '❍ تم تعطيل جلب الصوره ،\n❍ تم قفل البوتات بالطرد ،\n❍ تم قفل التكرار ،\n❍ تم قفل الروابط ،\n❍ تم قفل التوجيه ،\n❍ تم قفل الملصقات ،\n❍ تم قفل المتحركه ،\n❍ تم قفل الفيديو ،\n❍ تم قفل السب ،\n❍ تم قفل الالحاد ،\n❍ تم قفل الطائفيه ،\n❍ تم وضع التكرار بالطرد ،\n❍ تم قفل الفارسيه بالطرد ،\n❍ تم وضع الايدي بدون صوره ،\n         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •~~\n❍ تم تفعيل الحمايه القصوى بواسطه ، { '..renk_faeder(msg)..' } ', 1, 'md')
-end end
+
 --     By Developer Faeder     -- 
 if is_momod(msg.sender_user_id_, msg.chat_id_) then
 if text and text:match("^الاعدادات$") and faeder11(msg) then
