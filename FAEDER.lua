@@ -9122,8 +9122,8 @@ faederdx(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 return false end
 end
 --     By Developer Faeder     -- 
-if text == 'الاوامر' and GetSourseMember(msg) then     
-  if not Addictive(msg) then
+if text == 'الاوامر' and is_leader(msg) then     
+  if not is_leader(msg) then
   send(msg.chat_id_, msg.id_,'• عذرا الاوامر هذا لا المنشئين ') 
   return false
   end
