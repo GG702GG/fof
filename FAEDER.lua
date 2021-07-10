@@ -5050,7 +5050,7 @@ end end
 --     By Developer Faeder     -- 
 -------- Set Monsh
 if is_vpall(msg.sender_user_id_, msg.chat_id_) then
-if text ==('رفع مالك ') and faeder11(msg) then
+if text ==('رفع منشئ اساسي') and faeder11(msg) then
 function raf_reply(extra, result, success)
 faederdx1:sadd(FAEDER..'bot:monsh:'..msg.chat_id_,result.sender_user_id_)
 Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه منشئ اساسي𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
@@ -5059,8 +5059,8 @@ if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),raf_reply)
 end end
-if text and text:match('^رفع مالك  @(.*)') and faeder11(msg) then
-local username = text:match('^رفع مالك  @(.*)')
+if text and text:match('^رفع منشئ اساسي @(.*)') and faeder11(msg) then
+local username = text:match('^رفع منشئ اساسي @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:sadd(FAEDER..'bot:monsh:'..msg.chat_id_,result.id_)
@@ -5072,7 +5072,7 @@ resolve_username(username,promreply)
 end
 --     By Developer Faeder     -- 
 -------- Rem Monsh
-if text ==('تنزيل منشئ اساسي') or text ==('تنزيل منشى اساسي') and faeder11(msg) then
+if text ==('تنزيل منشئ اساسي') and faeder11(msg) then
 function prom_reply(extra, result, success)
 faederdx1:srem(FAEDER..'bot:monsh:'..msg.chat_id_,result.sender_user_id_)
 Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من الاساسيين𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
@@ -5081,8 +5081,8 @@ if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
 end end
-if text and text:match('^تنزيل مالك @(.*)') and faeder11(msg) then
-local username = text:match('^تنزيل مالك @(.*)')
+if text and text:match('^تنزيل منشئ اساسي @(.*)') and faeder11(msg) then
+local username = text:match('^تنزيل منشئ اساسي @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:srem(FAEDER..'bot:monsh:'..msg.chat_id_,result.id_)
@@ -5095,7 +5095,7 @@ end end
 --     By Developer Faeder     -- 
 -------- Set Monsh2
 if is_monsh(msg.sender_user_id_, msg.chat_id_) then
-if text ==('رفع منشئ') or text ==('رفع منشى') and faeder11(msg) then
+if text ==('رفع منشئ') and faeder11(msg) then
 function raf_reply(extra, result, success)
 faederdx1:sadd(FAEDER..'bot:monsh2:'..msg.chat_id_,result.sender_user_id_)
 Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه منشئ𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
@@ -5104,7 +5104,7 @@ if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),raf_reply)
 end end
-if text and text:match('^رفع منشئ @(.*)') or text ==('رفع منشى') and faeder11(msg) then
+if text and text:match('^رفع منشئ @(.*)') and faeder11(msg) then
 local username = text:match('^رفع منشئ @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
@@ -5117,7 +5117,7 @@ resolve_username(username,promreply)
 end
 --     By Developer Faeder     -- 
 -------- Rem Monsh2
-if text ==('تنزيل منشئ') or text ==('تنزيل منشى') and faeder11(msg) then
+if text ==('تنزيل منشئ') and faeder11(msg) then
 function prom_reply(extra, result, success)
 faederdx1:srem(FAEDER..'bot:monsh2:'..msg.chat_id_,result.sender_user_id_)
 Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من المنشئين𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
@@ -5126,8 +5126,8 @@ if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
 end end
-if text and text:match('^تنزيل منشئ @(.*)') or text ==('تنزيل منشى') and faeder11(msg) then
-local username = text:match('^تنزيل منشئ @(.*)') or text ==('تنزيل منشى')
+if text and text:match('^تنزيل منشئ @(.*)') and faeder11(msg) then
+local username = text:match('^تنزيل منشئ @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:srem(FAEDER..'bot:monsh2:'..msg.chat_id_,result.id_)
