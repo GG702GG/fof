@@ -3386,7 +3386,7 @@ else
 if not faederdx1:get(FAEDER.."bot:tt:link:"..msg.chat_id_) then 
 local link = faederdx1:get(FAEDER.."bot:group:link"..msg.chat_id_)
 if link then
-faederdx(msg.chat_id_, msg.id_,"["..ta.title_.."]("..link..")")
+faederdx(msg.chat_id_, msg.id_, 1"["1 , ..ta.title_.."]("..link..")""md")
 else 
 faederdx(msg.chat_id_, msg.id_, 1, '❍ لم يتم حفظ رابط المجموعه ارسل لي (ضع رابط) ليتم حفظه 📥 ،', 1, 'md')
 end else
