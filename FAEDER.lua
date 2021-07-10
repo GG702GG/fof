@@ -3386,7 +3386,7 @@ else
 if not faederdx1:get(FAEDER.."bot:tt:link:"..msg.chat_id_) then 
 local link = faederdx1:get(FAEDER.."bot:group:link"..msg.chat_id_)
 if link then
-faederdx(msg.chat_id_, msg.id_, 1, "❍[رابط المجموعة] .\n\n" (.. link, 1, "md")
+faederdx(msg.chat_id_, msg.id_,"["..ta.title_.."]("..link..")")
 else 
 faederdx(msg.chat_id_, msg.id_, 1, '❍ لم يتم حفظ رابط المجموعه ارسل لي (ضع رابط) ليتم حفظه 📥 ،', 1, 'md')
 end else
@@ -3402,7 +3402,7 @@ end end
 --     By Developer Faeder     --
 if text == "نسبه الحب" and faeder11(msg) then
 faederdx1:set(FAEDER..'nsba'..msg.chat_id_..msg.sender_user_id_,'Check')
-faeder = '❍ ارسل اسمك واسم الشخص الاخر ،\n❍ مثال :- لاكس ولاكسه ، '
+faeder = '❍ ارسل اسمك واسم الشخص الاخر ،\n❍ مثال :- لاكس ونوير ، '
 faederdx(msg.chat_id_, msg.id_, 1,faeder, 1, 'md')
 end
 if text and text ~="نسبه الحب"  and faederdx1:get(FAEDER..'nsba'..msg.chat_id_..msg.sender_user_id_) == 'Check' then
