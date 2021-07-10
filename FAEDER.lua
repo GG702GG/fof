@@ -5127,7 +5127,7 @@ else
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
 end end
 if text and text:match('^تنزيل منشئ @(.*)') or text ==('تنزيل منشى') and faeder11(msg) then
-local username = text:match('^تنزيل منشئ @(.*)')
+local username = text:match('^تنزيل منشئ @(.*)') or text ==('تنزيل منشى')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:srem(FAEDER..'bot:monsh2:'..msg.chat_id_,result.id_)
