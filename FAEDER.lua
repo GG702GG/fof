@@ -840,7 +840,7 @@ faeder  = "Devil "
 elseif is_sudoid(user_id) then
 faeder = faederdx1:get(FAEDER.."bot:sudo:add"..chat_id) or "المطور الثانوي"
 elseif is_admin(user_id) then
-faeder = faederdx1:get(FAEDER.."bot:sudo3:add"..chat_id) or "Legand 🎖"
+faeder = faederdx1:get(FAEDER.."bot:sudo3:add"..chat_id) or "Legend 🎖"
 elseif is_onall(user_id) then
 faeder = faederdx1:get(FAEDER.."bot:onall:add"..chat_id) or "المدير العام"
 elseif is_moall(user_id) then
@@ -3470,8 +3470,8 @@ if text == 'اكرهك' or text == 'شسهبخاشسب' or text == 'سيهباي
 if text == 'زواج' or text == 'شسهبخاشسب' or text == 'سيهبايباسيبمي' or text == 'تاتنانتشساب' or text == 'منيبتسينب' or text == 'امسشباشسمب' or text == 'صشح9قعع93' then if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then faeder =  "❍ أهلاً عزيزي\n❍ تم زواجكم الاثنين بنجاح\n❍ الان يمكنكم أخذ راحتكم" else faeder = '' end faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md') end
 if text == 'احبك' then  if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then local faeder = { "كذاب","اموت فيك صدقني" } faederdx12 = math.random(#faeder) faederdx(msg.chat_id_, msg.id_, 1, faeder[faederdx12] , 1, 'md') end end
 if text == 'السلام عليكم' or text == 'سلام عليكم' or text == 'سلام'  then if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then faeder =  "وعليكم السلام والرحمه ارحب" else faeder = '' end faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md') end
-if text == 'بوت' and faeder11(msg) then  name_bot = (faederdx1:get('faeder:'..bot_id..'name_bot') or 'لاكس')  local faeder = {'ماني راد عليك الا لمن تناديني بأسمي'}  faeder2 = math.random(#faeder) faederdx(msg.chat_id_, msg.id_, 1, faeder[faeder2] , 1, 'md')  end
-if (text and text == (faederdx1:get('faeder:'..bot_id..'name_bot') or 'لاكس')) then name_bot = (faederdx1:get('faeder:'..bot_id..'name_bot') or 'لاكس') local namebot = {'امرني','قول ي عمري','سم ؟','تفضل','هلا'} name = math.random(#namebot) faederdx(msg.chat_id_, msg.id_, 1, namebot[name] , 1, 'md') return false end
+if text == 'بوت' and faeder11(msg) then  name_bot = (faederdx1:get('faeder:'..bot_id..'name_bot') or 'لاكس')  local faeder = {'ماني راد عليك الا لمن تناديني بأسمي .','يالبى الي يقول بوت ي ناس .'}  faeder2 = math.random(#faeder) faederdx(msg.chat_id_, msg.id_, 1, faeder[faeder2] , 1, 'md')  end
+if (text and text == (faederdx1:get('faeder:'..bot_id..'name_bot') or 'لاكس')) then name_bot = (faederdx1:get('faeder:'..bot_id..'name_bot') or 'لاكس') local namebot = {'. امرني','قول ي عمري','سم ؟','تفضل',' هلا'} name = math.random(#namebot) faederdx(msg.chat_id_, msg.id_, 1, namebot[name] , 1, 'md') return false end
 --     By Developer Faeder     -- 
 if text =='نقاطي' and faeder11(msg) then 
 if tonumber((faederdx1:get(FAEDER..'bot:add:num'..msg.chat_id_..msg.sender_user_id_) or 0)) == 0 then
@@ -4410,7 +4410,7 @@ faeder1 = "المطور 🎖."
 elseif is_sudoid(result.sender_user_id_) then
 faeder1 = "مطور ثانوي"
 elseif is_admin(result.sender_user_id_, msg.chat_id_) then
-faeder1 = "مطور رتبه ثالثه "
+faeder1 = "Legend 🎖 "
 elseif is_onall(result.sender_user_id_) then
 faeder1 = "مدير عام "
 elseif is_moall(result.sender_user_id_) then
@@ -4870,21 +4870,21 @@ end end
 --     By Developer Faeder     -- 
 -------- Set Sudo3
 if is_sudo(msg) then
-if text ==('رفع مطور رتبه ثالثه') or text ==('رفع مطور') or text ==('رفع Legand 🎖') and faeder11(msg) then
+if text ==('رفع Legend 🎖') or text ==('رفع مطور') or text ==('رفع Legend 🎖') and faeder11(msg) then
 function sudo_reply(extra, result, success)
 faederdx1:sadd(FAEDER..'bot:admins:',result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه Legand 🎖  \n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه Legend 🎖  \n❍ بواسطه ، "..renk_faeder(msg).."\n")
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),sudo_reply)
 end end 
-if text and text:match('^رفع مطور رتبه ثالثه @(.*)') and faeder11(msg) then
-local username = text:match('^رفع مطور رتبه ثالثه @(.*)')
+if text and text:match('^رفع Legend 🎖 @(.*)') and faeder11(msg) then
+local username = text:match('^رفع Legend 🎖 @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:sadd(FAEDER..'bot:admins:',result.id_)
-Send_Options(msg,result.id_,"reply","❍ تم رفعه مطور رتبه ثالثه𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.id_,"reply","❍ تم رفعه Legend 🎖𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
 else 
 faederdx(msg.chat_id_, msg.id_, 1, '*❍  المعرف غير صحيح*', 1, 'md')
 end end 
@@ -4892,17 +4892,17 @@ resolve_username(username,promreply)
 end
 --     By Developer Faeder     -- 
 -------- Rem Sudo3
-if text ==('تنزيل مطور رتبه ثالثه') or text ==('تنزيل Legand 🎖') or text ==('حذف مطور') and faeder11(msg) then
+if text ==('تنزيل Legend 🎖') or text ==('تنزيل Legend 🎖') or text ==('حذف مطور') and faeder11(msg) then
 function prom_reply(extra, result, success)
 faederdx1:srem(FAEDER..'bot:admins:',result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من Legand 🎖,\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من Legend 🎖,\n❍ بواسطه ، "..renk_faeder(msg).."\n")
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
 end end
-if text and text:match('^تنزيل مطور رتبه ثالثه @(.*)') and faeder11(msg) then
-local username = text:match('^تنزيل مطور رتبه ثالثه @(.*)')
+if text and text:match('^تنزيل Legend 🎖 @(.*)') and faeder11(msg) then
+local username = text:match('^تنزيل Legend 🎖 @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:srem(FAEDER..'bot:admins:',result.id_)
@@ -5050,7 +5050,7 @@ end end
 --     By Developer Faeder     -- 
 -------- Set Monsh
 if is_vpall(msg.sender_user_id_, msg.chat_id_) then
-if text ==('رفع منشئ اساسي') and faeder11(msg) then
+if text ==('رفع مالك ') and faeder11(msg) then
 function raf_reply(extra, result, success)
 faederdx1:sadd(FAEDER..'bot:monsh:'..msg.chat_id_,result.sender_user_id_)
 Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه منشئ اساسي𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
@@ -5059,8 +5059,8 @@ if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),raf_reply)
 end end
-if text and text:match('^رفع منشئ اساسي @(.*)') and faeder11(msg) then
-local username = text:match('^رفع منشئ اساسي @(.*)')
+if text and text:match('^رفع مالك  @(.*)') and faeder11(msg) then
+local username = text:match('^رفع مالك  @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:sadd(FAEDER..'bot:monsh:'..msg.chat_id_,result.id_)
@@ -5072,7 +5072,7 @@ resolve_username(username,promreply)
 end
 --     By Developer Faeder     -- 
 -------- Rem Monsh
-if text ==('تنزيل منشئ اساسي') and faeder11(msg) then
+if text ==('تنزيل منشئ اساسي') or text ==('تنزيل منشى اساسي') and faeder11(msg) then
 function prom_reply(extra, result, success)
 faederdx1:srem(FAEDER..'bot:monsh:'..msg.chat_id_,result.sender_user_id_)
 Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من الاساسيين𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
@@ -5081,8 +5081,8 @@ if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
 end end
-if text and text:match('^تنزيل منشئ اساسي @(.*)') and faeder11(msg) then
-local username = text:match('^تنزيل منشئ اساسي @(.*)')
+if text and text:match('^تنزيل مالك @(.*)') and faeder11(msg) then
+local username = text:match('^تنزيل مالك @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:srem(FAEDER..'bot:monsh:'..msg.chat_id_,result.id_)
@@ -5095,7 +5095,7 @@ end end
 --     By Developer Faeder     -- 
 -------- Set Monsh2
 if is_monsh(msg.sender_user_id_, msg.chat_id_) then
-if text ==('رفع منشئ') and faeder11(msg) then
+if text ==('رفع منشئ') or text ==('رفع منشى') and faeder11(msg) then
 function raf_reply(extra, result, success)
 faederdx1:sadd(FAEDER..'bot:monsh2:'..msg.chat_id_,result.sender_user_id_)
 Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه منشئ𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
@@ -5104,7 +5104,7 @@ if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),raf_reply)
 end end
-if text and text:match('^رفع منشئ @(.*)') and faeder11(msg) then
+if text and text:match('^رفع منشئ @(.*)') or text ==('رفع منشى') and faeder11(msg) then
 local username = text:match('^رفع منشئ @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
@@ -5117,7 +5117,7 @@ resolve_username(username,promreply)
 end
 --     By Developer Faeder     -- 
 -------- Rem Monsh2
-if text ==('تنزيل منشئ') and faeder11(msg) then
+if text ==('تنزيل منشئ') or text ==('تنزيل منشى') and faeder11(msg) then
 function prom_reply(extra, result, success)
 faederdx1:srem(FAEDER..'bot:monsh2:'..msg.chat_id_,result.sender_user_id_)
 Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من المنشئين𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
@@ -5126,7 +5126,7 @@ if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
 end end
-if text and text:match('^تنزيل منشئ @(.*)') and faeder11(msg) then
+if text and text:match('^تنزيل منشئ @(.*)') or text ==('تنزيل منشى') and faeder11(msg) then
 local username = text:match('^تنزيل منشئ @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
@@ -9469,7 +9469,7 @@ local text =  [[
 ❍ رفع « » تنزيل مدير عام 
 ❍ رفع « » تنزيل ادمن عام  
 ❍ رفع « » تنزيل مميز عام 
-❍ رفع « » تنزيل مطور رتبه ثالثه
+❍ رفع « » تنزيل Legend 🎖
          • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •
 ❍ مطور البوت : @]]..SudoFaeder..[[
 
@@ -9708,114 +9708,6 @@ io.popen("rm -rf ~/.telegram-cli/data/profile_photo/*")
 print("\27[31;47m\n          🚸) تم تحديث البوت (🚸          \n\27[0;34;49m\n") 
 faederdx(msg.chat_id_, msg.id_, 1, "❍ تم تحديث البوت ", 1, "md")
 end 
-if text and text:match("^(.*)$") then
-  if redis:get(bot_id.."botss:faederdx1:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
-  send(msg.chat_id_, msg.id_, '\nارسل لي الكلمه الان ')
-  redis:set(bot_id.."botss:faederdx1:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_, "true1")
-  redis:set(bot_id.."botss:faederdx1:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_, text)
-  redis:sadd(bot_id.."botss:faederdx1:List:Rd:Sudo", text)
-  return false end
-  end
-  if text and text:match("^(.*)$") then
-  if redis:get(bot_id.."botss:faederdx1:Set:On"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
-  send(msg.chat_id_, msg.id_,"تم حذف الرد من ردود المتعدده")
-  redis:del(bot_id..'botss:faederdx1:Add:Rd:Sudo:Text'..text)
-  redis:del(bot_id..'botss:faederdx1:Add:Rd:Sudo:Text1'..text)
-  redis:del(bot_id..'botss:faederdx1:Add:Rd:Sudo:Text2'..text)
-  redis:del(bot_id.."botss:faederdx1:Set:On"..msg.sender_user_id_..":"..msg.chat_id_)
-  redis:srem(bot_id.."botss:faederdx1:List:Rd:Sudo", text)
-  return false
-  end
-  end
-  if text == ("مسح الردود المتعدده") and Dev_Bots(msg) then
-  local list = redis:smembers(bot_id.."botss:faederdx1:List:Rd:Sudo")
-  for k,v in pairs(list) do  
-  redis:del(bot_id.."botss:faederdx1:Add:Rd:Sudo:Text"..v) 
-  redis:del(bot_id.."botss:faederdx1:Add:Rd:Sudo:Text1"..v) 
-  redis:del(bot_id.."botss:faederdx1:Add:Rd:Sudo:Text2"..v)   
-  redis:del(bot_id.."botss:faederdx1:List:Rd:Sudo")
-  end
-  send(msg.chat_id_, msg.id_,"تم حذف ردود المتعدده")
-  end
-  if text == ("الردود المتعدده") and Dev_Bots(msg) then 
-  local list = redis:smembers(bot_id.."botss:faederdx1:List:Rd:Sudo")
-  text = "\nقائمة ردود المتعدده \n━━━━━━━━\n"
-  for k,v in pairs(list) do
-  db = "رساله "
-  text = text..""..k.." => {"..v.."} => {"..db.."}\n"
-  end
-  if #list == 0 then
-  text = "لا توجد ردود متعدده"
-  end
-  send(msg.chat_id_, msg.id_,"["..text.."]")
-  end
-  if text == "اضف رد متعدد" and DeveloperBot1(msg) then
-  redis:set(bot_id.."botss:faederdx1:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,true)
-  return send(msg.chat_id_, msg.id_,"ارسل الرد الذي اريد اضافته")
-  end
-  if text == "حذف رد متعدد" and DeveloperBot1(msg) then
-  redis:set(bot_id.."botss:faederdx1:Set:On"..msg.sender_user_id_..":"..msg.chat_id_,true)
-  return send(msg.chat_id_, msg.id_,"ارسل الان الكلمه لحذفها ")
-  end
-  if text then  
-  local test = redis:get(bot_id.."botss:faederdx1:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-  if redis:get(bot_id.."botss:faederdx1:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true1" then
-  redis:set(bot_id.."botss:faederdx1:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd1')
-  if text then   
-  text = text:gsub('"',"") 
-  text = text:gsub('"',"") 
-  text = text:gsub("`","") 
-  text = text:gsub("*","") 
-  redis:set(bot_id.."botss:faederdx1:Add:Rd:Sudo:Text"..test, text)  
-  end  
-  send(msg.chat_id_, msg.id_,"تم حفظ الرد الاول ارسل الرد الثاني")
-  return false  
-  end  
-  end
-  if text then  
-  local test = redis:get(bot_id.."botss:faederdx1:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-  if redis:get(bot_id.."botss:faederdx1:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd1" then
-  redis:set(bot_id.."botss:faederdx1:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd2')
-  if text then   
-  text = text:gsub('"',"") 
-  text = text:gsub('"',"") 
-  text = text:gsub("`","") 
-  text = text:gsub("*","") 
-  redis:set(bot_id.."botss:faederdx1:Add:Rd:Sudo:Text1"..test, text)  
-  end  
-  send(msg.chat_id_, msg.id_,"تم حفظ الرد الثاني ارسل الرد الثالث")
-  return false  
-  end  
-  end
-  if text then  
-  local test = redis:get(bot_id.."botss:faederdx1:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-  if redis:get(bot_id.."botss:faederdx1:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd2" then
-  redis:set(bot_id.."botss:faederdx1:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd3')
-  if text then   
-  text = text:gsub('"',"") 
-  text = text:gsub('"',"") 
-  text = text:gsub("`","") 
-  text = text:gsub("*","") 
-  redis:set(bot_id.."botss:faederdx1:Add:Rd:Sudo:Text2"..test, text)  
-  end  
-  send(msg.chat_id_, msg.id_,"تم حفظ الرد")
-  return false  
-  end  
-  end
-  if text then
-  local Text = redis:get(bot_id.."botss:faederdx1:Add:Rd:Sudo:Text"..text)   
-  local Text1 = redis:get(bot_id.."botss:faederdx1:Add:Rd:Sudo:Text1"..text)   
-  local Text2 = redis:get(bot_id.."botss:faederdx1:Add:Rd:Sudo:Text2"..text)   
-  if Text or Text1 or Text2 then 
-  local texting = {
-  Text,
-  Text1,
-  Text2
-  }
-  Textes = math.random(#texting)
-  send(msg.chat_id_, msg.id_,texting[Textes])
-  end
-  end
 --     By Developer Faeder     -- 
 if text and text:match("^اضف رسائل (%d+)$") and is_monsh(msg.sender_user_id_, msg.chat_id_) and faeder11(msg) then  
 faeder0 = text:match("^اضف رسائل (%d+)$")
