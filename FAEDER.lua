@@ -4636,7 +4636,7 @@ local inline = {
 {{text="- قناة السورس ،",url="t.me/badboy_here"},
 {text="- مالك السورس،",url="t.me/bzzzw"}},
 }
-send_inline(msg.chat_id_, msg.id_, 1,'سورسس لاكس الجديد',nil,inline , 1, 'md')  
+send_inline(msg.chat_id_, ة'سورسسسس لاكس الجديد',nil,inline) 
 return false 
 end
 --     By Developer Faeder     -- 
