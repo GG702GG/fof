@@ -1339,7 +1339,7 @@ if Chat_Type == 'pv' then
 if text == '/start' then   
 function adding(extra,result,success)
 local users = faederdx1:scard(FAEDER.."bot:userss")
-faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❍  هذا ارسل ستارت للبوت \n❍ معرفه ← @"..(result.username_ or "لا يوجد").."\n❍ ايديه ← {"..msg.sender_user_id_.."}\n❍ اصبح عدد المشتركين { "..users.." }" , 1, 'html')
+faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❍  هذا ارسل ستارت للبوت \n❍ معرفه ⌯← @"..(result.username_ or "لا يوجد").."\n❍ ايديه ⌯← {"..msg.sender_user_id_.."}\n❍ اصبح عدد المشتركين { "..users.." }" , 1, 'html')
 end 
 getUser(msg.sender_user_id_,adding) 
 end end
@@ -1347,7 +1347,7 @@ end end
 if Chat_Type == 'pv' then 
 if text and text:match("/start hms(.*)_(%d+)") then 
 function adding(extra,result,success)
-faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❍ هذا ارسلو له همسه وجالس يشوفها \n❍ معرفه ← @"..(result.username_ or "لا يوجد").."\n❍ ايديه ← {"..msg.sender_user_id_.."}" , 1, 'html') 
+faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❍ هذا ارسلو له همسه وجالس يشوفها \n❍ معرفه ⌯← @"..(result.username_ or "لا يوجد").."\n❍ ايديه ⌯← {"..msg.sender_user_id_.."}" , 1, 'html') 
 end 
 getUser(msg.sender_user_id_,adding) 
 end end 
@@ -1669,7 +1669,7 @@ function faeder(extra,result,success)
 function  reslit(f1,f2)
 function faeder333(t1,t2)
 tdcli_function ({ ID = "GetChat", chat_id_ = bot_owner },function(arg,chat)  
-faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❍ تم طرد البوت من مجموعه  \n❍ معرف العضو ← @"..(result.username_ or "لا يوجد").."\n❍ ايدي العضو ← `"..msg.sender_user_id_.."`\n❍ معلومات المجموعه ،  \n\n❍ اسم المجموعه ←  *"..f2.title_.."*\n❍ ايدي المجموعه ← `"..msg.chat_id_.."`\n❍ رابط المجموعه ، \n❍ تم مسح جميع بياناتها\n" , 1, 'md')
+faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❍ تم طرد البوت من مجموعه  \n❍ معرف العضو ⌯← @"..(result.username_ or "لا يوجد").."\n❍ ايدي العضو ⌯← `"..msg.sender_user_id_.."`\n❍ معلومات المجموعه ،  \n\n❍ اسم المجموعه ⌯←  *"..f2.title_.."*\n❍ ايدي المجموعه ⌯← `"..msg.chat_id_.."`\n❍ رابط المجموعه ، \n❍ تم مسح جميع بياناتها\n" , 1, 'md')
 end,nil)   
 end
 tdcli_function ({
@@ -1808,7 +1808,7 @@ if link.ok == true then
 t2.invite_link_ = link.result
 end end 
 faederdx1:set(FAEDER.."bot:group:link"..msg.chat_id_,(t2.invite_link_ or "Error")) 
-faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❍ تم تفعيل مجموعه جديده  \n❍ معرف الضافني ← @"..(result.username_ or "لا يوجد").."\n❍ ايدي الضافني ← `"..msg.sender_user_id_.."`\n❍ معلومات المجموعه ،  \n\n❍ اسم المجموعه ←  *"..f2.title_.."*\n❍ ايدي المجموعه ← `"..msg.chat_id_.."`\n❍ رابط المجموعه ، \n❍ "..(t2.invite_link_ or "Error").."\n" , 1, 'md')
+faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❍ تم تفعيل مجموعه جديده  \n❍ معرف الضافني ⌯← @"..(result.username_ or "لا يوجد").."\n❍ ايدي الضافني ⌯← `"..msg.sender_user_id_.."`\n❍ معلومات المجموعه ،  \n\n❍ اسم المجموعه ⌯←  *"..f2.title_.."*\n❍ ايدي المجموعه ⌯← `"..msg.chat_id_.."`\n❍ رابط المجموعه ، \n❍ "..(t2.invite_link_ or "Error").."\n" , 1, 'md')
 end
 tdcli_function ({
 ID = "GetChannelFull",
@@ -3301,7 +3301,7 @@ local Added_Me = faederdx1:get(FAEDER.."Who:Added:Me"..msg.chat_id_..':'..msg.se
 if Added_Me then 
 tdcli_function ({ID = "GetUser",user_id_ = Added_Me},function(extra,result,success)
 local Name = '['..result.first_name_..'](tg://user?id='..result.id_..')'
-Text = '*❍ الشخص الذي ضافك هو* ← '..Name
+Text = '*❍ الشخص الذي ضافك هو* ⌯← '..Name
 sendText(msg.chat_id_,Text,msg.id_/2097152/0.5,'md')
 end,nil) else
 faederdx(msg.chat_id_, msg.id_, 1, '❍ انت دخلت عبر الرابط .', 1, 'md')
@@ -3382,12 +3382,12 @@ if faederdx1:get(FAEDER..'bot:cmds'..msg.chat_id_) and not is_momod(msg.sender_u
 print("Return False [Lock] [Cmd]")
 else  
 --     By Developer Faeder     -- 
-if text:match("^الرابط$") and faeder11(msg) then
-  if not faederdx1:get(FAEDER.."bot:tt:link:"..msg.chat_id_) then 
-  local link = faederdx1:get(FAEDER.."bot:group:link"..msg.chat_id_)
-  if link then
-  faederdx(msg.chat_id_, msg.id_, 1, "[❍ *رابط المجموعة* .]" (.. link), 1, "md")
-  else
+ if text:match("^الرابط$") and faeder11(msg) then
+if not faederdx1:get(FAEDER.."bot:tt:link:"..msg.chat_id_) then 
+local link = faederdx1:get(FAEDER.."bot:group:link"..msg.chat_id_)
+if link then
+faederdx(msg.chat_id_, msg.id_, 1, "❍ *رابط المجموعة* .\n\n" .. link, 1, "md")
+else 
 faederdx(msg.chat_id_, msg.id_, 1, '❍ لم يتم حفظ رابط المجموعه ارسل لي (ضع رابط) ليتم حفظه 📥 ،', 1, 'md')
 end else
 faederdx(msg.chat_id_, msg.id_, 1, '❍ الرابط معطل لا يمكن ارساله ،', 1, 'md')
@@ -3460,7 +3460,7 @@ t = "❍ قائمة الزخرفه ،\n         • ┉ • ┉ • ┉ • ┉ 
 i = 0
 for k,v in pairs(Zrf.ok) do
 i = i + 1
-t = t..i.." `"..v.."` \n"
+t = t..i.."⌯ `"..v.."` \n"
 end
 faederdx(msg.chat_id_, msg.id_, 1, t, 1, 'md')
 end
@@ -4636,7 +4636,7 @@ local inline = {
 {{text="- قناة السورس ،",url="t.me/badboy_here"},
 {text="- مالك السورس،",url="t.me/bzzzw"}},
 }
-send_inline(msg.chat_id_,'سورس لاكس الجديد ',nil,inline) 
+send_inline(msg.chat_id_,'سورسس لاكس الجديد',nil,inline) 
 return false 
 end
 --     By Developer Faeder     -- 
@@ -6349,12 +6349,12 @@ tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,
 if pho.total_count_ == 0 then
 photouser = ''
 else
-photouser = '\n❍ عدد صوره ← { '..pho.total_count_..' }'
+photouser = '\n❍ عدد صوره ⌯← { '..pho.total_count_..' }'
 end
 if pho.total_count_ == 0 then
 photouser1 = ''
 else
-photouser1 = '\n❍ عدد صوره ← { '..pho.total_count_..' }'
+photouser1 = '\n❍ عدد صوره ⌯← { '..pho.total_count_..' }'
 end
 if faederdx1:sismember(FAEDER..'bot:gban:',result.sender_user_id_) then
 Tkeed = 'محظور عام'
@@ -6394,23 +6394,23 @@ if data.first_name_ == false then
 faederdx(msg.chat_id_, msg.id_, 1,'*❍ الحساب محذوف*\n', 1, 'md')
 return false  end
 if data.username_ == false then
-text = '❍ ايديه ←{ `'..result.sender_user_id_..
-'` }\n❍ رتبته بلقروب ← { '..Renk..
-' }\n❍ رتبته بالبوت ← { '..faeder_renk(result.sender_user_id_, msg.chat_id_)..
+text = '❍ ايديه ⌯←{ `'..result.sender_user_id_..
+'` }\n❍ رتبته بلقروب ⌯← { '..Renk..
+' }\n❍ رتبته بالبوت ⌯← { '..faeder_renk(result.sender_user_id_, msg.chat_id_)..
 ' }\n'..photouser1..
-'\n❍ نوع القيود ← { '..Tkeed..
-' }\n❍ التواجد ← { '..tt..
-' }\n❍ نوع حسابه ← { '..noh..' }'
+'\n❍ نوع القيود ⌯← { '..Tkeed..
+' }\n❍ التواجد ⌯← { '..tt..
+' }\n❍ نوع حسابه ⌯← { '..noh..' }'
 monsend(msg,msg.chat_id_,text,data.id_) 
 else
-text = '❍ ايديه ←{ `'..result.sender_user_id_..
-'` }\n❍ معرفه ← { [@'..data.username_..']'..
-' } \n❍ رتبته بلقروب ← { '..Renk..
-' }\n❍ رتبته بالبوت ← { '..faeder_renk(result.sender_user_id_, msg.chat_id_)..
+text = '❍ ايديه ⌯←{ `'..result.sender_user_id_..
+'` }\n❍ معرفه ⌯← { [@'..data.username_..']'..
+' } \n❍ رتبته بلقروب ⌯← { '..Renk..
+' }\n❍ رتبته بالبوت ⌯← { '..faeder_renk(result.sender_user_id_, msg.chat_id_)..
 ' }'..photouser1..
-'\n❍ نوع القيود ← { '..Tkeed..
-' }\n❍ التواجد ← { '..tt..
-' }\n❍ نوع حسابه ← { '..noh..' }'
+'\n❍ نوع القيود ⌯← { '..Tkeed..
+' }\n❍ التواجد ⌯← { '..tt..
+' }\n❍ نوع حسابه ⌯← { '..noh..' }'
 faederdx(msg.chat_id_, msg.id_, 1, text, 1, 'md') 
 end end,nil) end,nil) end,nil) end 
 getMessage(msg.chat_id_, msg.reply_to_message_id_,id_by_reply) 
@@ -6426,11 +6426,11 @@ return false  end
 if res.type_.ID == "ChannelChatInfo" then 
 if res.type_.channel_.is_supergroup_ == false then
 local ch = 'قناة'
-local chn = '*❍ نوع الحساب ← { '..ch..' }\n❍ الايدي ← {*`'..res.id_..'`*}\n❍ المعرف ← {* [@'..username..'] *}\n❍ الاسم ← { *`'..res.title_..'`* }*'
+local chn = '*❍ نوع الحساب ⌯← { '..ch..' }\n❍ الايدي ⌯← {*`'..res.id_..'`*}\n❍ المعرف ⌯← {* [@'..username..'] *}\n❍ الاسم ⌯← { *`'..res.title_..'`* }*'
 faederdx(msg.chat_id_, msg.id_, 1,chn, 1, 'md')
 else
 local gr = 'مجموعه'
-local grr = '❍ نوع الحساب ← { '..gr..' }\n❍ الايدي ← {*`'..res.id_..'`*}\n❍ المعرف ← {* [@'..username..'] *}\n❍ الاسم ← { *`'..res.title_..'`* }*'
+local grr = '❍ نوع الحساب ⌯← { '..gr..' }\n❍ الايدي ⌯← {*`'..res.id_..'`*}\n❍ المعرف ⌯← {* [@'..username..'] *}\n❍ الاسم ⌯← { *`'..res.title_..'`* }*'
 faederdx(msg.chat_id_, msg.id_, 1,grr, 1, 'md')
 end
 return false  end
@@ -6441,7 +6441,7 @@ tdcli_function ({ID = "GetUser",user_id_ = res.id_},function(arg,data)
 if pho.total_count_ == 0 then
 photouser1 = ''
 else
-photouser1 = '\n❍ عدد صوره ← { '..pho.total_count_..' }'
+photouser1 = '\n❍ عدد صوره ⌯← { '..pho.total_count_..' }'
 end
 if faederdx1:sismember(FAEDER..'bot:gban:',res.id_) then
 Tkeed = 'محظور عام'
@@ -6480,14 +6480,14 @@ end
 if data.first_name_ == false then
 faederdx(msg.chat_id_, msg.id_, 1,'*❍ الحساب محذوف*\n', 1, 'md')
 return false  end
-text = '❍ ايديه ←{ `'..res.id_..
-'` }\n❍ معرفه ← { [@'..data.username_..']'..
-' } \n❍ رتبته بلقروب ← { '..Renk..
-' }\n❍ رتبته بالبوت ← { '..faeder_renk(res.id_, msg.chat_id_)..
+text = '❍ ايديه ⌯←{ `'..res.id_..
+'` }\n❍ معرفه ⌯← { [@'..data.username_..']'..
+' } \n❍ رتبته بلقروب ⌯← { '..Renk..
+' }\n❍ رتبته بالبوت ⌯← { '..faeder_renk(res.id_, msg.chat_id_)..
 ' }'..photouser1..
-'\n❍ نوع القيود ← { '..Tkeed..
-' }\n❍ التواجد ← { '..tt..
-' }\n❍ نوع حسابه ← { '..noh..' }'
+'\n❍ نوع القيود ⌯← { '..Tkeed..
+' }\n❍ التواجد ⌯← { '..tt..
+' }\n❍ نوع حسابه ⌯← { '..noh..' }'
 faederdx(msg.chat_id_, msg.id_, 1, text, 1, 'md') 
 end,nil) end,nil) end,nil) end end,nil)
 return false 
@@ -6504,12 +6504,12 @@ return false  end
 if pho.total_count_ == 0 then
 photouser = ''
 else
-photouser = '\n❍ عدد صوره ← { '..pho.total_count_..' }'
+photouser = '\n❍ عدد صوره ⌯← { '..pho.total_count_..' }'
 end
 if pho.total_count_ == 0 then 
 photouser1 = ''
 else
-photouser1 = '\n❍ عدد صوره ← { '..pho.total_count_..' }'
+photouser1 = '\n❍ عدد صوره ⌯← { '..pho.total_count_..' }'
 end
 if faederdx1:sismember(FAEDER..'bot:gban:',iduser) then
 Tkeed = 'محظور عام'
@@ -6549,23 +6549,23 @@ if data.first_name_ == false then
 faederdx(msg.chat_id_, msg.id_, 1,'*❍ الحساب محذوف *\n', 1, 'md')
 return false  end
 if data.username_ == false then
-text = '❍ ايديه ←{ `'..iduser..
-'` }\n❍ رتبته بلقروب ← { '..Renk..
-' }\n❍ رتبته بالبوت ← { '..faeder_renk(iduser, msg.chat_id_)..
+text = '❍ ايديه ⌯←{ `'..iduser..
+'` }\n❍ رتبته بلقروب ⌯← { '..Renk..
+' }\n❍ رتبته بالبوت ⌯← { '..faeder_renk(iduser, msg.chat_id_)..
 ' }\n'..photouser1..
-'\n❍ نوع القيود ← { '..Tkeed..
-' }\n❍ التواجد ← { '..tt..
-' }\n❍ نوع حسابه ← { '..noh..' }'
+'\n❍ نوع القيود ⌯← { '..Tkeed..
+' }\n❍ التواجد ⌯← { '..tt..
+' }\n❍ نوع حسابه ⌯← { '..noh..' }'
 monsend(msg,msg.chat_id_,text,iduser) 
 else
-text = '❍ ايديه ←{ `'..iduser..
-'` }\n❍ معرفه ← { [@'..data.username_..']'..
-' }\n❍ رتبته بلقروب ← { '..Renk..
-' }\n❍ رتبته بالبوت ← { '..faeder_renk(iduser, msg.chat_id_)..
+text = '❍ ايديه ⌯←{ `'..iduser..
+'` }\n❍ معرفه ⌯← { [@'..data.username_..']'..
+' }\n❍ رتبته بلقروب ⌯← { '..Renk..
+' }\n❍ رتبته بالبوت ⌯← { '..faeder_renk(iduser, msg.chat_id_)..
 ' }'..photouser1..
-'\n❍ نوع القيود ← { '..Tkeed..
-' }\n❍ التواجد ← { '..tt..
-' }\n❍ نوع حسابه ← { '..noh..' }'
+'\n❍ نوع القيود ⌯← { '..Tkeed..
+' }\n❍ التواجد ⌯← { '..tt..
+' }\n❍ نوع حسابه ⌯← { '..noh..' }'
 faederdx(msg.chat_id_, msg.id_, 1, text, 1, 'md') 
 end end,nil) end,nil) end,nil)
 return false 
@@ -7329,14 +7329,14 @@ local faederdx3 = #group - faederddx2
 if q == 0 then
 faederddx2 = ''
 else
-faederddx2 = '\n*❍ تم مسح ← { '..q..' } مجموعه من البوت*' 
+faederddx2 = '\n*❍ تم مسح ⌯← { '..q..' } مجموعه من البوت*' 
 end
 if w == 0 then
 faederddx1 = ''
 else
-faederddx1 = '\n*❍ تم مسح ← { '..w..' } قروب بسبب تنزيل البوت عضو*'
+faederddx1 = '\n*❍ تم مسح ⌯← { '..w..' } قروب بسبب تنزيل البوت عضو*'
 end
-faederdx(msg.chat_id_, msg.id_, 1,'*❍ عدد القروبات الان ← { '..#group..' }*'..faederddx1..''..faederddx2..'\n*❍ العدد الحقيقي الان ← ( '..faederdx3..' ) قروب*\n', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1,'*❍ عدد القروبات الان ⌯← { '..#group..' }*'..faederddx1..''..faederddx2..'\n*❍ العدد الحقيقي الان ⌯← ( '..faederdx3..' ) قروب*\n', 1, 'md')
 end end end,nil) end
 return false
 end
@@ -8475,7 +8475,7 @@ if link.ok == true then
   t2.invite_link_ = link.result
 end end
 faederdx1:set(FAEDER.."bot:group:link"..msg.chat_id_,(t2.invite_link_ or "@badboy_here")) 
-faederdx(msg.chat_id_, msg.id_, 1, "❍ المنشئ ← ["..monsh.."]\n\n❍ الرابط ، ["..title_name(chattid).."]("..(t2.invite_link_ or "t.me/badboy_here")..")\n❍ ايديها ← *"..msg.chat_id_.."*\n❍ عدد الاعضاء ← *"..data.member_count_.."* \n❍ عدد المدراء ← *"..Owner.."*\n❍ عدد المنشئين ← *"..Monsh.."*\n❍ عدد الادمنيه ← *"..Momod.."*\n❍ عدد المكتومين ← *"..Muted.."*\n❍ عدد المحظورين ← *"..Baned.."*\n❍ عدد المقيدين ← *"..Tkeed.."*\n❍ عدد المميزين ← *"..Vip.."*\n", 1,"md")
+faederdx(msg.chat_id_, msg.id_, 1, "❍ المنشئ ⌯← ["..monsh.."]\n\n❍ الرابط ، ["..title_name(chattid).."]("..(t2.invite_link_ or "t.me/badboy_here")..")\n❍ ايديها ⌯← *"..msg.chat_id_.."*\n❍ عدد الاعضاء ⌯← *"..data.member_count_.."* \n❍ عدد المدراء ⌯← *"..Owner.."*\n❍ عدد المنشئين ⌯← *"..Monsh.."*\n❍ عدد الادمنيه ⌯← *"..Momod.."*\n❍ عدد المكتومين ⌯← *"..Muted.."*\n❍ عدد المحظورين ⌯← *"..Baned.."*\n❍ عدد المقيدين ⌯← *"..Tkeed.."*\n❍ عدد المميزين ⌯← *"..Vip.."*\n", 1,"md")
 end
 tdcli_function ({
 ID = "GetChannelFull",
@@ -8495,7 +8495,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ للمطورين فقط ', 1, 'md')
 else 
 local leavegp = function(extra, result)
 if result.id_ then
-faederdx(msg.chat_id_, msg.id_, 1, "❍ المجموعه ← {" .. result.title_ .. "}\n❍ تمت المغادره منها بامر المطور ", 1, "md")
+faederdx(msg.chat_id_, msg.id_, 1, "❍ المجموعه ⌯← {" .. result.title_ .. "}\n❍ تمت المغادره منها بامر المطور ", 1, "md")
 faederdx(txt[2], 0, 1, '❍ بامر من المطور تم مغادره المجموعه\n❍ لاستعاده البوت راسل المطور ادناه \n         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •\n [❍ مطور البوت ](t.me/'..SudoFaeder..')', 1, 'md') 
 chat_leave(result.id_, bot_id)
 faederdx1:srem(FAEDER.."bot:groups", result.id_)
@@ -8619,7 +8619,7 @@ if link.ok == true then
 t2.invite_link_ = link.result
 end end  
 faederdx1:set(FAEDER.."bot:group:link"..msg.chat_id_,(t2.invite_link_ or "Error")) 
-faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❍ تم تفعيل مجموعه جديده  \n❍ معرف المطور ← @"..(result.username_ or "لا يوجد").."\n❍ ايدي المطور ← `"..msg.sender_user_id_.."`\n❍ معلومات المجموعه ،  \n\n❍ اسم المجموعه ←  *"..f2.title_.."*\n❍ ايدي المجموعه ← `"..msg.chat_id_.."`\n❍ رابط المجموعه ، \n❍ "..(t2.invite_link_ or "Error").."\n" , 1, 'md')
+faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❍ تم تفعيل مجموعه جديده  \n❍ معرف المطور ⌯← @"..(result.username_ or "لا يوجد").."\n❍ ايدي المطور ⌯← `"..msg.sender_user_id_.."`\n❍ معلومات المجموعه ،  \n\n❍ اسم المجموعه ⌯←  *"..f2.title_.."*\n❍ ايدي المجموعه ⌯← `"..msg.chat_id_.."`\n❍ رابط المجموعه ، \n❍ "..(t2.invite_link_ or "Error").."\n" , 1, 'md')
 end
 tdcli_function ({
 ID = "GetChannelFull",
@@ -8687,7 +8687,7 @@ if link.ok == true then
   t2.invite_link_ = link.result
 end end
 faederdx1:set(FAEDER.."bot:group:link"..msg.chat_id_,(t2.invite_link_ or "Error")) 
-faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❍ هناك من بحاجه للمساعده  \n❍ معرف الشخص ← @"..(result.username_ or "لا يوجد").."\n❍ ايدي الشخص ← `"..msg.sender_user_id_.."`\n❍ معلومات المجموعه ،  \n\n❍ اسم المجموعه ←  *"..f2.title_.."*\n❍ ايدي المجموعه ← `"..msg.chat_id_.."`\n❍ رابط المجموعه ، \n❍ "..(t2.invite_link_ or "Error").."\n" , 1, 'md')
+faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❍ هناك من بحاجه للمساعده  \n❍ معرف الشخص ⌯← @"..(result.username_ or "لا يوجد").."\n❍ ايدي الشخص ⌯← `"..msg.sender_user_id_.."`\n❍ معلومات المجموعه ،  \n\n❍ اسم المجموعه ⌯←  *"..f2.title_.."*\n❍ ايدي المجموعه ⌯← `"..msg.chat_id_.."`\n❍ رابط المجموعه ، \n❍ "..(t2.invite_link_ or "Error").."\n" , 1, 'md')
 end
 tdcli_function ({
 ID = "GetChannelFull",
@@ -8736,7 +8736,7 @@ file:close()
 local dxx = 'https://api.telegram.org/bot' .. tokenbot .. '/sendDocument'
 local dxxx = 'curl "' .. dxx .. '" -F "chat_id=' .. msg.chat_id_ .. '" -F "document=@' .. 'Groups_Bot.txt' .. '"'
 io.popen(dxxx)
-faederdx(msg.chat_id_, msg.id_, 1, '❍ عزيزي ← *'..result.first_name_..'*\n❍ جاري ارسال نسخه للمجموعات \n❍ تحتوي على *('..num..')* مجموعه\n         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •\n', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ عزيزي ⌯← *'..result.first_name_..'*\n❍ جاري ارسال نسخه للمجموعات \n❍ تحتوي على *('..num..')* مجموعه\n         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •\n', 1, 'md')
 sleep(1.5)
 faederdx(msg.chat_id_, msg.id_, 1, dxxx, 1, 'md')
 end
