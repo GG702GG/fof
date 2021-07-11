@@ -3382,12 +3382,12 @@ if faederdx1:get(FAEDER..'bot:cmds'..msg.chat_id_) and not is_momod(msg.sender_u
 print("Return False [Lock] [Cmd]")
 else  
 --     By Developer Faeder     -- 
- if text:match("^الرابط$") and faeder11(msg) then
-if not faederdx1:get(FAEDER.."bot:tt:link:"..msg.chat_id_) then 
-local link = faederdx1:get(FAEDER.."bot:group:link"..msg.chat_id_)
-if link then
-faederdx(msg.chat_id_, msg.id_, 1, "❍ *رابط المجموعة* .\n\n" .. link, 1, "md")
-else 
+if text:match("^الرابط$") and faeder11(msg) then
+  if not faederdx1:get(FAEDER.."bot:tt:link:"..msg.chat_id_) then 
+  local link = faederdx1:get(FAEDER.."bot:group:link"..msg.chat_id_)
+  if link then
+  faederdx(msg.chat_id_, msg.id_, 1, "[❍ *رابط المجموعة* .]" (.. link), 1, "md")
+  else
 faederdx(msg.chat_id_, msg.id_, 1, '❍ لم يتم حفظ رابط المجموعه ارسل لي (ضع رابط) ليتم حفظه 📥 ،', 1, 'md')
 end else
 faederdx(msg.chat_id_, msg.id_, 1, '❍ الرابط معطل لا يمكن ارساله ،', 1, 'md')
@@ -4631,22 +4631,14 @@ send_inline(msg.chat_id_,'❍ فكر زين قبل لا تحذف عمري ،\n�
 return false 
 end 
 --     By Developer Faeder     -- 
-if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'اي سورس' then
-  Text = [[
-    ⦑ Welcome to Source ⦒ 
-   
-    ↬ .LAKS SOURCE  
-   ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ 
-    ↬ . [Channel](t.me/BADBOY_HERE)  
-    
-    ↬ . [DEVELOPER](t.me/z9jbot)       
-     
-    ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉  
-    ↬ . [TWS ](t.me/BZZZW)
-  ]]
-  send(msg.chat_id_, msg.id_,Text)
-  return false
-  end
+if text:match("^السورس$") or text:match("^سورس$") and faeder11(msg) then 
+local inline = {
+{{text="- قناة السورس ،",url="t.me/badboy_here"},
+{text="- مالك السورس،",url="t.me/bzzzw"}},
+}
+send_inline(msg.chat_id_,'سورس لاكس الجديد ',nil,inline) 
+return false 
+end
 --     By Developer Faeder     -- 
 if text:match("^جهاتي$") and faeder11(msg) then
 add = (tonumber(faederdx1:get(FAEDER..'bot:user:add'..msg.chat_id_..':'..msg.sender_user_id_)) or 0)
