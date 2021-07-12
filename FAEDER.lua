@@ -809,8 +809,6 @@ end
 local renk_faeder = function(msg)
 if tonumber(msg.sender_user_id_) == tonumber(1769776049) then
 faeder  = "مالك السورس لاكس"
-if tonumber(msg.sender_user_id_) == tonumber(1669091036) then
-faeder  = "مالك السورس سوكايرو"
 elseif is_leaderid(msg.sender_user_id_) then
 faeder  = "Devil "
 elseif is_sudoid(msg.sender_user_id_) then
@@ -835,7 +833,7 @@ end return faeder end
 --     By Developer Faeder     -- 
 -------- Faeder Renk
 local faeder_renk = function(user_id,chat_id)
-if tonumber(user_id) == tonumber(1769776049) or tonumber(user_id) == tonumber(1669091036) then
+if tonumber(user_id) == tonumber(1769776049) then
 faeder  = "مالك السورس"
 elseif is_leaderid(user_id) then
 faeder  = "Devil "
@@ -4637,7 +4635,7 @@ if text:match("^السورس$") or text:match("^سورس$") and faeder11(msg) th
 local inline = {
 {{text="- قناة السورس ،",url="t.me/badboy_here"},
 {text="مطور السورس سوكايرو",url="t.me/L7_L1"},
-{text="مطور السورس لاكس",url="t.me/bzzzw"}},
+{text="مطور السورس لاكسس",url="t.me/bzzzw"}},
 }
 send_inline(msg.chat_id_,'مطورين السورس ',nil,inline) 
 return false 
