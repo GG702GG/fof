@@ -4767,7 +4767,7 @@ faederdx(msg.chat_id_, msg.id_, 1, nerkh, 1, "md")
 elseif faederdx1:get(FAEDER.."lang:gp:" .. msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, "❍ Bot not found ", 1, "md")
 else
-faederdx(msg.chat_id_, msg.id_, 1, "[Devil]("..SudoFaeder..")"",", 1, "md")
+faederdx(msg.chat_id_, msg.id_, 1, "[𝗦𝘂𝗱𝗼@]("..SudoFaeder.."),", 1, "md")
 end end end 
 --     By Developer Faeder     -- 
 if text and text:match('^امحطه @(.*)') and faeder11(msg) then 
