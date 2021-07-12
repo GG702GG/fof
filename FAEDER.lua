@@ -4633,9 +4633,9 @@ end
 --     By Developer Faeder     -- 
 if text:match("^السورس$") or text:match("^سورس$") and faeder11(msg) then 
 local inline = {
-{{text="𝘊𝘩𝘢𝘯𝘯𝘦𝘭 𝘚𝘰𝘶𝘳𝘤𝘦",url="https://t.me/badboy_here"}},
+{{text="- 𝘊𝘩𝘢𝘯𝘯𝘦𝘭 𝘚𝘰𝘶𝘳𝘤𝘦 .",url="https://t.me/badboy_here"}},
 }
-send_inline(msg.chat_id_,'[𝘋𝘦𝘷 𝘴𝘰𝘶𝘳𝘤𝘦 𝘚𝘶𝘬𝘢𝘪𝘳𝘰](https://t.me/L7_L1)\n[𝘋𝘦𝘷 𝘴𝘰𝘶𝘳𝘤𝘦 𝘓𝘢𝘬𝘴𝘪𝘴 .](https://t.me/bzzzw)',nil,inline) 
+send_inline(msg.chat_id_,'- [𝘋𝘦𝘷 𝘴𝘰𝘶𝘳𝘤𝘦 𝘚𝘶𝘬𝘢𝘪𝘳𝘰](https://t.me/L7_L1) .\n- [𝘋𝘦𝘷 𝘴𝘰𝘶𝘳𝘤𝘦 𝘓𝘢𝘬𝘴𝘪𝘴 .](https://t.me/bzzzw) .',nil,inline) 
 return false 
 end
 --     By Developer Faeder     -- 
