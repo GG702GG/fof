@@ -4767,7 +4767,7 @@ faederdx(msg.chat_id_, msg.id_, 1, nerkh, 1, "md")
 elseif faederdx1:get(FAEDER.."lang:gp:" .. msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, "❍ Bot not found ", 1, "md")
 else
-faederdx(msg.chat_id_, msg.id_, 1, "- 𝗦𝘂𝗱𝗼@"..SudoFaeder..",", 1, "md")
+faederdx(msg.chat_id_, msg.id_, 1, "- 𝐓𝐨 𝐂𝐨𝐧𝐭𝐢𝐧𝐮𝐞 𝐖𝐢𝐭𝐡 𝐓𝐡𝐞 𝐁𝐨𝐭 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫  𖠂\n\n- 𝗦𝘂𝗱𝗼 𖠙 @"..SudoFaeder..",", 1, "md")
 end end end 
 --     By Developer Faeder     -- 
 if text and text:match('^امحطه @(.*)') and faeder11(msg) then 
@@ -9679,10 +9679,10 @@ faederdx(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html')
 end
 --     By Developer Faeder     -- 
 if text == "تحديث السورس" and is_leader(msg) then 
-faederdx(msg.chat_id_, msg.id_, 1, '❍ جاري تحديث السورس الى الاصدار الجديد ', 1, 'md') 
+faederdx(msg.chat_id_, msg.id_, 1, '❍ جاري تحديث السورس الى الاضافات الجديده ', 1, 'md') 
 os.execute('rm -rf FAEDER.lua') 
 os.execute('wget https://raw.githubusercontent.com/laksis1500/fo/master/FAEDER.lua') 
-faederdx(msg.chat_id_, msg.id_, 1, '❍ تم تحديث السورس اكتشف المميزات الجديده الان ', 1, 'md') 
+faederdx(msg.chat_id_, msg.id_, 1, '❍ تم تحديث السورس اكتشف الاضافات الجديده الان او راسل مالك السورس لمعرفه الاضافات الجديده', 1, 'md') 
 dofile('FAEDER.lua')
 io.popen("rm -rf ~/.telegram-cli/data/audio/*")
 io.popen("rm -rf ~/.telegram-cli/data/document/*")
