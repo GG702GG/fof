@@ -98,10 +98,10 @@ return config
 end  
 _faederdx1 = load_faederdx1()  
 sudos = dofile("./config.lua") 
-bot_owner = {sudos.SUDO,1669091036}
-sudo_users = {sudos.sudo_users,1669091036} 
+bot_owner = sudos.SUDO 
+sudo_users = {sudos.sudo_users} 
 bot_id = sudos.bot_id 
-FAEDER = {sudos.bot_id,1669091036}
+FAEDER = sudos.bot_id
 SUDOUSERNAME = sudos.username
 tokenbot = sudos.token
 name_bot = (faederdx1:get(FAEDER..'name_bot') or 'لاكس')
