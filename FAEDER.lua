@@ -1483,12 +1483,12 @@ faederdx(msg.chat_id_, msg.id_, 1, Start_Source, 1, 'md')
 return false
 end end
 --     By Developer Faeder     -- 
-if text == 'تعطيل اليوتيوب' and Constructor(msg) then
+if text == 'تعطيل اليوتيوب' and is_owner(msg.sender_user_id_, msg.chat_id_) then
 send(msg.chat_id_,msg.id_,'\n• تم الامر بنجاح')
 database:set(bot_id.."dl_yt_dl"..msg.chat_id_,"close")
 return false
 end
-if text == 'تفعيل اليوتيوب' and Constructor(msg) then
+if text == 'تفعيل اليوتيوب' and is_owner(msg.sender_user_id_, msg.chat_id_) then
 send(msg.chat_id_,msg.id_,'\n• تم الامر بنجاح')
 database:set(bot_id.."dl_yt_dl"..msg.chat_id_,"open")
 return false
