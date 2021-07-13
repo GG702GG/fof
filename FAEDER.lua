@@ -5848,7 +5848,7 @@ local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
 local faeder_res = user_info_
 if user_info_ then
 if is_leaderid(result.sender_user_id_) == true then
-faederdx(msg.chat_id_, msg.id_, 1, "❍ *دزمها مبرمج السورس ذا Devil  والمبرمج ،*", 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, "❍ *دزمها مبرمج السورس ذا ماتقدر ترفعه او ترفع  Devil  والمبرمج ،*", 1, 'md')
 return false 
 end
 local hash = 'bot:donky:'..msg.chat_id_
