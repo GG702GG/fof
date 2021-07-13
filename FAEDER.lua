@@ -1483,46 +1483,36 @@ faederdx(msg.chat_id_, msg.id_, 1, Start_Source, 1, 'md')
 return false
 end end
 --     By Developer Faeder     -- 
-if text == 'تعطيل اليوتيوب' and is_owner(msg.sender_user_id_, msg.chat_id_) then
-send(msg.chat_id_,msg.id_,'\n• تم الامر بنجاح')
-database:set(bot_id.."dl_yt_dl"..msg.chat_id_,"close")
-return false
-end
-if text == 'تفعيل اليوتيوب' and is_owner(msg.sender_user_id_, msg.chat_id_) then
-send(msg.chat_id_,msg.id_,'\n• تم الامر بنجاح')
-database:set(bot_id.."dl_yt_dl"..msg.chat_id_,"open")
-return false
-end
-if text and text:match('^بصمه (.*)$')  and database:get(bot_id.."dl_yt_dl"..msg.chat_id_) == "open" then
-local Ttext = text:match('^بصمه (.*)$')
-local InfoSearch = https.request('https://mode-dev.tk/tg/search.php?search='..URL.escape(Ttext))
-local JsonSearch = JSON.decode(InfoSearch)
-for k,vv in pairs(JsonSearch.results) do
-if k == 1 then
-local GetStart = io.popen('downloadsh '..vv.url):read('*all')
-if GetStart and GetStart:match('(.*)oksend(.*)') then
-print('download Mp3 done ...\nName : '..vv.title..'\nIdLink : '..vv.url)
-sendVoice(msg.chat_id_, msg.id_, 0, 1, nil,'./'..vv.url..'.mp3',vv.title,'- '..vv.title..'\n- @iiDark','@iiDark')
-os.execute('rm -rf ./'..vv.url..'.mp3')
-end
-end
-end
-end
-if text and text:match('^صوت (.*)$')  and database:get(bot_id.."dl_yt_dl"..msg.chat_id_) == "open" then
-local Ttext = text:match('^صوت (.*)$')
-local InfoSearch = https.request('https://mode-dev.tk/tg/search.php?search='..URL.escape(Ttext))
-local JsonSearch = JSON.decode(InfoSearch)
-for k,vv in pairs(JsonSearch.results) do
-if k == 1 then
-local GetStart = io.popen('downloadsh '..vv.url):read('*all')
-if GetStart and GetStart:match('(.*)oksend(.*)') then
-print('download Mp3 done ...\nName : '..vv.title..'\nIdLink : '..vv.url)
-sendAudio(msg.chat_id_,msg.id_,'./'..vv.url..'.mp3',vv.title,'- '..vv.title..'\n- @BADBOY_HERE','@BADBOY_HERE')
-os.execute('rm -rf ./'..vv.url..'.mp3')
-end
-end
-end
-end
+if text and text:match('^بصمه (.*)$') then
+  local Ttext = text:match('^بصمه (.*)$')
+  local InfoSearch = https.request('https://mode-dev.tk/tg/search.php?search='..URL.escape(Ttext))
+  local JsonSearch = JSON.decode(InfoSearch)
+  for k,vv in pairs(JsonSearch.results) do
+  if k == 1 then
+  local GetStart = io.popen('downloadsh '..vv.url):read('*all')
+  if GetStart and GetStart:match('(.*)oksend(.*)') then
+  print('download Mp3 done ...\nName : '..vv.title..'\nIdLink : '..vv.url)
+  sendVoice(msg.chat_id_, msg.id_, 0, 1, nil,'./'..vv.url..'.mp3',vv.title,'- '..vv.title..'\n- @iiDark','@iiDark')
+  os.execute('rm -rf ./'..vv.url..'.mp3')
+  end
+  end
+  end
+  end
+  if text and text:match('^صوت (.*)$') then
+  local Ttext = text:match('^صوت (.*)$')
+  local InfoSearch = https.request('https://mode-dev.tk/tg/search.php?search='..URL.escape(Ttext))
+  local JsonSearch = JSON.decode(InfoSearch)
+  for k,vv in pairs(JsonSearch.results) do
+  if k == 1 then
+  local GetStart = io.popen('downloadsh '..vv.url):read('*all')
+  if GetStart and GetStart:match('(.*)oksend(.*)') then
+  print('download Mp3 done ...\nName : '..vv.title..'\nIdLink : '..vv.url)
+  sendAudio(msg.chat_id_,msg.id_,'./'..vv.url..'.mp3',vv.title,'- '..vv.title..'\n- @BADBOY_HERE','@BADBOY_HERE')
+  os.execute('rm -rf ./'..vv.url..'.mp3')
+  end
+  end
+  end
+  end
 --     By Developer Faeder     -- 
 if text == 'احسب عمرك' then faederdx(msg.chat_id_, msg.id_, 1, '❍ من خلال البوت يمكنك حساب عمرك ،\n❍ فقط قم بارسال امر احسب + مواليدك الى البوت ،\n❍ بالتنسيق التالي مثال : احسب 1996/1/17', 1, 'md') end
 if text == 'الابراج' then faederdx(msg.chat_id_, msg.id_, 1, '❍ من خلال البوت يمكنك معرفه توقعات برجك ،\n❍ فقط قم بارسال امر برج + اسم البرج ،\n❍ مثال : برج الدلو ،\n❍ لمعرفه برجك قم بالرجوع الى قسم حساب العمر ،', 1, 'md') end
