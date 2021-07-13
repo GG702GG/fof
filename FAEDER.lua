@@ -5853,7 +5853,7 @@ return false
 end
 local hash = 'bot:donky:'..msg.chat_id_
 if faederdx1:sismember(FAEDER..hash, result.sender_user_id_) then
-Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ هو حمار اصلا حبي 🤫😂\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ هو حمار اصلا روق\n")
 else
 Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ تم رفعه حمار 🐴\n")
 end
@@ -5872,7 +5872,7 @@ local hash = 'bot:donky:'..msg.chat_id_
 if not faederdx1:sismember(FAEDER..hash, result.sender_user_id_) then
 Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ لم يتم رفعه حمار\n")
 else
-Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ يبقه حمار بس حنزله لخاطرك 🤫😂\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ بيجلس حمار بس بنزله لعيونك\n")
 faederdx1:srem(FAEDER..hash, result.sender_user_id_)
 end end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,donky_by_reply)
