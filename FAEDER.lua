@@ -13,6 +13,7 @@ https = require ("ssl.https")
 http  = require ("socket.http")
 json = dofile('./JSON.lua')
 JSON = dofile('./dkjson.lua')
+redis = dofile("./lib/reedis.lua").connect("127.0.0.1", 6379)
 notify = lgi.require('Notify') 
 notify.init ("Telegram updates")
 chats = {}
