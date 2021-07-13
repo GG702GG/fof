@@ -293,10 +293,7 @@ local function replace(str, o, n)
     return str
   end
 end
--- locale independent num2str and str2num functions
-do
-    local monitor_loop = function(client)
-        local monitoring = true
+
 -- locale independent num2str and str2num functions
 local decpoint, numfilter
 
