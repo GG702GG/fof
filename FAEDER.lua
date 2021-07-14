@@ -1102,7 +1102,7 @@ end end
 --     By Developer Faeder     -- 
 if text and faederdx1:get(bot_id.."Set:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_) == "true" then
 faederdx1:set(bot_id.."Set:Cmd:Group:New"..msg.chat_id_,text)
-faederdx(msg.chat_id_, msg.id_, 1, "❍ ارسل لي الامر الجديد ،", 1, 'html')
+faederdx(msg.chat_id_, msg.id_, 1, "❍ ارسل لي الامر الجديد ", 1, 'html')
 faederdx1:del(bot_id.."Set:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_)
 faederdx1:set(bot_id.."Set:Cmd:Group1"..msg.chat_id_..":"..msg.sender_user_id_,"true1") 
 return false
@@ -1111,14 +1111,14 @@ if text and faederdx1:get(bot_id.."Set:Cmd:Group1"..msg.chat_id_..":"..msg.sende
 local NewCmd = faederdx1:get(bot_id.."Set:Cmd:Group:New"..msg.chat_id_)
 faederdx1:set(bot_id.."Set:Cmd:Group:New1"..msg.chat_id_..":"..text,NewCmd)
 faederdx1:sadd(bot_id.."List:Cmd:Group:New"..msg.chat_id_,text)
-faederdx(msg.chat_id_, msg.id_, 1, "❍ تم حفظ الامر الجديد ،", 1, 'html')
+faederdx(msg.chat_id_, msg.id_, 1, "❍ تم حفظ الامر الجديد ", 1, 'html')
 faederdx1:del(bot_id.."Set:Cmd:Group1"..msg.chat_id_..":"..msg.sender_user_id_)
 return false
 end
 --     By Developer Faeder     -- 
 if text == "الاوامر المضافه" and faeder11(msg) then
 local list = faederdx1:smembers(bot_id.."List:Cmd:Group:New"..msg.chat_id_.."")
-t = "❍ قائمه الاوامر المضافه ،\n         ───────────────\n"
+t = "❍ قائمه الاوامر المضافه \n         ───────────────\n"
 for k,v in pairs(list) do
 Cmds = faederdx1:get(bot_id.."Set:Cmd:Group:New1"..msg.chat_id_..":"..v)
 if Cmds then 
@@ -1228,19 +1228,19 @@ function by_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 local fdrt = faederdx1:get(bot_id.."Comd:New:rt:bot:"..faederrt..msg.chat_id_)
 if fdrt == "مميز" and is_momod(msg.sender_user_id_, msg.chat_id_) then
-faederdx(msg.chat_id_, msg.id_, 1, '❍ *العضو* ( ['..data.first_name_..'](t.me/'..(data.username_ or 'faeder_ch')..')'..' )\n❍ *تم رفعه ( '..faederrt..' )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ العضو ⇠ ( ['..data.first_name_..'](t.me/'..(data.username_ or 'faeder_ch')..')'..' )\n❍ *تم رفعه ( '..faederrt..' )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
 faederdx1:set(bot_id.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,faederrt) 
 faederdx1:sadd(FAEDER..'bot:vipmem:'..msg.chat_id_, result.sender_user_id_)
 elseif fdrt == "ادمن" and is_owner(msg.sender_user_id_, msg.chat_id_) then 
-faederdx(msg.chat_id_, msg.id_, 1, '❍ *العضو* ( ['..data.first_name_..'](t.me/'..(data.username_ or 'faeder_ch')..')'..' )\n❍ *تم رفعه ( '..faederrt..' )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ العضو ⇠ ( ['..data.first_name_..'](t.me/'..(data.username_ or 'faeder_ch')..')'..' )\n❍ *تم رفعه ( '..faederrt..' )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
 faederdx1:set(bot_id.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,faederrt)
 faederdx1:sadd(FAEDER..'bot:momod:'..msg.chat_id_, result.sender_user_id_)
 elseif fdrt == "مدير" and is_monsh(msg.sender_user_id_, msg.chat_id_) then
-faederdx(msg.chat_id_, msg.id_, 1, '❍ *العضو* ( ['..data.first_name_..'](t.me/'..(data.username_ or 'faeder_ch')..')'..' )\n❍ *تم رفعه ( '..faederrt..' )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ العضو ⇠ ( ['..data.first_name_..'](t.me/'..(data.username_ or 'faeder_ch')..')'..' )\n❍ *تم رفعه ( '..faederrt..' )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
 faederdx1:set(bot_id.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,faederrt)  
 faederdx1:sadd(FAEDER..'bot:owners:'..msg.chat_id_, result.sender_user_id_)
 elseif fdrt == "عضو" and is_momod(msg.sender_user_id_, msg.chat_id_) then
-faederdx(msg.chat_id_, msg.id_, 1, '❍ *العضو* ( ['..data.first_name_..'](t.me/'..(data.username_ or 'faeder_ch')..')'..' )\n❍ *تم رفعه ( '..faederrt..' )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ العضو ⇠ ( ['..data.first_name_..'](t.me/'..(data.username_ or 'faeder_ch')..')'..' )\n❍ *تم رفعه ( '..faederrt..' )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
 end end,nil) end   
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil)
 end end
@@ -1252,19 +1252,19 @@ function by_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 local fdrt = faederdx1:get(bot_id.."Comd:New:rt:bot:"..faederrt..msg.chat_id_)
 if fdrt == "مميز" and is_momod(msg.sender_user_id_, msg.chat_id_) then
-faederdx(msg.chat_id_, msg.id_, 1, '❍ *العضو* ( ['..data.first_name_..'](t.me/'..(data.username_ or 'faeder_ch')..')'..' )\n❍ *تم تنزيله من ( '..faederrt..' )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ العضو ⇠ ( ['..data.first_name_..'](t.me/'..(data.username_ or 'faeder_ch')..')'..' )\n❍ *تم تنزيله من ( '..faederrt..' )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
 faederdx1:srem(FAEDER..'bot:vipmem:'..msg.chat_id_, result.sender_user_id_)
 faederdx1:del(bot_id.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif fdrt == "ادمن" and is_owner(msg.sender_user_id_, msg.chat_id_) then 
-faederdx(msg.chat_id_, msg.id_, 1, '❍ *العضو* ( ['..data.first_name_..'](t.me/'..(data.username_ or 'faeder_ch')..')'..' )\n❍ *تم تنزيله من ( '..faederrt..' )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ العضو ⇠ ( ['..data.first_name_..'](t.me/'..(data.username_ or 'faeder_ch')..')'..' )\n❍ *تم تنزيله من ( '..faederrt..' )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
 faederdx1:srem(FAEDER..'bot:momod:'..msg.chat_id_, result.sender_user_id_)
 faederdx1:del(bot_id.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif fdrt == "مدير" and is_monsh(msg.sender_user_id_, msg.chat_id_) then
-faederdx(msg.chat_id_, msg.id_, 1, '❍ *العضو* ( ['..data.first_name_..'](t.me/'..(data.username_ or 'faeder_ch')..')'..' )\n❍ *تم تنزيله من ( '..faederrt..' )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ العضو ⇠ ( ['..data.first_name_..'](t.me/'..(data.username_ or 'faeder_ch')..')'..' )\n❍ *تم تنزيله من ( '..faederrt..' )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
 faederdx1:srem(FAEDER..'bot:owners:'..msg.chat_id_, result.sender_user_id_)
 faederdx1:del(bot_id.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif fdrt == "عضو" and is_momod(msg.sender_user_id_, msg.chat_id_) then
-faederdx(msg.chat_id_, msg.id_, 1, '❍ *العضو* ( ['..data.first_name_..'](t.me/'..(data.username_ or 'faeder_ch')..')'..' )\n❍ *تم تنزيله من ( '..faederrt..' )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ العضو ⇠ ( ['..data.first_name_..'](t.me/'..(data.username_ or 'faeder_ch')..')'..' )\n❍ *تم تنزيله من ( '..faederrt..' )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
 end end,nil) end   
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil)
 end end
@@ -4903,7 +4903,7 @@ if is_sudo(msg) then
 if text ==('رفع Legend 🎖') or text ==('رفع مطور') or text ==('رفع Legend 🎖') and faeder11(msg) then
 function sudo_reply(extra, result, success)
 faederdx1:sadd(FAEDER..'bot:admins:',result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه Legend 🎖  \n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه Legend 🎖  \n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
@@ -4914,7 +4914,7 @@ local username = text:match('^رفع Legend 🎖 @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:sadd(FAEDER..'bot:admins:',result.id_)
-Send_Options(msg,result.id_,"reply","❍ تم رفعه Legend 🎖𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.id_,"reply","❍ تم رفعه Legend 🎖𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 else 
 faederdx(msg.chat_id_, msg.id_, 1, '*❍  المعرف غير صحيح*', 1, 'md')
 end end 
@@ -4925,7 +4925,7 @@ end
 if text ==('تنزيل Legend 🎖') or text ==('تنزيل Legend 🎖') or text ==('حذف مطور') and faeder11(msg) then
 function prom_reply(extra, result, success)
 faederdx1:srem(FAEDER..'bot:admins:',result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من Legend 🎖,\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من Legend 🎖,\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
@@ -4936,7 +4936,7 @@ local username = text:match('^تنزيل Legend 🎖 @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:srem(FAEDER..'bot:admins:',result.id_)
-Send_Options(msg,result.id_,"reply","❍ تم تنزيله من المطورين𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.id_,"reply","❍ تم تنزيله من المطورين𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 else 
 faederdx(msg.chat_id_, msg.id_, 1, '*❍  المعرف غير صحيح*', 1, 'md')
 end end 
@@ -4948,7 +4948,7 @@ if is_admin(msg.sender_user_id_, msg.chat_id_) then
 if text ==('رفع مدير عام') and faeder11(msg) then
 function raf_reply(extra, result, success)
 faederdx1:sadd(FAEDER..'bot:onall:',result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه مدير عام𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه مدير عام𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
@@ -4959,7 +4959,7 @@ local username = text:match('^رفع مدير عام @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:sadd(FAEDER..'bot:onall:',result.id_)
-Send_Options(msg,result.id_,"reply","❍ تم رفعه مدير عام𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.id_,"reply","❍ تم رفعه مدير عام𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 else 
 faederdx(msg.chat_id_, msg.id_, 1, '*❍  المعرف غير صحيح*', 1, 'md')
 end end 
@@ -4970,7 +4970,7 @@ end
 if text ==('تنزيل مدير عام') and faeder11(msg) then
 function prom_reply(extra, result, success)
 faederdx1:srem(FAEDER..'bot:onall:',result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من المدراء𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من المدراء𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
@@ -4981,7 +4981,7 @@ local username = text:match('^تنزيل مدير عام @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:srem(FAEDER..'bot:onall:',result.id_)
-Send_Options(msg,result.id_,"reply","❍ تم تنزيله من المدراء𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.id_,"reply","❍ تم تنزيله من المدراء𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 else 
 faederdx(msg.chat_id_, msg.id_, 1, '*❍  المعرف غير صحيح*', 1, 'md')
 end end 
@@ -4993,7 +4993,7 @@ if is_onall(msg.sender_user_id_, msg.chat_id_) and faeder11(msg) then
 if text ==('رفع ادمن عام') then
 function raf_reply(extra, result, success)
 faederdx1:sadd(FAEDER..'bot:moall:',result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه ادمن عام𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه ادمن عام𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
@@ -5004,7 +5004,7 @@ local username = text:match('^رفع ادمن عام @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:sadd(FAEDER..'bot:moall:',result.id_)
-Send_Options(msg,result.id_,"reply","❍ تم رفعه ادمن عام𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.id_,"reply","❍ تم رفعه ادمن عام𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 else 
 faederdx(msg.chat_id_, msg.id_, 1, '*❍  المعرف غير صحيح*', 1, 'md')
 end end 
@@ -5015,7 +5015,7 @@ end
 if text ==('تنزيل ادمن عام') and faeder11(msg) then
 function prom_reply(extra, result, success)
 faederdx1:srem(FAEDER..'bot:moall:',result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من الادمنيه𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من الادمنيه\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
@@ -5026,7 +5026,7 @@ local username = text:match('^تنزيل ادمن عام @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:srem(FAEDER..'bot:moall:',result.id_)
-Send_Options(msg,result.id_,"reply","❍ تم تنزيله من الادمنيه𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.id_,"reply","❍ تم تنزيله من الادمنيه\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 else 
 faederdx(msg.chat_id_, msg.id_, 1, '*❍  المعرف غير صحيح*', 1, 'md')
 end end 
@@ -5038,7 +5038,7 @@ if is_moall(msg.sender_user_id_, msg.chat_id_) then
 if text ==('رفع مميز عام') and faeder11(msg) then
 function raf_reply(extra, result, success)
 faederdx1:sadd(FAEDER..'bot:vpall:',result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه مميز عام𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه مميز عام𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
@@ -5049,7 +5049,7 @@ local username = text:match('^رفع مميز عام @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:sadd(FAEDER..'bot:vpall:',result.id_)
-Send_Options(msg,result.id_,"reply","❍ تم رفعه مميز عام𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.id_,"reply","❍ تم رفعه مميز عام𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 else 
 faederdx(msg.chat_id_, msg.id_, 1, '*❍  المعرف غير صحيح*', 1, 'md')
 end end 
@@ -5060,7 +5060,7 @@ end
 if text ==('تنزيل مميز عام') and faeder11(msg) then
 function prom_reply(extra, result, success)
 faederdx1:srem(FAEDER..'bot:vpall:',result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من المميزين𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من المميزين𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
@@ -5071,7 +5071,7 @@ local username = text:match('^تنزيل مميز عام @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:srem(FAEDER..'bot:vpall:',result.id_)
-Send_Options(msg,result.id_,"reply","❍ تم تنزيله من المميزين𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.id_,"reply","❍ تم تنزيله من المميزين𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 else 
 faederdx(msg.chat_id_, msg.id_, 1, '*❍  المعرف غير صحيح*', 1, 'md')
 end end 
@@ -5083,7 +5083,7 @@ if is_vpall(msg.sender_user_id_, msg.chat_id_) then
 if text ==('رفع منشئ اساسي') and faeder11(msg) then
 function raf_reply(extra, result, success)
 faederdx1:sadd(FAEDER..'bot:monsh:'..msg.chat_id_,result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه منشئ اساسي𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه منشئ اساسي𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
@@ -5094,7 +5094,7 @@ local username = text:match('^رفع منشئ اساسي @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:sadd(FAEDER..'bot:monsh:'..msg.chat_id_,result.id_)
-Send_Options(msg,result.id_,"reply","❍ تم رفعه منشئ اساسي𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.id_,"reply","❍ تم رفعه منشئ اساسي𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 else 
 faederdx(msg.chat_id_, msg.id_, 1, '*❍  المعرف غير صحيح*', 1, 'md')
 end end 
@@ -5105,7 +5105,7 @@ end
 if text ==('تنزيل منشئ اساسي') and faeder11(msg) then
 function prom_reply(extra, result, success)
 faederdx1:srem(FAEDER..'bot:monsh:'..msg.chat_id_,result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من الاساسيين𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من الاساسيين𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
@@ -5116,7 +5116,7 @@ local username = text:match('^تنزيل منشئ اساسي @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:srem(FAEDER..'bot:monsh:'..msg.chat_id_,result.id_)
-Send_Options(msg,result.id_,"reply","❍ تم تنزيله من الاساسيين𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.id_,"reply","❍ تم تنزيله من الاساسيين𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 else 
 faederdx(msg.chat_id_, msg.id_, 1, '*❍  المعرف غير صحيح*', 1, 'md')
 end end 
@@ -5128,7 +5128,7 @@ if is_monsh(msg.sender_user_id_, msg.chat_id_) then
 if text ==('رفع منشئ') and faeder11(msg) then
 function raf_reply(extra, result, success)
 faederdx1:sadd(FAEDER..'bot:monsh2:'..msg.chat_id_,result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه منشئ𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه منشئ𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
@@ -5139,7 +5139,7 @@ local username = text:match('^رفع منشئ @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:sadd(FAEDER..'bot:monsh2:'..msg.chat_id_,result.id_)
-Send_Options(msg,result.id_,"reply","❍ ❍ تم رفعه منشئ𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.id_,"reply","❍ ❍ تم رفعه منشئ𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 else 
 faederdx(msg.chat_id_, msg.id_, 1, '*❍  المعرف غير صحيح*', 1, 'md')
 end end 
@@ -5150,7 +5150,7 @@ end
 if text ==('تنزيل منشئ') and faeder11(msg) then
 function prom_reply(extra, result, success)
 faederdx1:srem(FAEDER..'bot:monsh2:'..msg.chat_id_,result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من المنشئين𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من المنشئين𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
@@ -5161,7 +5161,7 @@ local username = text:match('^تنزيل منشئ @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:srem(FAEDER..'bot:monsh2:'..msg.chat_id_,result.id_)
-Send_Options(msg,result.id_,"reply","❍ تم تنزيله من المنشئين𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.id_,"reply","❍ تم تنزيله من المنشئين𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 else 
 faederdx(msg.chat_id_, msg.id_, 1, '*❍  المعرف غير صحيح*', 1, 'md')
 end end 
@@ -5173,7 +5173,7 @@ if is_monsh2(msg.sender_user_id_, msg.chat_id_) then
 if text ==('رفع مدير') and faeder11(msg) then
 function prom_reply(extra, result, success)
 faederdx1:sadd(FAEDER..'bot:owners:'..msg.chat_id_,result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه مدير𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه مدير𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 end  
 if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
@@ -5184,7 +5184,7 @@ local username = text:match('^رفع مدير @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:sadd(FAEDER..'bot:owners:'..msg.chat_id_,result.id_)
-Send_Options(msg,result.id_,"reply","❍ تم رفعه مدير𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.id_,"reply","❍ تم رفعه مدير𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 else 
 faederdx(msg.chat_id_, msg.id_, 1, '*❍  المعرف غير صحيح*', 1, 'md')
 end end 
@@ -5195,7 +5195,7 @@ end
 if text ==('تنزيل مدير') and faeder11(msg) then
 function prom_reply(extra, result, success)
 faederdx1:srem(FAEDER..'bot:owners:'..msg.chat_id_,result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من المدراء𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من المدراء𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
@@ -5206,7 +5206,7 @@ local username = text:match('^تنزيل مدير @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:srem(FAEDER..'bot:owners:'..msg.chat_id_,result.id_)
-Send_Options(msg,result.id_,"reply","❍ تم تنزيله من المدراء𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.id_,"reply","❍ تم تنزيله من المدراء𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 else 
 faederdx(msg.chat_id_, msg.id_, 1, '*❍  المعرف غير صحيح*', 1, 'md')
 end end 
@@ -5218,7 +5218,7 @@ if is_owner(msg.sender_user_id_, msg.chat_id_) then
 if text ==('رفع ادمن') and faeder11(msg) then
 function prom_reply(extra, result, success)
 faederdx1:sadd(FAEDER..'bot:momod:'..msg.chat_id_,result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه ادمن𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه ادمن𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
@@ -5229,7 +5229,7 @@ local username = text:match('^رفع ادمن @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:sadd(FAEDER..'bot:momod:'..msg.chat_id_,result.id_)
-Send_Options(msg,result.id_,"reply","❍ تم رفعه ادمن𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.id_,"reply","❍ تم رفعه ادمن𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 else 
 faederdx(msg.chat_id_, msg.id_, 1, '*❍  المعرف غير صحيح*', 1, 'md')
 end end 
@@ -5240,7 +5240,7 @@ end
 if text ==('تنزيل ادمن') and faeder11(msg) then
 function prom_reply(extra, result, success)
 faederdx1:srem(FAEDER..'bot:momod:'..msg.chat_id_,result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من الادمنيه𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من الادمنيه\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
@@ -5251,7 +5251,7 @@ local username = text:match('^تنزيل ادمن @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:srem(FAEDER..'bot:momod:'..msg.chat_id_,result.id_)
-Send_Options(msg,result.id_,"reply","❍ تم تنزيله من الادمنيه𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.id_,"reply","❍ تم تنزيله من الادمنيه\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 else 
 faederdx(msg.chat_id_, msg.id_, 1, '*❍  المعرف غير صحيح*', 1, 'md')
 end end 
@@ -5263,7 +5263,7 @@ if is_momod(msg.sender_user_id_, msg.chat_id_) then
 if text ==('رفع مميز') and faeder11(msg) then
 function prom_reply(extra, result, success)
 faederdx1:sadd(FAEDER..'bot:vipmem:'..msg.chat_id_,result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه مميز𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ تم رفعه مميز𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
@@ -5274,7 +5274,7 @@ local username = text:match('^رفع مميز @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:sadd(FAEDER..'bot:vipmem:'..msg.chat_id_,result.id_)
-Send_Options(msg,result.id_,"reply","❍ تم رفعه مميز𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.id_,"reply","❍ تم رفعه مميز𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 else 
 faederdx(msg.chat_id_, msg.id_, 1, '*❍  المعرف غير صحيح*', 1, 'md')
 end end 
@@ -5285,7 +5285,7 @@ end
 if text ==('تنزيل مميز') and faeder11(msg) then
 function prom_reply(extra, result, success)
 faederdx1:srem(FAEDER..'bot:vipmem:'..msg.chat_id_,result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من المميزين𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ تم تنزيله من المميزين𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
@@ -5296,7 +5296,7 @@ local username = text:match('^تنزيل مميز @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:srem(FAEDER..'bot:vipmem:'..msg.chat_id_,result.id_)
-Send_Options(msg,result.id_,"reply","❍ تم تنزيله من المميزين𓍢\n❍ بواسطه ، "..renk_faeder(msg).."\n")
+Send_Options(msg,result.id_,"reply","❍ تم تنزيله من المميزين𓍢\n❍ بواسطه ⇠ "..renk_faeder(msg).."\n")
 else 
 faederdx(msg.chat_id_, msg.id_, 1, '*❍  المعرف غير صحيح*', 1, 'md')
 end end 
@@ -5420,7 +5420,7 @@ local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
 local faeder_res = user_info_
 if user_info_ then
 HTTPS.request("https://api.telegram.org/bot" .. tokenbot .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=True&can_delete_messages=True&can_invite_users=True&can_restrict_members=True&can_pin_messages=True&can_promote_members=false")
-faederdx(msg.chat_id_, msg.id_, 1, '❍ *العضو* ( ['..faeder_res..'] )\n❍ *تم رفعه ( ادمن بلقروب ) *\n❍ *بواسطه ( '..renk_faeder(msg)..' )*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ العضو ⇠ ( ['..faeder_res..'] )\n❍ *تم رفعه ( ادمن بلقروب ) *\n❍ *بواسطه ( '..renk_faeder(msg)..' )*', 1, 'md')
 end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,promote_by_reply)
 end
@@ -5440,7 +5440,7 @@ local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
 local faeder_res = user_info_
 if user_info_ then
 HTTPS.request("https://api.telegram.org/bot" .. tokenbot .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=True&can_delete_messages=True&can_invite_users=True&can_restrict_members=True&can_pin_messages=True&can_promote_members=True")
-faederdx(msg.chat_id_, msg.id_, 1, '❍ *العضو* ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم رفعه ( ادمن بلقروب بكل الصلاحيات )\n❍ صلاحياته الان \n❍ تغيير اسم المجموعه \n❍ حذف الرسائل \n❍ الدعوه بالرابط \n❍ تثبيت الرسائل \n❍ اضافه مشرفين *', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ العضو ⇠ ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم رفعه ( ادمن بلقروب بكل الصلاحيات )\n❍ صلاحياته الان \n❍ تغيير اسم المجموعه \n❍ حذف الرسائل \n❍ الدعوه بالرابط \n❍ تثبيت الرسائل \n❍ اضافه مشرفين *', 1, 'md')
 end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,promote_by_reply)
 end
@@ -5450,7 +5450,7 @@ local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
 local faeder_res = user_info_ 
 if user_info_ then
 HTTPS.request("https://api.telegram.org/bot" .. tokenbot .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=false&can_delete_messages=True&can_invite_users=True&can_restrict_members=True&can_pin_messages=True&can_promote_members=false")
-faederdx(msg.chat_id_, msg.id_, 1, '❍ *العضو* ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم الغاء ( خاصيه تغيير الاسم )\n❍ صلاحياته الان \n❍ حذف الرسائل \n❍ الدعوه بالرابط \n❍ تثبيت الرسائل*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ العضو ⇠ ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم الغاء ( خاصيه تغيير الاسم )\n❍ صلاحياته الان \n❍ حذف الرسائل \n❍ الدعوه بالرابط \n❍ تثبيت الرسائل*', 1, 'md')
 end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,promote_by_reply)
 end
@@ -5460,7 +5460,7 @@ local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
 local faeder_res = user_info_ 
 if user_info_ then
 HTTPS.request("https://api.telegram.org/bot" .. tokenbot .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=false&can_delete_messages=True&can_invite_users=True&can_restrict_members=True&can_pin_messages=false&can_promote_members=false")
-faederdx(msg.chat_id_, msg.id_, 1, '❍ *العضو* ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم الغاء ( خاصيه التثبيت )\n❍ صلاحياته الان \n❍ حذف الرسائل \n❍ الدعوه بالرابط *', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ العضو ⇠ ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم الغاء ( خاصيه التثبيت )\n❍ صلاحياته الان \n❍ حذف الرسائل \n❍ الدعوه بالرابط *', 1, 'md')
 end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,promote_by_reply)
 end
@@ -5501,11 +5501,11 @@ if is_momod(result.sender_user_id_, result.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '❍ لا تستطيع حظر ، '..faeder_renk(result.sender_user_id_, msg.chat_id_), 1, 'md')
 else
 if faederdx1:sismember(FAEDER..faeder, result.sender_user_id_) then
-Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ تم حظره سابقا𓍢\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ تم حظره سابقا𓍢\n")
 chat_kick(result.chat_id_, result.sender_user_id_)
 else
 faederdx1:sadd(FAEDER..faeder, result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ تم حظره بنجاح𓍢\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ تم حظره بنجاح𓍢\n")
 chat_kick(result.chat_id_, result.sender_user_id_)
 end end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,ban_by_reply)
@@ -5524,10 +5524,10 @@ if is_momod(result.id_, msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '❍ لا تستطيع حظر ، '..faeder_renk(result.id_, msg.chat_id_), 1, 'md')
 else
 if faederdx1:sismember(FAEDER..faeder, result.id_) then
-Send_Options(msg,result.id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ تم حظره سابقا𓍢\n")
+Send_Options(msg,result.id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ تم حظره سابقا𓍢\n")
 else
 faederdx1:sadd(FAEDER..faeder, result.id_)
-Send_Options(msg,result.id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ تم حظره بنجاح𓍢\n")
+Send_Options(msg,result.id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ تم حظره بنجاح𓍢\n")
 chat_kick(msg.chat_id_, result.id_)
 end end end end
 resolve_username(faeder_res[2],ban_by_username)
@@ -5546,7 +5546,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ لا تستطيع حظر ، '..faeder_re
 else
 faederdx1:sadd(FAEDER..'bot:banned:'..msg.chat_id_, res[2])
 chat_kick(msg.chat_id_, res[2])
-faederdx(msg.chat_id_, msg.id_, 1, '❍ *العضو* ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم ( حظره ) من المجموعه ،*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ العضو ⇠ ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم ( حظره ) من المجموعه ،*', 1, 'md')
 end end end
 --     By Developer Faeder     -- 
 if text:match("^طرد$") and msg.reply_to_message_id_ ~= 0 and is_momod(msg.sender_user_id_, msg.chat_id_) and faeder11(msg) then
@@ -5558,7 +5558,7 @@ end
 if is_momod(result.sender_user_id_, result.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '❍ لا تستطيع طرد ، '..faeder_renk(result.sender_user_id_, msg.chat_id_), 1, 'md')
 else
-Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ تم طرده بنجاح𓍢\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ تم طرده بنجاح𓍢\n")
 chat_kick(result.chat_id_, result.sender_user_id_)
 end end
 getMessage(msg.chat_id_,msg.reply_to_message_id_,kick_reply)
@@ -5575,7 +5575,7 @@ if result.id_ then
 if is_momod(result.id_, msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '❍ لا تستطيع طرد ، '..faeder_renk(result.id_, msg.chat_id_), 1, 'md')
 else
-Send_Options(msg,result.id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ تم طرده بنجاح𓍢\n")
+Send_Options(msg,result.id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ تم طرده بنجاح𓍢\n")
 chat_kick(msg.chat_id_, result.id_)
 end end end
 resolve_username(faeder_res[2],ban_by_username)
@@ -5593,7 +5593,7 @@ if is_momod(res[2], msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '❍ لا تستطيع طرد ، '..faeder_renk(res[2], msg.chat_id_), 1, 'md')
 else
 chat_kick(msg.chat_id_, res[2])
-faederdx(msg.chat_id_, msg.id_, 1, '❍ *العضو* ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم ( طرده ) من المجموعه ،*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ العضو ⇠ ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم ( طرده ) من المجموعه ،*', 1, 'md')
 end end end
 --     By Developer Faeder     -- 
 if text:match("^الغاء حظر$") and msg.reply_to_message_id_ ~= 0 and is_momod(msg.sender_user_id_, msg.chat_id_) and faeder11(msg) then
@@ -5601,11 +5601,11 @@ function faeder(extra, result, success)
 function unban_by_reply(extra, result, success)
 local faeder = 'bot:banned:'..msg.chat_id_
 if not faederdx1:sismember(FAEDER..faeder, result.sender_user_id_) then
-Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ لم يتم حظره سابقا𓍢\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ لم يتم حظره سابقا𓍢\n")
 else  
 faederdx1:srem(FAEDER..faeder, result.sender_user_id_)
 tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = msg.chat_id_, user_id_ = result.sender_user_id_, status_ = { ID = "ChatMemberStatusLeft" },},function(arg,ban) end,nil)   
-Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ تم الغاء حظره𓍢\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ تم الغاء حظره𓍢\n")
 end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,unban_by_reply)
 end
@@ -5617,11 +5617,11 @@ local res = {string.match(text, "^(الغاء حظر) @(.*)$")}
 function unban_by_username(extra, result, success)
 if result.id_ then
 if not faederdx1:sismember(FAEDER..'bot:banned:'..msg.chat_id_, result.id_) then
-Send_Options(msg,result.id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ لم يتم حظره سابقا𓍢\n")
+Send_Options(msg,result.id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ لم يتم حظره سابقا𓍢\n")
 else 
 faederdx1:srem(FAEDER..'bot:banned:'..msg.chat_id_, result.id_)
 tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = msg.chat_id_, user_id_ = result.id_, status_ = { ID = "ChatMemberStatusLeft" },},function(arg,ban) end,nil)
-Send_Options(msg,result.id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ تم الغاء حظره𓍢\n")
+Send_Options(msg,result.id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ تم الغاء حظره𓍢\n")
 end else 
 text = '❍ *المعرف غير صحيح*'
 end
@@ -5635,7 +5635,7 @@ local res = {string.match(text, "^(الغاء حظر) (%d+)$")}
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. res[2])
 local faeder_res = user_info_ if user_info_ then
 if not faederdx1:sismember(FAEDER..'bot:banned:'..msg.chat_id_, res[2]) then
-faederdx(msg.chat_id_, msg.id_, 1, '❍ *العضو* ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *لم يتم ( حظره ) سابقا*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ العضو ⇠ ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *لم يتم ( حظره ) سابقا*', 1, 'md')
 else 
 faederdx1:srem(FAEDER..'bot:banned:'..msg.chat_id_, res[2])
 tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = msg.chat_id_, user_id_ = res[2] , status_ = { ID = "ChatMemberStatusLeft" },},function(arg,ban) end,nil)   
@@ -5650,7 +5650,7 @@ if is_leaderid(result.sender_user_id_) == true then
 faederdx(msg.chat_id_, msg.id_, 1, "❍ *لا تستطيع حظر Devil  ،*", 1, 'md')
 return false 
 end
-Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ تم حظره من "..gps.." مجموعه𓍢\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ تم حظره من "..gps.." مجموعه𓍢\n")
 faederdx1:sadd(FAEDER..faeder, result.sender_user_id_)
 chat_kick(result.chat_id_, result.sender_user_id_)
 end
@@ -5666,7 +5666,7 @@ if is_leaderid(result.id_) == true then
 faederdx(msg.chat_id_, msg.id_, 1, "❍ *لا تستطيع حظر Devil  ،*", 1, 'md')
 return false 
 end
-Send_Options(msg,result.id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ تم حظره من "..gps.." مجموعه𓍢\n")
+Send_Options(msg,result.id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ تم حظره من "..gps.." مجموعه𓍢\n")
 faederdx1:sadd(FAEDER..'bot:gban:', result.id_)
 chat_kick(msg.chat_id_, result.id_)
 end end
@@ -5683,7 +5683,7 @@ if is_leaderid(res[2]) == true then
 faederdx(msg.chat_id_, msg.id_, 1, "❍ *لا تستطيع حظر Devil  ،*", 1, 'md')
 return false 
 end
-faederdx(msg.chat_id_, msg.id_, 1, '❍ *العضو* ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم حظره من ( '..gps..' ) مجموعه*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ العضو ⇠ ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم حظره من ( '..gps..' ) مجموعه*', 1, 'md')
 end
 faederdx1:sadd(FAEDER..faeder, res[2])
 chat_kick(msg.chat_id_, res[2])
@@ -5694,7 +5694,7 @@ function ungban_by_reply(extra, result, success)
 local gps = faederdx1:scard(FAEDER.."bot:groups")
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
 local faeder_res = user_info_ if user_info_ then
-Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ تم الغاء حظره ، كتمه من "..gps.." مجموعه𓍢\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ تم الغاء حظره ، كتمه من "..gps.." مجموعه𓍢\n")
 end
 faederdx1:srem(FAEDER..'bot:gban:', result.sender_user_id_)
 faederdx1:srem(FAEDER..'bot:mutedall:', result.sender_user_id_)
@@ -5708,7 +5708,7 @@ local faeder_res = {string.match(text, "^(الغاء العام) @(.*)$")}
 local gps = faederdx1:scard(FAEDER.."bot:groups")
 function ungban_by_username(extra, result, success)
 if result.id_ then
-Send_Options(msg,result.id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ تم الغاء حظره ، كتمه من "..gps.." مجموعه𓍢\n")
+Send_Options(msg,result.id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ تم الغاء حظره ، كتمه من "..gps.." مجموعه𓍢\n")
 tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = msg.chat_id_, user_id_ = result.id_, status_ = { ID = "ChatMemberStatusLeft" },},function(arg,ban) end,nil)
 faederdx1:srem(FAEDER..'bot:gban:', result.id_)
 faederdx1:srem(FAEDER..'bot:mutedall:', result.id_)
@@ -5721,7 +5721,7 @@ local res = {string.match(text, "^(الغاء العام) (%d+)$")}
 local gps = faederdx1:scard(FAEDER.."bot:groups")
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. res[2])
 local faeder_res = user_info_ if user_info_ then
-faederdx(msg.chat_id_, msg.id_, 1, '❍ *العضو* ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم الغاء حظره ، كتمه من ( '..gps..' ) مجموعه*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ العضو ⇠ ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم الغاء حظره ، كتمه من ( '..gps..' ) مجموعه*', 1, 'md')
 faederdx1:srem(FAEDER..'bot:gban:', res[2])
 faederdx1:srem(FAEDER..'bot:mutedall:', res[2])
 tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = msg.chat_id_, user_id_ = ap[2] , status_ = { ID = "ChatMemberStatusLeft" },},function(arg,ban) end,nil)   
@@ -5741,7 +5741,7 @@ faederdx(msg.chat_id_, msg.id_, 1, "❍ *لا تستطيع كتم Devil  ،*", 1
 return false 
 end
 faederdx1:sadd(FAEDER..'bot:mutedall:', result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ تم كتمه في "..gps.." مجموعه𓍢\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ تم كتمه في "..gps.." مجموعه𓍢\n")
 end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,muteall_by_reply)
 end
@@ -5755,7 +5755,7 @@ if is_leaderid(result.id_) == true then
 faederdx(msg.chat_id_, msg.id_, 1, "❍ *لا تستطيع كتم Devil  ،*", 1, 'md')
 return false 
 end
-Send_Options(msg,result.id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ تم كتمه في "..gps.." مجموعه𓍢\n")
+Send_Options(msg,result.id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ تم كتمه في "..gps.." مجموعه𓍢\n")
 faederdx1:sadd(FAEDER..'bot:mutedall:', result.id_)
 end end
 resolve_username(faeder_res[2],muteall_by_username)
@@ -5771,7 +5771,7 @@ faederdx(msg.chat_id_, msg.id_, 1, "❍ *لا تستطيع كتم Devil  ،*", 1
 return false 
 end
 faederdx1:sadd(FAEDER..'bot:mutedall:', res[2])
-faederdx(msg.chat_id_, msg.id_, 1, '❍ *العضو* ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم كتمه في ( '..gps..' ) مجموعه*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ العضو ⇠ ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم كتمه في ( '..gps..' ) مجموعه*', 1, 'md')
 end end
 --     By Developer Faeder     -- 
 if text:match("^كتم$") and msg.reply_to_message_id_ ~= 0 and is_momod(msg.sender_user_id_, msg.chat_id_) and faeder11(msg) then
@@ -5788,7 +5788,7 @@ if is_momod(result.sender_user_id_, msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '❍ لا تستطيع كتم ، '..faeder_renk(result.sender_user_id_, msg.chat_id_), 1, 'md')
 else 
 faederdx1:sadd(FAEDER..'bot:muted:'..msg.chat_id_, result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ تم  كتمه𓍢\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ تم  كتمه𓍢\n")
 end end 
 getMessage(msg.chat_id_, msg.reply_to_message_id_,mute_by_reply)
 end
@@ -5806,10 +5806,10 @@ if is_momod(result.id_, msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '❍ لا تستطيع كتم ، '..faeder_renk(result.id_, msg.chat_id_), 1, 'md')
 else
 if faederdx1:sismember(FAEDER..faeder, result.id_) then
-Send_Options(msg,result.id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ تم كتمه سابقا𓍢\n")
+Send_Options(msg,result.id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ تم كتمه سابقا𓍢\n")
 else
 faederdx1:sadd(FAEDER..faeder, result.id_)
-Send_Options(msg,result.id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ تم كتمه بنجاح𓍢\n")
+Send_Options(msg,result.id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ تم كتمه بنجاح𓍢\n")
 end end end end
 resolve_username(faeder_res[2],mute_by_username)
 end
@@ -5826,10 +5826,10 @@ if is_momod(res[2], msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '❍ لا تستطيع كتم ، '..faeder_renk(res[2], msg.chat_id_), 1, 'md')
 else
 if faederdx1:sismember(FAEDER..'bot:muted:'..msg.chat_id_, res[2]) then
-faederdx(msg.chat_id_, msg.id_, 1, '❍ *العضو* ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم  ( كتمه ) سابقا ،*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ العضو ⇠ ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم  ( كتمه ) سابقا ،*', 1, 'md')
 end
 faederdx1:sadd(FAEDER..'bot:muted:'..msg.chat_id_, res[2])
-faederdx(msg.chat_id_, msg.id_, 1, '❍ *العضو* ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم  ( كتمه ) ،*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ العضو ⇠ ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم  ( كتمه ) ،*', 1, 'md')
 end end end
 --     By Developer Faeder     -- 
 if text:match("^الغاء كتم$") and msg.reply_to_message_id_ ~= 0 and is_momod(msg.sender_user_id_, msg.chat_id_) and faeder11(msg) then
@@ -5838,10 +5838,10 @@ local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
 local faeder = 'bot:muted:'..msg.chat_id_
 local faeder_res = user_info_ if user_info_ then
 if not faederdx1:sismember(FAEDER..faeder, result.sender_user_id_) then
-Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ لم يتم كتمه سابقا𓍢\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ لم يتم كتمه سابقا𓍢\n")
 else
 faederdx1:srem(FAEDER..faeder, result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ تم الغاء كتمه𓍢\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ تم الغاء كتمه𓍢\n")
 end end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,unmute_by_reply)
 end
@@ -5853,9 +5853,9 @@ local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.id_)
 local faeder_res = user_info_ 
 if result.id_ then
 if not faederdx1:sismember(FAEDER..'bot:muted:'..msg.chat_id_, result.id_) then
-Send_Options(msg,result.id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ لم يتم كتمه سابقا𓍢\n")
+Send_Options(msg,result.id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ لم يتم كتمه سابقا𓍢\n")
 else
-Send_Options(msg,result.id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ تم الغاء كتمه بنجاح𓍢\n")
+Send_Options(msg,result.id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ تم الغاء كتمه بنجاح𓍢\n")
 faederdx1:srem(FAEDER..'bot:muted:'..msg.chat_id_, result.id_)
 end end end
 resolve_username(res[2],unmute_by_username)
@@ -5866,10 +5866,10 @@ local res = {string.match(text, "^(الغاء كتم) (%d+)$")}
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. res[2])
 local faeder_res = user_info_ if user_info_ then
 if not faederdx1:sismember(FAEDER..'bot:muted:'..msg.chat_id_, res[2]) then
-Send_Options(msg,result.id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ لم يتم كتمه سابقا𓍢\n")
+Send_Options(msg,result.id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ لم يتم كتمه سابقا𓍢\n")
 else
 faederdx1:srem(FAEDER..'bot:muted:'..msg.chat_id_, res[2])
-Send_Options(msg,result.id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ تم الغاء كتمه بنجاح𓍢\n")
+Send_Options(msg,result.id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ تم الغاء كتمه بنجاح𓍢\n")
 end end end end
 --     By Developer Faeder     -- 
 if msg.reply_to_message_id_ ~= 0  then
@@ -5884,9 +5884,9 @@ return false
 end
 local hash = 'bot:donky:'..msg.chat_id_
 if faederdx1:sismember(FAEDER..hash, result.sender_user_id_) then
-Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ هو حمار اصلا روق\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ هو حمار اصلا روق\n")
 else
-Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ تم رفعه حمار 🐴\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ تم رفعه حمار 🐴\n")
 end
 faederdx1:sadd(FAEDER..hash, result.sender_user_id_)
 end end
@@ -5901,9 +5901,9 @@ local faeder_res = user_info_
 if user_info_ then
 local hash = 'bot:donky:'..msg.chat_id_
 if not faederdx1:sismember(FAEDER..hash, result.sender_user_id_) then
-Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ لم يتم رفعه حمار\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ لم يتم رفعه حمار\n")
 else
-Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ بيجلس حمار بس بنزله لعيونك\n")
+Send_Options(msg,result.sender_user_id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ بيجلس حمار بس بنزله لعيونك\n")
 faederdx1:srem(FAEDER..hash, result.sender_user_id_)
 end end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,donky_by_reply)
@@ -5924,7 +5924,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❍ لا تستطيع تقييد ، '..faede
 else 
 HTTPS.request("https://api.telegram.org/bot"..tokenbot.."/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.sender_user_id_.."")
 faederdx1:sadd(FAEDER..'tkeed:'..msg.chat_id_, result.sender_user_id_)
-Send_Options(msg,result.id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ تم تقييده بنجاح𓍢\n")
+Send_Options(msg,result.id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ تم تقييده بنجاح𓍢\n")
 end end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,mute_by_reply)
 end
@@ -5941,7 +5941,7 @@ return false
 end 
 HTTPS.request("https://api.telegram.org/bot" .. tokenbot .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.sender_user_id_.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")
 faederdx1:srem(FAEDER..'tkeed:'..msg.chat_id_, result.sender_user_id_)
-Send_Options(msg,result.id_,"reply","❍ بواسطه ، "..renk_faeder(msg).."\n❍ تم الغاء تقييده بنجاح𓍢\n")
+Send_Options(msg,result.id_,"reply","❍ بواسطه ⇠ "..renk_faeder(msg).."\n❍ تم الغاء تقييده بنجاح𓍢\n")
 end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,mute_by_reply)
 end end end
@@ -5960,7 +5960,7 @@ return false end
 if is_momod(result.sender_user_id_, msg.chat_id_) then 
 faederdx(msg.chat_id_, msg.id_, 1, '❍ لا تستطيع كتم ، '..faeder_renk(result.sender_user_id_, msg.chat_id_), 1, 'md') else 
 Mute_time(msg.chat_id_,result.sender_user_id_,msg.date_+num1) 
-faederdx(msg.chat_id_, msg.id_, 1, '❍ *العضو* ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم كتمه لمده ( '..mutept[1]..' ) دقيقه ،*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ العضو ⇠ ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم كتمه لمده ( '..mutept[1]..' ) دقيقه ،*', 1, 'md')
 faederdx1:sadd(FAEDER..'bot:mutet:'..msg.chat_id_,result.sender_user_id_) end end 
 if tonumber(msg.reply_to_message_id_) == 0 then else
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, mut_time,nil) end end
@@ -5979,7 +5979,7 @@ return false end
 if is_momod(result.sender_user_id_, msg.chat_id_) then 
 faederdx(msg.chat_id_, msg.id_, 1, '❍ لا تستطيع كتم ، '..faeder_renk(result.sender_user_id_, msg.chat_id_), 1, 'md') else 
 Mute_time(msg.chat_id_,result.sender_user_id_,msg.date_+num1) 
-faederdx(msg.chat_id_, msg.id_, 1, '❍ *العضو* ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم كتمه لمده ( '..mutept[1]..' ) ساعه ،*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ العضو ⇠ ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم كتمه لمده ( '..mutept[1]..' ) ساعه ،*', 1, 'md')
 faederdx1:sadd(FAEDER..'bot:mutet:'..msg.chat_id_,result.sender_user_id_) end end
 if tonumber(msg.reply_to_message_id_) == 0 then else
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, mut_time,nil) end end 
@@ -5998,7 +5998,7 @@ return false end
 if is_momod(result.sender_user_id_, msg.chat_id_) then 
 faederdx(msg.chat_id_, msg.id_, 1, '❍ لا تستطيع كتم ، '..faeder_renk(result.sender_user_id_, msg.chat_id_), 1, 'md') else 
 Mute_time(msg.chat_id_,result.sender_user_id_,msg.date_+num1) 
-faederdx(msg.chat_id_, msg.id_, 1, '❍ *العضو* ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم كتمه لمده ( '..mutept[1]..' ) يوم ،*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❍ العضو ⇠ ( ['..faeder_res..'] )\n❍ *بواسطه ( '..renk_faeder(msg)..' )*\n❍ *تم كتمه لمده ( '..mutept[1]..' ) يوم ،*', 1, 'md')
 faederdx1:sadd(FAEDER..'bot:mutet:'..msg.chat_id_,result.sender_user_id_) end end
 if tonumber(msg.reply_to_message_id_) == 0 then else
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, mut_time,nil) end end 
