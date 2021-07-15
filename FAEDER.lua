@@ -8975,213 +8975,24 @@ faederdx1:set(FAEDER.."delrep_sudo",msg.content_.text_)
 return false 
 end end
 ---------laks------------
-if text == "اضف رد متعدد" and Is_sudo(msg) then
- 
-  faederdx1:set(bot_id.."botss:FAEDER:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,true)
-  return send(msg.chat_id_, msg.id_,"ارسل الرد الذي اريد اضافته")
-  end
-  if text == "حذف رد متعدد" and Is_sudo(msg) then
-   
-  faederdx1:set(bot_id.."botss:FAEDER:Set:On"..msg.sender_user_id_..":"..msg.chat_id_,true)
-  return send(msg.chat_id_, msg.id_,"ارسل الان الكلمه لحذفها ")
-  end
-  if text then  
-  local test = faederdx1:get(bot_id.."botss:FAEDER:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-  if faederdx1:get(bot_id.."botss:FAEDER:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true1" then
-  faederdx1:set(bot_id.."botss:FAEDER:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd1')
-  if text then   
-  text = text:gsub('"',"") 
-  text = text:gsub('"',"") 
-  text = text:gsub("`","") 
-  text = text:gsub("*","") 
-  faederdx1:set(bot_id.."botss:FAEDER:Add:Rd:Sudo:Text"..test, text)  
-  end  
-  send(msg.chat_id_, msg.id_,"تم حفظ الرد الاول ارسل الرد الثاني")
+if text ==("المالك") then
+
+  tdcli_function ({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 100},function(arg,data) 
+  local admins = data.members_
+  for i=0 , #admins do
+  if data.members_[i].status_.ID == "ChatMemberStatusCreator" then
+  owner_id = admins[i].user_id_
+  tdcli_function ({ID = "GetUser",user_id_ = owner_id},function(arg,b) 
+  if b.first_name_ == false then
+  send(msg.chat_id_, msg.id_,"•  حساب المالك محذوف")
   return false  
-  end  
   end
-  if text then  
-  local test = faederdx1:get(bot_id.."botss:FAEDER:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-  if faederdx1:get(bot_id.."botss:FAEDER:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd1" then
-  faederdx1:set(bot_id.."botss:FAEDER:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd2')
-  if text then   
-  text = text:gsub('"',"") 
-  text = text:gsub('"',"") 
-  text = text:gsub("`","") 
-  text = text:gsub("*","") 
-  faederdx1:set(bot_id.."botss:FAEDER:Add:Rd:Sudo:Text1"..test, text)  
-  end  
-  send(msg.chat_id_, msg.id_,"تم حفظ الرد الثاني ارسل الرد الثالث")
-  return false  
-  end  
+  local UserName = (b.username_ or "ramses20")
+  send(msg.chat_id_, msg.id_,"• مالك المجموعه ~ ["..b.first_name_.."](T.me/"..UserName..")")  
+  end,nil)   
   end
-  if text then  
-  local test = faederdx1:get(bot_id.."botss:FAEDER:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-  if faederdx1:get(bot_id.."botss:FAEDER:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd2" then
-  faederdx1:set(bot_id.."botss:FAEDER:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd3')
-  if text then   
-  text = text:gsub('"',"") 
-  text = text:gsub('"',"") 
-  text = text:gsub("`","") 
-  text = text:gsub("*","") 
-  faederdx1:set(bot_id.."botss:FAEDER:Add:Rd:Sudo:Text2"..test, text)  
-  end  
-  send(msg.chat_id_, msg.id_,"تم حفظ الرد الثاني ارسل الرد الرابع")
-  return false  
-  end  
   end
-  if text then  
-  local test = faederdx1:get(bot_id.."botss:FAEDER:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-  if faederdx1:get(bot_id.."botss:FAEDER:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd3" then
-  faederdx1:set(bot_id.."botss:FAEDER:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd4')
-  if text then   
-  text = text:gsub('"',"") 
-  text = text:gsub('"',"") 
-  text = text:gsub("`","") 
-  text = text:gsub("*","") 
-  faederdx1:set(bot_id.."botss:FAEDER:Add:Rd:Sudo:Text3"..test, text)  
-  end    
-  
-  send(msg.chat_id_, msg.id_,"تم حفظ الرد الثاني ارسل الرد الخامس")
-  return false  
-  end  
-  end
-  if text then  
-  local test = faederdx1:get(bot_id.."botss:FAEDER:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-  if faederdx1:get(bot_id.."botss:FAEDER:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd4" then
-  faederdx1:set(bot_id.."botss:FAEDER:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd5')
-  if text then   
-  text = text:gsub('"',"") 
-  text = text:gsub('"',"") 
-  text = text:gsub("`","") 
-  text = text:gsub("*","") 
-  faederdx1:set(bot_id.."botss:FAEDER:Add:Rd:Sudo:Text4"..test, text)  
-  end     
-  send(msg.chat_id_, msg.id_,"تم حفظ الرد الثاني ارسل الرد السادس")
-  return false  
-  end  
-  end
-  if text then  
-  local test = faederdx1:get(bot_id.."botss:FAEDER:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-  if faederdx1:get(bot_id.."botss:FAEDER:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd5" then
-  faederdx1:set(bot_id.."botss:FAEDER:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd6')
-  if text then   
-  text = text:gsub('"',"") 
-  text = text:gsub('"',"") 
-  text = text:gsub("`","") 
-  text = text:gsub("*","") 
-  faederdx1:set(bot_id.."botss:FAEDER:Add:Rd:Sudo:Text5"..test, text)  
-  end     
-  send(msg.chat_id_, msg.id_,"تم حفظ الرد الثاني ارسل الرد السابع")
-  return false  
-  end  
-  end
-  if text then  
-  local test = faederdx1:get(bot_id.."botss:FAEDER:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-  if faederdx1:get(bot_id.."botss:FAEDER:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd6" then
-  faederdx1:set(bot_id.."botss:FAEDER:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd7')
-  if text then   
-  text = text:gsub('"',"") 
-  text = text:gsub('"',"") 
-  text = text:gsub("`","") 
-  text = text:gsub("*","") 
-  faederdx1:set(bot_id.."botss:FAEDER:Add:Rd:Sudo:Text6"..test, text)  
-  end     
-  send(msg.chat_id_, msg.id_,"تم حفظ الرد الثاني ارسل الرد الثامن")
-  return false  
-  end  
-  end
-  if text then  
-  local test = faederdx1:get(bot_id.."botss:FAEDER:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-  if faederdx1:get(bot_id.."botss:FAEDER:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd7" then
-  faederdx1:set(bot_id.."botss:FAEDER:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd8')
-  if text then   
-  text = text:gsub('"',"") 
-  text = text:gsub('"',"") 
-  text = text:gsub("`","") 
-  text = text:gsub("*","") 
-  faederdx1:set(bot_id.."botss:FAEDER:Add:Rd:Sudo:Text7"..test, text)  
-  end     
-  send(msg.chat_id_, msg.id_,"تم حفظ الرد الثاني ارسل الرد التاسع")
-  return false  
-  end  
-  end
-  if text then  
-  local test = faederdx1:get(bot_id.."botss:FAEDER:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-  if faederdx1:get(bot_id.."botss:FAEDER:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd8" then
-  faederdx1:set(bot_id.."botss:FAEDER:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd9')
-  if text then   
-  text = text:gsub('"',"") 
-  text = text:gsub('"',"") 
-  text = text:gsub("`","") 
-  text = text:gsub("*","") 
-  faederdx1:set(bot_id.."botss:FAEDER:Add:Rd:Sudo:Text8"..test, text)  
-  end     
-  send(msg.chat_id_, msg.id_,"تم حفظ الرد الثاني ارسل الرد العاشر")
-  return false  
-  end  
-  end
-  if text then  
-  local test = faederdx1:get(bot_id.."botss:FAEDER:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-  if faederdx1:get(bot_id.."botss:FAEDER:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd9" then
-  faederdx1:set(bot_id.."botss:FAEDER:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd10')
-  if text then   
-  text = text:gsub('"',"") 
-  text = text:gsub('"',"") 
-  text = text:gsub("`","") 
-  text = text:gsub("*","") 
-  faederdx1:set(bot_id.."botss:FAEDER:Add:Rd:Sudo:Text9"..test, text)  
-  end     
-  send(msg.chat_id_, msg.id_,"تم حفظ الرد الثاني ارسل الرد الحادي عشر")
-  return false  
-  end  
-  end
-  if text then  
-  local test = faederdx1:get(bot_id.."botss:FAEDER:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-  if faederdx1:get(bot_id.."botss:FAEDER:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd10" then
-  faederdx1:set(bot_id.."botss:FAEDER:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd11')
-  if text then   
-  text = text:gsub('"',"") 
-  text = text:gsub('"',"") 
-  text = text:gsub("`","") 
-  text = text:gsub("*","") 
-  faederdx1:set(bot_id.."botss:FAEDER:Add:Rd:Sudo:Text10"..test, text)  
-  end          
-  send(msg.chat_id_, msg.id_,"تم حفظ الرد")
-  return false  
-  end  
-  end
-  if text then
-  local Text = faederdx1:get(bot_id.."botss:FAEDER:Add:Rd:Sudo:Text"..text)   
-  local Text1 = faederdx1:get(bot_id.."botss:FAEDER:Add:Rd:Sudo:Text1"..text)   
-  local Text2 = faederdx1:get(bot_id.."botss:FAEDER:Add:Rd:Sudo:Text2"..text)
-  local Text3 = faederdx1:get(bot_id.."botss:FAEDER:Add:Rd:Sudo:Text3"..text)
-  local Text4 = faederdx1:get(bot_id.."botss:FAEDER:Add:Rd:Sudo:Text4"..text)
-  local Text5 = faederdx1:get(bot_id.."botss:FAEDER:Add:Rd:Sudo:Text5"..text)
-  local Text6 = faederdx1:get(bot_id.."botss:FAEDER:Add:Rd:Sudo:Text6"..text)
-  local Text7 = faederdx1:get(bot_id.."botss:FAEDER:Add:Rd:Sudo:Text7"..text)
-  local Text8 = faederdx1:get(bot_id.."botss:FAEDER:Add:Rd:Sudo:Text8"..text)
-  local Text9 = faederdx1:get(bot_id.."botss:FAEDER:Add:Rd:Sudo:Text9"..text)
-  local Text10 = faederdx1:get(bot_id.."botss:FAEDER:Add:Rd:Sudo:Text10"..text)
-  local Text11 = faederdx1:get(bot_id.."botss:FAEDER:Add:Rd:Sudo:Text11"..text)
-  if Text or Text1 or Text2 or Text3 or Text4 or Text5 or Text6 or Text7 or Text8 or Text9 or Text10 or Text11 then 
-  local texting = {
-  Text,
-  Text1,
-  Text2,
-  Text3,
-  Text4,
-  Text5,
-  Text6,
-  Text7,
-  Text8,
-  Text9,
-  Text10,
-  Text11
-  }
-  Textes = math.random(#texting)
-  send(msg.chat_id_, msg.id_,texting[Textes])
-  end
+  end,nil)   
   end
 
 --     By Developer Faeder     -- 
